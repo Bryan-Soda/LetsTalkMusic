@@ -1,3 +1,4 @@
 #Enviroments/secrets
 .venv
 .env
+server/Retunify.db
