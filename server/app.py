@@ -9,15 +9,14 @@ import bcrypt #used for hashing passwords
 from dotenv import load_dotenv #NOTE: Some portions require secrets. consult with others and do NOT place secrets within code plainly
 
 
-#salt for encryption
-salt = bcrypt.gensalt()
+
 
 
 load_dotenv()
 admin_key = os.getenv('FLASK_ADMIN_KEY')
 
 app = Flask(__name__)
-cors = CORS(app)
+cors = CORS(app, origins='*')
 
 basedir = os.path.abspath(os.path.dirname(__file__))
 
@@ -36,6 +35,8 @@ class User(db.Model):
     # May need some relations down the line
     #   > Stored data for user's analytics, etc.
 
+    # May need to store some webapi tokens for the user's spotify to be able to login?
+
 
 
 #Api routes:
@@ -44,28 +45,33 @@ class User(db.Model):
 def index():
     return "Hello Retunify DB World!"
 
-#Add new user (check if valid email, user, etc)
+#Add new user (check if valid email, user, etc) Note: Currently only checks if user is valid
 @app.route('/user', methods=['POST'])
 def add_new_member():
     data = request.get_json()
     if not data:
         return {'error': 'data required'}, 400
     print("Raw data:", data) #testing purposes
-    if 'name' not in data or 'password' not in data:
+    if 'username' not in data or 'password' not in data:
         return {'error': 'username and password required'}, 400
     if len(data['password']) < 12:
         return {'error': 'password must be at least 12 characters long'}, 400
 
-    name = data['name'] #frontend must return a json/dict with the key-names 'name' and 'password'
-    
+    name = data['username'] #frontend must return a json/dict with the key-names 'name' and 'password'
+
     user = User.query.filter_by(username=name).first()
     if user is not None:
         return {'error': 'user already exists!'}, 400
     
-    hashed_pass = bcrypt.hashpw(data['password'], salt)
+    #salt for encryption
+    salt = bcrypt.gensalt()
+
+    password_bytes = data['password'].encode('utf-8')
+    hashed_pass = bcrypt.hashpw(password_bytes, salt)
     
     new_user = User(username=name, password=hashed_pass)
-
+    
+    print()
     db.session.add(new_user)
     db.session.commit()
 
@@ -75,6 +81,12 @@ def add_new_member():
 @app.route('/auth')
 def authenticate():
     pass
+
+
+admin.add_view(ModelView(User,db.session))
+
+with app.app_context():
+    db.create_all()
 
 if __name__ == "__main__":
     app.run(debug=True)
