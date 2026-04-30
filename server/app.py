@@ -36,7 +36,7 @@ class Users(db.Model):
 
 class Artists(db.Model):
     id = db.Column(db.Integer, primary_key=True)
-    artist = db.Column(db.String, unique=True, nullable=False)
+    name = db.Column(db.String, unique=True, nullable=False)
     overall_genre = db.Column(db.String, nullable=False)
     bio = db.Column(db.String, unique=True)
 
@@ -95,11 +95,43 @@ def add_new_member():
 
     return {'Success': f'User {name} added'}
 
-#Authenticate the user is a member
+#Authenticate the user is a member, admin, or mod (SIDE A.K.A NOT PRIORITY RN)
 @app.route('/auth')
 def authenticate():
-    # Types: Users and Admins
+    # Types: Users and Admins and Mods
     pass
+
+@app.route('/artists')
+def get_all_artists():
+    results = []
+
+    artists = Artists.query.all()
+
+    for a in artists:
+        results.append({
+            "id": a.id,
+            "artist_name": a.name,
+            "genre": a.overall_genre,
+            "bio": a.bio,
+        })
+    
+    return jsonify(results), 200
+
+@app.route('/artists/<int:artist_id>')
+def get_artist():
+    # Gets the a particular artist's albums, genre, a bio, etc.
+    pass
+
+@app.route('/artists/<int:artist_id>/<int:album_id>')
+def get_artist_album():
+    # Gets a specific album's tracks, genre, etc.
+    pass
+
+@app.route('/artists/<int:artist_id>/<int:album_id>/<int:track_id>')
+def get_artist_album():
+    # Gets a specific track's info
+    pass
+
 
 
 admin.add_view(ModelView(Users,db.session))
