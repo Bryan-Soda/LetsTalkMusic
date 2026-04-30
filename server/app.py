@@ -8,10 +8,6 @@ import bcrypt #used for hashing passwords
 
 from dotenv import load_dotenv #NOTE: Some portions require secrets. consult with others and do NOT place secrets within code plainly
 
-
-
-
-
 load_dotenv()
 admin_key = os.getenv('FLASK_ADMIN_KEY')
 
@@ -20,30 +16,52 @@ cors = CORS(app, origins='*')
 
 basedir = os.path.abspath(os.path.dirname(__file__))
 
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///' + os.path.join(basedir, 'Retunify.db')
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///' + os.path.join(basedir, 'MusicApp.db')
 app.config['SQLALCHEMY_TRACK_MODIFCATIONS'] = False
 app.config['SECRET_KEY'] = str(admin_key)
-admin = Admin(app, name="Retunify Admin")
+admin = Admin(app, name="MusicApp Admin")
 db = SQLAlchemy(app)
 
 #DB models:
 
-class User(db.Model):
+class Users(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     username = db.Column(db.String(32), unique=True, nullable=False)
     password = db.Column(db.String, nullable=False)
+    role = db.Column(db.String, nullable=False) # 'a' = admin, 'u'=user
     # May need some relations down the line
     #   > Stored data for user's analytics, etc.
 
     # May need to store some webapi tokens for the user's spotify to be able to login?
 
+class Artists(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    artist = db.Column(db.String, unique=True, nullable=False)
+    overall_genre = db.Column(db.String, nullable=False)
+    bio = db.Column(db.String, unique=True)
 
+    albums = db.relationship('Albums', backref='artist')
+
+class Albums(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    artist_id = db.Column(db.Integer, db.ForeignKey('artists.id'), nullable=False) 
+    title = db.Column(db.String, nullable=False)
+    genre = db.Column(db.String, nullable=False)
+    total_length = db.Column(db.String, nullable=False)
+
+    tracks = db.relationship('Tracks', backref='album')
+    # synopsis = db.Column(db.String, nullable=False)
+class Tracks(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    album_id = db.Column(db.Integer, db.ForeignKey('albums.id'), nullable=False)  
+    title = db.Column(db.String, nullable=False) 
+    length = db.Column(db.String, nullable=False) #denote the track length
 
 #Api routes:
 
 @app.route('/')
 def index():
-    return "Hello Retunify DB World!"
+    return "Hello MusicApp DB World!"
 
 #Add new user (check if valid email, user, etc) Note: Currently only checks if user is valid
 @app.route('/user', methods=['POST'])
@@ -59,7 +77,7 @@ def add_new_member():
 
     name = data['username'] #frontend must return a json/dict with the key-names 'name' and 'password'
 
-    user = User.query.filter_by(username=name).first()
+    user = Users.query.filter_by(username=name).first()
     if user is not None:
         return {'error': 'user already exists!'}, 400
     
@@ -69,7 +87,7 @@ def add_new_member():
     password_bytes = data['password'].encode('utf-8')
     hashed_pass = bcrypt.hashpw(password_bytes, salt)
     
-    new_user = User(username=name, password=hashed_pass)
+    new_user = Users(username=name, password=hashed_pass)
     
     print()
     db.session.add(new_user)
@@ -80,10 +98,14 @@ def add_new_member():
 #Authenticate the user is a member
 @app.route('/auth')
 def authenticate():
+    # Types: Users and Admins
     pass
 
 
-admin.add_view(ModelView(User,db.session))
+admin.add_view(ModelView(Users,db.session))
+admin.add_view(ModelView(Artists,db.session))
+admin.add_view(ModelView(Albums,db.session))
+admin.add_view(ModelView(Tracks,db.session))
 
 with app.app_context():
     db.create_all()
