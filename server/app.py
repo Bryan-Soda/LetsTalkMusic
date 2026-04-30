@@ -101,7 +101,7 @@ def authenticate():
     # Types: Users and Admins and Mods
     pass
 
-@app.route('/artists')
+@app.route('/artists', method=['GET'])
 def get_all_artists():
     results = []
 
