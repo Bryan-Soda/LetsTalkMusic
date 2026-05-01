@@ -1,4 +1,4 @@
 #Enviroments/secrets
 .venv
 .env
-server/Retunify.db
+server/MusicApp.db
