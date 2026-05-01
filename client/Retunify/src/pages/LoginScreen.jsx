@@ -42,7 +42,7 @@ const LoginScreen = () => {
     return (
         <div className="login-page">
             <div className="login-card">  
-                <h1>Retunify</h1>              
+                <h1>LetsTalkMusic</h1>              
                 <div className="input-group">
                     <label>Username</label>
                     <input 
