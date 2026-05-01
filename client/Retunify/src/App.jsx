@@ -1,14 +1,18 @@
-import React from 'react'
-import {Routes, Route} from 'react-router-dom'
+import { Routes, Route } from 'react-router-dom';
+import LoginScreen from './pages/LoginScreen'; 
+import HomePage from './pages/Homepage';
 
-import MainPage from './Test_Pages/MainTest'
-
-const App = () => {
+function App() {
   return (
     <Routes>
-      <Route path='/' element={<MainPage/>} > </Route>
+      {/* Landing page to login screen */}
+      <Route path="/" element={<LoginScreen />} />
+
+      {/* Route for the homepage after login */}
+      <Route path="/home" element={<HomePage />} /> 
     </Routes>
-  )
+  );
 }
 
-export default App
+export default App;
+
