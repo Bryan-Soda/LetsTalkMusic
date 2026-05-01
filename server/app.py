@@ -57,6 +57,13 @@ class Tracks(db.Model):
     title = db.Column(db.String, nullable=False) 
     length = db.Column(db.String, nullable=False) #denote the track length
 
+class Reviews(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    user_id = db.Column(db.Integer, db.ForeignKey('users.id'), nullable=False)
+    album_id = db.Column(db.Integer, db.ForeignKey('albums.id'), nullable=False)  
+    review = db.Column(db.String(255))
+    rating = db.Column(db.Float, nullable=False)
+
 #Api routes:
 
 @app.route('/')
@@ -101,7 +108,7 @@ def authenticate():
     # Types: Users and Admins and Mods
     pass
 
-@app.route('/artists', method=['GET'])
+@app.route('/artists', methods=['GET'])
 def get_all_artists():
     results = []
 
@@ -117,9 +124,36 @@ def get_all_artists():
     
     return jsonify(results), 200
 
-@app.route('/artists/<int:artist_id>')
-def get_artist():
-    # Gets the a particular artist's albums, genre, a bio, etc.
+@app.route('/artists/<int:artist_id>', methods=['GET'])
+def get_artist(artist_id):
+    # Gets the a particular artist's genre, bio, etc.
+
+    results = []
+
+    artist = Artists.query.get(artist_id)
+
+    results.append({
+            "id": artist.id,
+            "artist_name": artist.name,
+            "genre": artist.overall_genre,
+            "bio": artist.bio,
+        })
+    
+    return jsonify(results), 200
+
+@app.route('/artists/<int:artist_id>/albums', methods=['GET'])
+def get_artist_albums(artist_id):
+    # Gets all albums from artist.
+
+    results = []
+
+    artist = Artists.query.get(artist_id)
+
+    for albums in artist:
+        results.append({
+            "album_id": albums.id
+        })
+
     pass
 
 @app.route('/artists/<int:artist_id>/<int:album_id>')
