@@ -47,7 +47,7 @@ h1{
     padding: 12px;
     border: 1px solid #ddd;
     border-radius: 6px;
-    box-sizing: border-box; /* Ensures padding doesn't break width */
+    box-sizing: border-box; 
 }
 
 .login-btn {
