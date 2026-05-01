@@ -224,5 +224,98 @@
                 ]
             }
         ]
+    },
+    {
+        "artist_name": "PinkPantheress",
+        "genre": "Alt-Pop",
+        "bio": "BIO",
+        "albums": [
+            {
+                "title": "Fancy That" ,
+                "total_length": "20:33",
+                "tracks": [
+                    {
+                        "title": "Illegal",
+                        "length": "2:29"
+                    },
+                    {
+                        "title": "Girl Like Me",
+                        "length": "2:25"
+                    },
+                    {
+                        "title": "Tonight",
+                        "length": "2:54"
+                    },
+                    {
+                        "title": "Intermission",
+                        "length": "0:24"
+                    },
+                    {
+                        "title": "Noises",
+                        "length": "1:44"
+                    },
+
+                    {
+                        "title": "Nice to Know You",
+                        "length": "2:50"
+                    },
+                    {
+                        "title": "Stateside",
+                        "length": "2:48"
+                    },
+                    {
+                        "title": "Romeo",
+                        "length": "2:34"
+                    }
+                ]
+            },
+            {
+                "title": "to hell with it",
+                "total_length": "18:36",
+                "tracks":[
+                    {
+                        "title": "Pain",
+                        "length": "1:38"
+                    },
+                    {
+                        "title": "I Must Apologize",
+                        "length": "1:48"
+                    },
+                    {
+                        "title": "Last Valentines",
+                        "length": "1:13"
+                    },
+                    {
+                        "title": "Passion",
+                        "length": "2:18"
+                    },
+
+                    {
+                        "title": "Just for Me",
+                        "length": "1:56"
+                    },
+                    {
+                        "title": "Noticed I Cried",
+                        "length": "1:22"
+                    },
+                    {
+                        "title": "Reason",
+                        "length": "2:11"
+                    },
+                    {
+                        "title": "All My Friends Know",
+                        "length": "1:58"
+                    },
+                    {
+                        "title": "Nineteen",
+                        "length": "2:33"
+                    },
+                    {
+                        "title": "Break It Off - Bonus",
+                        "length": "1:36"
+                    }
+                ]
+            }
+        ]
     }
 ]
