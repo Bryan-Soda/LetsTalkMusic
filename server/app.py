@@ -37,7 +37,7 @@ class Users(db.Model):
 class Artists(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String, unique=True, nullable=False)
-    overall_genre = db.Column(db.String, nullable=False)
+    genre = db.Column(db.String, nullable=False)
     bio = db.Column(db.String, unique=True)
 
     albums = db.relationship('Albums', backref='artist')
@@ -46,14 +46,15 @@ class Albums(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     artist_id = db.Column(db.Integer, db.ForeignKey('artists.id'), nullable=False) 
     title = db.Column(db.String, nullable=False)
-    genre = db.Column(db.String, nullable=False)
+    # genre = db.Column(db.String, nullable=False)
     total_length = db.Column(db.String, nullable=False)
 
     tracks = db.relationship('Tracks', backref='album')
     # synopsis = db.Column(db.String, nullable=False)
 class Tracks(db.Model):
     id = db.Column(db.Integer, primary_key=True)
-    album_id = db.Column(db.Integer, db.ForeignKey('albums.id'), nullable=False)  
+    album_id = db.Column(db.Integer, db.ForeignKey('albums.id'), nullable=False) 
+    artist_id = db.Column(db.Integer, db.ForeignKey('artists.id'), nullable=False)  
     title = db.Column(db.String, nullable=False) 
     length = db.Column(db.String, nullable=False) #denote the track length
 
@@ -163,21 +164,43 @@ def get_artist_albums(artist_id):
     return jsonify(results), 200
 
 @app.route('/artists/<int:artist_id>/<int:album_id>')
-def get_artist_album():
+def get_artist_album(artist_id, album_id):
     # Gets a specific album's tracks, genre, etc.
-    pass
+    artist = Artists.query.get(artist_id)
+
+    if artist is None:
+        return {'error': 'artist not found'}, 404
+    
+    album = Albums.query.get(album_id)
+
+    if album is None:
+        return {'error':'album not found'}, 404
+
+    if album.artist_id != artist_id:
+        return {'error':"not artist's album"}, 400 
+
+    results = []
+
+    results.append({
+        "album_id": album_id,
+        "album_title": album.title,
+        "album_genre": album.genre,
+        "track_length": album.total_length,
+    })
+    return jsonify(results), 200
 
 @app.route('/artists/<int:artist_id>/<int:album_id>/<int:track_id>')
-def get_artist_album():
+def get_album_tracks():
     # Gets a specific track's info
     pass
 
 
-
+# tabs for flask-admin
 admin.add_view(ModelView(Users,db.session))
 admin.add_view(ModelView(Artists,db.session))
 admin.add_view(ModelView(Albums,db.session))
 admin.add_view(ModelView(Tracks,db.session))
+admin.add_view(ModelView(Reviews,db.session))
 
 with app.app_context():
     db.create_all()
