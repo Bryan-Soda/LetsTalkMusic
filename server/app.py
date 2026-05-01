@@ -144,17 +144,23 @@ def get_artist(artist_id):
 @app.route('/artists/<int:artist_id>/albums', methods=['GET'])
 def get_artist_albums(artist_id):
     # Gets all albums from artist.
+    artist = Artists.query.get(artist_id)
+
+    if artist is None:
+        return {'error': 'artist not found'}, 404
 
     results = []
 
-    artist = Artists.query.get(artist_id)
-
-    for albums in artist:
+    #gathers all albums from artist and their details
+    for albums in artist.albums:
         results.append({
-            "album_id": albums.id
+            "album_id": albums.id,
+            "album_title": albums.title,
+            "album_genre": albums.genre,
+            "track_length": albums.total_length,
         })
 
-    pass
+    return jsonify(results), 200
 
 @app.route('/artists/<int:artist_id>/<int:album_id>')
 def get_artist_album():
