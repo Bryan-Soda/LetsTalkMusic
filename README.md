@@ -1,1 +1,1 @@
-Spotify companion webapp 
+Letterboxed; but for Music
