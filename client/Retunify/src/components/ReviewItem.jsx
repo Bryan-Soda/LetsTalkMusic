@@ -23,6 +23,11 @@ const ReviewItem = ({ albumCover, albumName, rating, reviewText }) => {
                     <p className="review-body">{reviewText}</p>
                 </div>
             </div>
+            {/* Right side: Action Buttons */}
+            <div className="review-actions">
+                <button className="action-btn edit-review-btn">EDIT</button>
+                <button className="action-btn delete-review-btn">DELETE</button>
+            </div>
         </div>
     );
 };

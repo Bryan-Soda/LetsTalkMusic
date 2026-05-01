@@ -13,7 +13,7 @@ const ProfilePage = () => {
             albumCover: '../src/assets/SweetBoy.jpg', 
             albumName: 'Sweet Boy',
             rating: 5,
-            reviewText: 'I LOVE MALCOLM TODD :).'
+            reviewText: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt sit eius qui quia optio maxime possimus magnam eos placeat ea? Neque distinctio ipsam officiis nulla! Quibusdam voluptate consequatur non rerum?'
         },
         {
             id: 2,
