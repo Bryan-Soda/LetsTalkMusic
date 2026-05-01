@@ -127,5 +127,102 @@
                 ]
             }
         ]
+    },
+    {
+        "artist_name": "Michael Jackson",
+        "genre": "Pop",
+        "bio": "BIO",
+        "albums": [
+            {
+                "title": "Thriller" ,
+                "total_length": "42:19",
+                "tracks": [
+                    {
+                        "title": "Wanna Be Startin' Somethin'",
+                        "length": "6:03"
+                    },
+                    {
+                        "title": "Baby Be Mine",
+                        "length": "4:20"
+                    },
+                    {
+                        "title": "The Girl is Mine (with Paul McCartney)",
+                        "length": "3:42"
+                    },
+                    {
+                        "title": "Thriller",
+                        "length": "5:58"
+                    },
+                    {
+                        "title": "Beat It",
+                        "length": "4:18"
+                    },
+
+                    {
+                        "title": "Billie Jean",
+                        "length": "4:53"
+                    },
+                    {
+                        "title": "Human Nature",
+                        "length": "4:05"
+                    },
+                    {
+                        "title": "P.Y.T.(Pretty Young Thing)",
+                        "length": "3:58"
+                    },
+                    {
+                        "title": "The Lady in My Life",
+                        "length": "4:58"
+                    }
+                ]
+            },
+            {
+                "title": "Off the Wall",
+                "total_length": "42:21",
+                "tracks":[
+                    {
+                        "title": "Don't Stop 'Til You Get Enough",
+                        "length": "6:04"
+                    },
+                    {
+                        "title": "Rock with You - Single Version",
+                        "length": "3:08"
+                    },
+                    {
+                        "title": "Workin' Day and Night",
+                        "length": "5:12"
+                    },
+                    {
+                        "title": "Get on the Floor",
+                        "length": "4:37"
+                    },
+
+                    {
+                        "title": "Off the Wall",
+                        "length": "4:05"
+                    },
+                    {
+                        "title": "Girlfriend",
+                        "length": "3:04"
+                    },
+                    {
+                        "title": "She's Out of My Life",
+                        "length": "3:38"
+                    },
+                    {
+                        "title": "I Can't Help It",
+                        "length": "4:29"
+                    },
+                    {
+                        "title": "It's the Falling in Love",
+                        "length": "3:48"
+                    },
+                    {
+                        "title": "Burn this Disco Out",
+                        "length": "3:41"
+                    }
+                ]
+            }
+        ]
     }
 ]
