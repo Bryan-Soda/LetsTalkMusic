@@ -88,7 +88,7 @@ def populate(data):
                 print(f"{track.title} added")
 
     db.session.commit()
-    print(f'population Done')  
+    print(f'Populating DB Done')  
 
 if __name__ == '__main__':
     with app.app_context():
