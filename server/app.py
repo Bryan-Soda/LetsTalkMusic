@@ -95,7 +95,7 @@ def add_new_member():
     password_bytes = data['password'].encode('utf-8')
     hashed_pass = bcrypt.hashpw(password_bytes, salt)
     
-    new_user = Users(username=name, password=hashed_pass)
+    new_user = Users(username=name, password=hashed_pass, role='u')
     
     print()
     db.session.add(new_user)
@@ -104,10 +104,27 @@ def add_new_member():
     return {'Success': f'User {name} added'}
 
 #Authenticate the user is a member, admin, or mod (SIDE A.K.A NOT PRIORITY RN)
-@app.route('/auth')
+@app.route('/auth', methods=['POST'])
 def authenticate():
     # Types: Users and Admins and Mods
-    pass
+    data = request.get_json()
+    print("Raw data:", data)
+    # body within jsx file must match var names
+    name = data['username']
+
+    user = Users.query.filter_by(username=name).first()
+    
+    if user is None:
+        print("DNE")
+        return {'error': 'user not found'}, 404
+    submitted_password = data['password']
+
+    print("hashed password: ", submitted_password.encode('utf-8') )
+    if bcrypt.checkpw(submitted_password.encode('utf-8'), user.password):
+        print("Password Matches!")
+        return {'role': 'user'}
+    else:
+        return{'error':'incorrect password'}, 400
 
 @app.route('/artists', methods=['GET'])
 def get_all_artists():
