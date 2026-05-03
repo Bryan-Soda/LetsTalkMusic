@@ -1,68 +1,77 @@
-h1{
-    color:  #1ED760;
-}
+body, html {
+    margin: 0;
+    padding: 0;
+    overflow: hidden; 
+} /* things to correct the commented out code from index and app css files */
 
-.login-page {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.login-page-container {
     height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #0a0a0a;
 
-    background-image: url('../src/assets/loginScreenBG.jpg') !important; 
-    background-size: cover !important;
-    background-position: center !important;
-    background-repeat: no-repeat !important;
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 1)), url('../../assets/loginScreenBG.jpg');
+    
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
-.login-card {
-    background: rgb(0, 0, 0);
-    padding: 2.5rem;
-    border-radius: 12px;
-    box-shadow: 0 10px 25px rgba(233, 8, 8, 0.1);
-    width: 100%;
-    max-width: 400px;
+.login-card-paper {
+    padding: 40px;
+    background-color: #121212 !important;
+    border: 1px solid #333;
+    border-radius: 16px !important;
     text-align: center;
 }
 
-.login-logo {
-    color:  #1ED760;
-    margin-bottom: 0.5rem;
-    font-size: 2rem;
+.login-title {
+    color: #1ED760 !important;
+    font-weight: bold !important;
+    margin-bottom: 30px !important;
+    letter-spacing: 1px;
 }
 
-.input-group {
-    text-align: left;
-    margin-bottom: 1.5rem;
+.login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
 
-.input-group label {
-    display: block;
-    margin-bottom: 0.5rem;
-    font-weight: 600;
-    color:  #1ED760;
+.login-input .MuiOutlinedInput-root {
+    color: white !important;
 }
 
-.input-group input {
-    width: 100%;
-    padding: 12px;
-    border: 1px solid #ddd;
-    border-radius: 6px;
-    box-sizing: border-box; /* Ensures padding doesn't break width */
+.login-input .MuiOutlinedInput-notchedOutline {
+    border-color: #444 !important;
 }
 
-.login-btn {
-    width: 100%;
-    padding: 12px;
-    background-color: #ddd;
-    color: black;
-    border: none;
-    border-radius: 6px;
-    font-size: 1rem;
-    font-weight: bold;
-    cursor: pointer;
-    transition: background 0.3s ease;
+.login-input:hover .MuiOutlinedInput-notchedOutline {
+    border-color: #1ED760 !important;
 }
 
-.login-btn:hover {
-    background-color: #1ED760;
+.login-input .Mui-focused .MuiOutlinedInput-notchedOutline {
+    border-color: #1ED760 !important;
+}
+
+.login-input .MuiInputLabel-root {
+    color: #888 !important;
+}
+
+.login-input .Mui-focused .MuiInputLabel-root {
+    color: #1ED760 !important;
+}
+
+.login-submit-btn {
+    background-color: #1ED760 !important;
+    color: black !important;
+    font-weight: bold !important;
+    padding: 12px !important;
+    margin-top: 10px !important;
+    border-radius: 8px !important;
+}
+
+.login-submit-btn:hover {
+    background-color: #17b350 !important;
 }

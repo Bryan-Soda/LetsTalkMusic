@@ -1,6 +1,6 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import React from 'react';
+import { Container, Paper, Typography, TextField, Button, Box } from '@mui/material';
 import './styles/LoginScreen.css';
 
 const LoginScreen = () => {
@@ -28,10 +28,8 @@ const LoginScreen = () => {
                 return;
             }
 
-            // Persist user session data
             localStorage.setItem('userId', data.id);
             localStorage.setItem('username', data.username);
-
             navigate("/home");
 
         } catch (err) {
@@ -40,32 +38,46 @@ const LoginScreen = () => {
     };
 
     return (
-        <div className="login-page">
-            <div className="login-card">  
-                <h1>LetsTalkMusic</h1>              
-                <div className="input-group">
-                    <label>Username</label>
-                    <input 
-                        type="text"
-                        value={name} 
-                        onChange={e => setName(e.target.value)} 
-                        placeholder="Enter username"
-                    /> 
-                </div>
+        <Box className="login-page-container">
+            <Container maxWidth="xs">
+                <Paper elevation={3} className="login-card-paper">
+                    <Typography variant="h3" className="login-title">
+                        Retunify
+                    </Typography>
+                    
+                    <Box component="form" className="login-form">
+                        <TextField
+                            label="Username"
+                            variant="outlined"
+                            fullWidth
+                            value={name}
+                            onChange={(e) => setName(e.target.value)}
+                            className="login-input"
+                            InputLabelProps={{ style: { color: '#888' } }}
+                        />
+                        
+                        <TextField
+                            label="Password"
+                            type="password"
+                            variant="outlined"
+                            fullWidth
+                            value={pass}
+                            onChange={(e) => setPass(e.target.value)}
+                            className="login-input"
+                        />
 
-                <div className="input-group">
-                    <label>Password</label>
-                    <input 
-                        type="password" 
-                        value={pass} 
-                        onChange={e => setPass(e.target.value)} 
-                        placeholder="Enter password"
-                    /> 
-                </div>
-
-                <button className="login-btn" onClick={authenticate}>Login</button>
-            </div>
-        </div>
+                        <Button 
+                            variant="contained"
+                            fullWidth
+                            onClick={authenticate}
+                            className="login-submit-btn"
+                        >
+                            Login
+                        </Button>
+                    </Box>
+                </Paper>
+            </Container>
+        </Box>
     );
 };
 
