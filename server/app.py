@@ -29,6 +29,8 @@ class Users(db.Model):
     username = db.Column(db.String(32), unique=True, nullable=False)
     password = db.Column(db.String, nullable=False)
     role = db.Column(db.String, nullable=False) # 'a' = admin, 'u'=user
+
+    reviews = db.relationship('Reviews', backref='user')
     # May need some relations down the line
     #   > Stored data for user's analytics, etc.
 
@@ -61,9 +63,12 @@ class Tracks(db.Model):
 class Reviews(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     user_id = db.Column(db.Integer, db.ForeignKey('users.id'), nullable=False)
+    # artist_id = db.Column(db.Integer, db.ForeignKey('artist_id')) Will we need this????
     album_id = db.Column(db.Integer, db.ForeignKey('albums.id'), nullable=False)  
     review = db.Column(db.String(255))
     rating = db.Column(db.Float, nullable=False)
+
+    album = db.relationship('Albums', backref='reviews')
 
 #Api routes:
 
@@ -103,7 +108,7 @@ def add_new_member():
 
     return {'Success': f'User {name} added'}
 
-#Authenticate the user is a member, admin, or mod (SIDE A.K.A NOT PRIORITY RN)
+#Authenticate the user is a member, admin, or mod (SIDE A.K.A NOT PRIORITY RN) Currently acts as Login 
 @app.route('/auth', methods=['POST'])
 def authenticate():
     # Types: Users and Admins and Mods
@@ -180,7 +185,7 @@ def get_artist_albums(artist_id):
 
     return jsonify(results), 200
 
-@app.route('/artists/<int:artist_id>/<int:album_id>')
+@app.route('/artists/<int:artist_id>/<int:album_id>', methods=['GET'])
 def get_artist_album(artist_id, album_id):
     # Gets a specific album's tracks, genre, etc.
     artist = Artists.query.get(artist_id)
@@ -206,11 +211,34 @@ def get_artist_album(artist_id, album_id):
     })
     return jsonify(results), 200
 
-@app.route('/artists/<int:artist_id>/<int:album_id>/<int:track_id>')
-def get_album_tracks():
+@app.route('/artists/<int:artist_id>/<int:album_id>/<int:track_id>', methods=['GET'])
+def get_album_tracks(artist_id, album_id, track_id):
     # Gets a specific track's info
     pass
 
+@app.route('/reviews/<int:user_id>', methods=['GET'])
+def get_all_user_reviews(user_id):
+    
+    user = Users.query.get(user_id)
+
+    if user is None:
+        return {'user':'user not found'}, 404
+    
+    results = []
+    for reviews in user.reviews:
+        results.append({
+            "review_id": reviews.id,
+            "album_id": reviews.album_id,
+            "review": reviews.review,
+            "rating": reviews.rating,
+            "album_title": reviews.album.title, 
+        })
+    
+    return jsonify(results), 200
+
+@app.route('/reviews/<int:user_id>', methods=['POST'])
+def set_review(user_id):
+    pass
 
 # tabs for flask-admin
 admin.add_view(ModelView(Users,db.session))
