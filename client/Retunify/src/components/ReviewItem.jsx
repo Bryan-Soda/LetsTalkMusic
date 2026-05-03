@@ -38,7 +38,7 @@ const ReviewItem = ({ albumCover, albumName, rating, reviewText }) => {
             </Box>
 
             {/* Right side: Action Buttons */}
-            <Stack spacing={1} className="action-stack">
+            <Stack spacing={3} className="action-stack">
                 <Button 
                     variant="contained" 
                     size="small"
