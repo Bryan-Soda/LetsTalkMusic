@@ -1,64 +1,39 @@
-.profile-container {
-    padding: 2rem;
-    max-width: 800px;
-    margin: 0 auto;
-    color: #1ED760; 
-    background-color: transparent;
+.profile-mui-container {
+    margin-top: 32px !important; 
 }
 
-.profile-header {
-    display: flex;
+.profile-header-box {
+    display: flex !important;
     align-items: center;
-    gap: 25px;
-    margin-bottom: 20px;
+    gap: 24px; 
+    margin-bottom: 24px; 
 }
 
-.avatar-circle {
-    width: 90px;
-    height: 90px;
-    background-color: #222;
-    border-radius: 50%;
-    border: 2px solid #00ff00;
-
-    /* temp profile picture */
-    background-image: url(../../assets/templatePFP.jpg);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+.profile-avatar-mui {
+    width: 90px !important;
+    height: 90px !important;
+    border: 2px solid #1ED760 !important;
+    background-color: #222 !important;
 }
 
-.username {
-    font-size: 2.2rem;
-    margin: 0;
+.profile-username-text {
+    color: white !important;
+    font-weight: bold !important;
 }
 
-.edit-btn {
-    background: #1a1a1a;
-    border: 1px solid #00ff00;
-    color: #00ff00;
-    padding: 6px 12px;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 0.75rem;
-    margin-top: 8px;
-    font-weight: bold;
+.profile-divider-mui {
+    margin-bottom: 32px !important; 
+    background-color: #333 !important;
 }
 
-.profile-divider {
-    border: 0;
-    border-top: 1px solid #333;
-    margin: 20px 0 40px 0;
+.reviews-title-text {
+    color: #888 !important;
+    margin-bottom: 16px !important; 
+    letter-spacing: 2px !important;
 }
 
-.section-title {
-    font-size: 1rem;
-    letter-spacing: 2px;
-    margin-bottom: 30px;
-    color: #888; 
-}
-
-.reviews-list {
-    display: flex;
+.reviews-list-container {
+    display: flex !important;
     flex-direction: column;
-    gap: 30px;
+    gap: 24px; 
 }

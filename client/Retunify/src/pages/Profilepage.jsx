@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
+import { Avatar, Typography, Divider, Box, Container } from '@mui/material';
 import ReviewItem from '../components/ReviewItem';
+import DefaultAvatar from '../assets/templatePFP.jpg'; 
 import '../pages/styles/Profilepage.css'; 
 
 const ProfilePage = () => {
-    // Get the username stored during the authenticate function in LoginScreen
     const username = localStorage.getItem('username') || 'User';
     
-    // Mock data representing what will eventually be fetched from Flask/SQL backend
     const [reviews] = useState([
         {
             id: 1,
@@ -25,34 +25,35 @@ const ProfilePage = () => {
     ]);
 
     return (
-        <div className="profile-container">
-            <header className="profile-header">
-                <div className="avatar-circle">
-                </div>
-                <div className="profile-info">
-                    <h1 className="username">{username}</h1>
-                </div>
-            </header>
+        <Container maxWidth="md" className="profile-mui-container">
+            {/* Header Section */}
+            <Box className="profile-header-box">
+                <Avatar 
+                    src={DefaultAvatar} 
+                    className="profile-avatar-mui"
+                />
+                <Typography variant="h4" className="profile-username-text">
+                    {username}
+                </Typography>
+            </Box>
 
-            <hr className="profile-divider" />
+            <Divider className="profile-divider-mui" />
 
-            {/* List section for the reviews */}
             <section className="reviews-section">
-                <h2 className="section-title">REVIEWS</h2>
-                <div className="reviews-list">
-                    {/* Mapping through array to populate ReviewItem components automatically */}
+                <Typography variant="h6" className="reviews-title-text">
+                    REVIEWS
+                </Typography>
+                
+                <Box className="reviews-list-container">
                     {reviews.map(item => (
                         <ReviewItem 
                             key={item.id}
-                            albumCover={item.albumCover}
-                            albumName={item.albumName}
-                            rating={item.rating}
-                            reviewText={item.reviewText}
+                            {...item} // brings in all the items from the mock data one by one 
                         />
                     ))}
-                </div>
+                </Box>
             </section>
-        </div>
+        </Container>
     );
 };
 

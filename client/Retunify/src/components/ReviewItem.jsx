@@ -1,34 +1,63 @@
 import React from 'react';
-import '../components/styles/ReviewItem.css';
+import { Box, Typography, Button, Paper, Stack } from '@mui/material';
+import EditIcon from '@mui/icons-material/Edit';
+import DeleteIcon from '@mui/icons-material/Delete';
+import './styles/ReviewItem.css'; 
 
 const ReviewItem = ({ albumCover, albumName, rating, reviewText }) => {
     return (
-        <div className="review-item">
-            {/* Left side: Album Cover remains as is */}
-            <div className="review-cover">
-                <img src={albumCover} alt={"ALBUM_IMAGE_HERE"} />
-            </div>
+        <Paper elevation={0} className="review-item-container">
+            {/* Left side: Album Cover */}
+            <Box 
+                component="img"
+                src={albumCover}
+                className="review-album-img"
+                alt={albumName}
+            />
 
-            {/* Right side: Information and Content with boxed styling */}
-            <div className="review-content">
-                <div className="boxed-info album-name-box">
-                    <h3 className="album-name">{albumName}</h3>
-                </div>
+            {/* Middle: Information and Content */}
+            <Box className="review-info-wrapper">
                 
-                <div className="boxed-info rating-box">
-                    <span className="user-rating">{rating}/5</span>
-                </div>
+                <Box className="boxed-label">
+                    <Typography variant="subtitle1" className="album-name-text">
+                        {albumName}
+                    </Typography>
+                </Box>
                 
-                <div className="boxed-info review-box">
-                    <p className="review-body">{reviewText}</p>
-                </div>
-            </div>
+                <Box className="boxed-label">
+                    <Typography variant="body2" className="rating-text">
+                        {rating}/5
+                    </Typography>
+                </Box>
+                
+                <Box className="review-text-box">
+                    <Typography variant="body2" className="review-body-text">
+                        {reviewText}
+                    </Typography>
+                </Box>
+            </Box>
+
             {/* Right side: Action Buttons */}
-            <div className="review-actions">
-                <button className="action-btn edit-review-btn">EDIT</button>
-                <button className="action-btn delete-review-btn">DELETE</button>
-            </div>
-        </div>
+            <Stack spacing={1} className="action-stack">
+                <Button 
+                    variant="contained" 
+                    size="small"
+                    startIcon={<EditIcon />}
+                    className="edit-btn-mui"
+                >
+                    EDIT
+                </Button>
+                <Button 
+                    variant="contained" 
+                    size="small"
+                    color="error"
+                    startIcon={<DeleteIcon />}
+                    className="delete-btn-mui"
+                >
+                    DELETE
+                </Button>
+            </Stack>
+        </Paper>
     );
 };
 
