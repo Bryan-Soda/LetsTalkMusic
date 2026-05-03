@@ -83,6 +83,8 @@ def add_new_member():
     if not data:
         return {'error': 'data required'}, 400
     print("Raw data:", data) #testing purposes
+
+    
     if 'username' not in data or 'password' not in data:
         return {'error': 'username and password required'}, 400
     if len(data['password']) < 12:
@@ -92,7 +94,7 @@ def add_new_member():
 
     user = Users.query.filter_by(username=name).first()
     if user is not None:
-        return {'error': 'user already exists!'}, 400
+        return {'error': 'username already exists!'}, 400
     
     #salt for encryption
     salt = bcrypt.gensalt()
@@ -236,9 +238,38 @@ def get_all_user_reviews(user_id):
     
     return jsonify(results), 200
 
-@app.route('/reviews/<int:user_id>', methods=['POST'])
-def set_review(user_id):
+@app.route('/reviews/<int:user_id>/<int:album_id>', methods=['GET'])
+def get_album_user_review(user_id, album_id):
     pass
+
+@app.route('/reviews/<int:user_id>/<int:album_id>', methods=['POST'])
+def make_review(user_id, album_id):
+    user = Users.query.get(user_id)
+
+    if user is None:
+        return {'error': 'user not found'}, 404
+    
+    data = request.get_json()
+    if 'rating' not in data: #frontend must use 'rating' json key
+        return {'error':'Must include rating'}
+    rating = float(data['rating'])
+    if not (0.0 <= rating <=5.0):
+        return{'error':'rating must be between 0-5'}
+    
+    review = data['review']
+        
+    if review is None:
+        review = ''
+    elif review.length() > 255:
+        return {'error': 'review is too large'}
+    
+    review = Reviews(user_id=user_id, album_id=album_id, review=review, rating=rating)
+
+    db.session.add(review)
+    db.session.commit()
+
+    return {"Success":f"Review Made for {album_id}!"}
+    
 
 # tabs for flask-admin
 admin.add_view(ModelView(Users,db.session))
