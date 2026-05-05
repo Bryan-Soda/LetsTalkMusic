@@ -125,6 +125,36 @@
                         "length": "3:44"
                     }
                 ]
+            },
+            {
+                "title": "Superclean",
+                "total_length": "18 min",
+                "tracks": [
+                    {
+                        "title": "I Don't Know You",
+                        "length": "3:30"
+                    },
+                    {
+                        "title": "Basta Ya",
+                        "length": "2:57"
+                    },
+                    {
+                        "title": "I Like It",
+                        "length": "3:24"
+                    },
+                    {
+                        "title": "Only in My Dreams",
+                        "length": "2:51"
+                    },
+                    {
+                        "title": "Superclean",
+                        "length": "2:36"
+                    },
+                    {
+                        "title": "Déjate Llevar",
+                        "length": "2:44"
+                    }
+                ]
             }
         ]
     },
@@ -313,6 +343,32 @@
                     {
                         "title": "Break It Off - Bonus",
                         "length": "1:36"
+                    }
+                ]
+            }
+        ]
+        
+    },
+    {
+        "artist_name": "Malcolm Todd",
+        "genre": "Alternative/Indie",
+        "bio": "BIO",
+        "albums": [
+            {
+                "title": "Sweet Boy" ,
+                "total_length": "45 min 16 sec",
+                "tracks": [
+                    {
+                        "title": "Earrings",
+                        "length": "2:31"
+                    },
+                    {
+                        "title": "Roommates",
+                        "length": "3:34"
+                    },
+                    {
+                        "title": "On My Sholder",
+                        "length": "2:49"
                     }
                 ]
             }
