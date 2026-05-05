@@ -175,14 +175,24 @@ def get_artist_albums(artist_id):
         return {'error': 'artist not found'}, 404
 
     results = []
-
+    #   May not be needed as tracklist will be revealed 
+    #   once user clicks album itself. saves on time without this:
+    
+    # tracklist = []
+    # for track in album.tracks:
+    #     tracklist.append({
+    #         "track_id": track.id,
+    #         "track_title": track.title,
+    #         "track_length": track.length,
+    #     })
     #gathers all albums from artist and their details
     for albums in artist.albums:
         results.append({
             "album_id": albums.id,
             "album_title": albums.title,
             "album_genre": albums.genre,
-            "track_length": albums.total_length,
+            "total_length": albums.total_length,
+            #"tracks": tracklist,
         })
 
     return jsonify(results), 200
@@ -205,18 +215,23 @@ def get_artist_album(artist_id, album_id):
 
     results = []
 
+        
+    tracklist = []
+    for track in album.tracks:
+        tracklist.append({
+            "track_id": track.id,
+            "track_title": track.title,
+            "track_length": track.length,
+        })
+
     results.append({
         "album_id": album_id,
         "album_title": album.title,
         "album_genre": album.genre,
-        "track_length": album.total_length,
+        "total_length": album.total_length,
+        "tracks": tracklist,
     })
     return jsonify(results), 200
-
-@app.route('/artists/<int:artist_id>/<int:album_id>/<int:track_id>', methods=['GET'])
-def get_album_tracks(artist_id, album_id, track_id):
-    # Gets a specific track's info
-    pass
 
 # get all reviews from a certain album
 @app.route('/reviews/<int:album_id>', methods=['GET'])
