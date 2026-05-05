@@ -104,7 +104,6 @@ def add_new_member():
     
     new_user = Users(username=name, password=hashed_pass, role='u')
     
-    print()
     db.session.add(new_user)
     db.session.commit()
 
@@ -143,7 +142,7 @@ def get_all_artists():
         results.append({
             "id": a.id,
             "artist_name": a.name,
-            "genre": a.overall_genre,
+            "genre": a.genre,
             "bio": a.bio,
         })
     
