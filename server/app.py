@@ -269,6 +269,11 @@ def make_review(user_id, album_id):
     if user is None:
         return {'error': 'user not found'}, 404
     
+    check_review = Reviews.query.filter_by(user_id=user_id, album_id=album_id).first()
+
+    if check_review is not None:
+        return {'error': 'Review already exists!'}
+
     data = request.get_json()
     if 'rating' not in data: #frontend must use 'rating' json key
         return {'error':'Must include rating'}
@@ -295,7 +300,8 @@ def edit_review():
     pass
 
 @app.route('/reviews/<int:user_id>/<int:album_id>', methods=['DELETE'])
-def delete_review():
+def delete_review(user_id, album_id):
+    review = Reviews.query.filter_by(user_id=user_id, album_id=album_id).first()
     pass
 
 
