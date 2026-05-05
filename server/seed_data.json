@@ -352,11 +352,11 @@
     {
         "artist_name": "Malcolm Todd",
         "genre": "Alternative/Indie",
-        "bio": "BIO",
+        "bio": "BIO3",
         "albums": [
             {
                 "title": "Sweet Boy" ,
-                "total_length": "45 min 16 sec",
+                "total_length": "45:16",
                 "tracks": [
                     {
                         "title": "Earrings",
@@ -367,7 +367,7 @@
                         "length": "3:34"
                     },
                     {
-                        "title": "On My Sholder",
+                        "title": "On My Shoulder",
                         "length": "2:49"
                     }
                 ]
