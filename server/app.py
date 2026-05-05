@@ -40,7 +40,7 @@ class Artists(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String, unique=True, nullable=False)
     genre = db.Column(db.String, nullable=False)
-    bio = db.Column(db.String, unique=True)
+    bio = db.Column(db.String, nullable=False, unique=False)
 
     albums = db.relationship('Albums', backref='artist')
 
@@ -218,6 +218,11 @@ def get_album_tracks(artist_id, album_id, track_id):
     # Gets a specific track's info
     pass
 
+# get all reviews from a certain album
+@app.route('/reviews/<int:album_id>', methods=['GET'])
+def get_all_album_reviews(album_id):
+    pass
+
 @app.route('/reviews/<int:user_id>', methods=['GET'])
 def get_all_user_reviews(user_id):
     
@@ -270,7 +275,6 @@ def make_review(user_id, album_id):
 
     return {"Success":f"Review Made for {album_id}!"}
     
-
 # tabs for flask-admin
 admin.add_view(ModelView(Users,db.session))
 admin.add_view(ModelView(Artists,db.session))
