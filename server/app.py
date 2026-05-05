@@ -302,7 +302,11 @@ def edit_review():
 @app.route('/reviews/<int:user_id>/<int:album_id>', methods=['DELETE'])
 def delete_review(user_id, album_id):
     review = Reviews.query.filter_by(user_id=user_id, album_id=album_id).first()
-    pass
+    if review is None:
+        return {'error': 'review not found'}, 404
+    db.session.delete(review)
+    db.session.commit()
+    return {'SUCCESS':'review deleted!'}, 200
 
 
 # tabs for flask-admin
