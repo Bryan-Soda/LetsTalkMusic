@@ -290,6 +290,15 @@ def make_review(user_id, album_id):
 
     return {"Success":f"Review Made for {album_id}!"}
     
+@app.route('/reviews/<int:user_id>/<int:album_id>', methods=['PUT'])
+def edit_review():
+    pass
+
+@app.route('/reviews/<int:user_id>/<int:album_id>', methods=['DELETE'])
+def delete_review():
+    pass
+
+
 # tabs for flask-admin
 admin.add_view(ModelView(Users,db.session))
 admin.add_view(ModelView(Artists,db.session))
