@@ -131,7 +131,7 @@
     {
         "artist_name": "Michael Jackson",
         "genre": "Pop",
-        "bio": "BIO",
+        "bio": "BIO1",
         "albums": [
             {
                 "title": "Thriller" ,
@@ -228,7 +228,7 @@
     {
         "artist_name": "PinkPantheress",
         "genre": "Alt-Pop",
-        "bio": "BIO",
+        "bio": "BIO2",
         "albums": [
             {
                 "title": "Fancy That" ,
