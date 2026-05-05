@@ -1,0 +1,232 @@
+/* Homepage.css – all styles moved from MUI sx props */
+
+/* Global reset & variables */
+:root {
+  --rt-bg: #0a0a0a;
+  --rt-surface: #111111;
+  --rt-surface2: #1a1a1a;
+  --rt-border: #1f1f1f;
+  --rt-text: #8a8a8a;
+  --rt-heading: #ffffff;
+  --rt-accent: #00e544;
+  --rt-accent-glow: rgba(0, 229, 68, 0.3);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: var(--rt-bg);
+  font-family: 'Geist', -apple-system, BlinkMacSystemFont, 'Poppins', sans-serif;
+  color: var(--rt-text);
+}
+
+/* Homepage container */
+.homepage {
+  background-color: var(--rt-bg);
+  min-height: 100vh;
+  color: #e0e0e0;
+}
+
+/* Top Bar */
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: 1100;
+  background-color: rgba(10, 10, 10, 0.8);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--rt-border);
+  padding: 20px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.greeting {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--rt-heading);
+}
+
+.subgreeting {
+  font-size: 0.875rem;
+  color: var(--rt-text);
+}
+
+.avatar {
+  width: 40px;
+  height: 40px;
+  background-color: var(--rt-surface2);
+  color: var(--rt-heading);
+  font-weight: 700;
+  font-size: 1rem;
+  border: 2px solid var(--rt-accent);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 12px var(--rt-accent-glow);
+  cursor: pointer;
+}
+
+/* Main content area */
+.main-content {
+  padding: 32px 40px;
+}
+
+/* Section header */
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.section-title {
+  color: var(--rt-text);
+  letter-spacing: 2px;
+  font-weight: 700;
+  font-size: 11px;
+  text-transform: uppercase;
+}
+
+.see-all-btn {
+  background: none;
+  border: none;
+  color: var(--rt-accent);
+  font-size: 0.75rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.15s;
+}
+
+.see-all-btn:hover {
+  opacity: 0.7;
+}
+
+/* Responsive grid */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 24px;
+}
+
+.grid-item {
+  width: 100%;
+}
+
+/* Album Card */
+.album-card {
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.album-card:hover {
+  transform: translateY(-4px);
+}
+
+.album-art {
+  position: relative;
+  aspect-ratio: 1 / 1;
+  border-radius: 8px;
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  transition: box-shadow 0.2s;
+}
+
+.album-card:hover .album-art {
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5), 0 0 16px rgba(0, 229, 68, 0.3);
+}
+
+.album-vinyl {
+  width: 44%;
+  height: 44%;
+  border-radius: 50%;
+  border: 5px solid;
+  opacity: 0.4;
+}
+
+.album-overlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.log-btn {
+  background-color: var(--rt-accent);
+  color: #000;
+  border: none;
+  border-radius: 6px;
+  padding: 6px 14px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  cursor: pointer;
+  font-family: inherit;
+  transition: background-color 0.15s;
+}
+
+.log-btn:hover {
+  background-color: #00c43a;
+}
+
+.album-info {
+  text-align: left;
+}
+
+.album-title {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--rt-heading);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-bottom: 2px;
+}
+
+.album-artist {
+  font-size: 0.75rem;
+  color: var(--rt-text);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-bottom: 4px;
+}
+
+.album-rating {
+  color: #00e544;
+  margin-top: 4px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .topbar {
+    padding: 16px 20px;
+  }
+  .greeting {
+    font-size: 1.25rem;
+  }
+  .main-content {
+    padding: 20px;
+  }
+  .grid {
+    gap: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .grid {
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  }
+}
