@@ -296,8 +296,33 @@ def make_review(user_id, album_id):
     return {"Success":f"Review Made for {album_id}!"}
     
 @app.route('/reviews/<int:user_id>/<int:album_id>', methods=['PUT'])
-def edit_review():
-    pass
+def edit_review(user_id, album_id):
+    data = request.get_json()
+
+    if not data:
+        return{'error': 'data required'}, 400
+    if 'rating' not in data:
+        return {'error': 'must have a rating'}, 400
+
+
+    review = Reviews.query.get(user_id=user_id, album_id=album_id)
+    if review is None:
+        return {'error':'review required to edit'}, 404
+    new_review = data['review']
+    if new_review is None:
+        new_review = ''
+    elif new_review.length() > 255:
+        return {'error': 'review is too large'}
+
+    rating = float(data['rating'])
+    if not (0.0 <= rating <=5.0):
+        return{'error':'rating must be between 0-5'}
+
+    review.rating = data['rating']
+    review.review = new_review
+    db.session.commit()
+
+    return {'SUCCESS':'Review edited!'}
 
 @app.route('/reviews/<int:user_id>/<int:album_id>', methods=['DELETE'])
 def delete_review(user_id, album_id):
