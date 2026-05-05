@@ -1,12 +1,12 @@
 import React from 'react'
 import {Routes, Route} from 'react-router-dom'
 
-import MainPage from './Test_Pages/MainTest'
+import Homepage from './Homepage.jsx'
 
 const App = () => {
   return (
     <Routes>
-      <Route path='/' element={<MainPage/>} > </Route>
+      <Route path='/' element={<Homepage/>} > </Route>
     </Routes>
   )
 }
