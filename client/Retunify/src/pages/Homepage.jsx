@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './styles/Homepage.css';
-import { Rating } from '@mui/material';
+import { Rating, Pagination } from '@mui/material';
 
 // --- Data --------------------------------------------------------------
 const RECENT = [
@@ -37,23 +37,29 @@ function AlbumCard({ album }) {
         ></div>
         {hovered && (
           <div className="album-overlay">
-            <button className="log-btn">+ Log</button>
           </div>
         )}
       </div>
       <div className="album-info">
-        <div className="album-title">{album.title}</div>
         <div className="album-artist">{album.artist}</div>
-        {album.rating && (
-          <Rating value={album.rating} readOnly size="small" className="album-rating" />
-        )}
+        
       </div>
     </div>
   );
 }
 
+const PAGE_SIZE = 5;
+
 // --- Main Homepage ----------------------------------------------------
 export default function Homepage() {
+  const [currentPage, setCurrentPage] = useState(1);
+
+  const totalPages = Math.ceil(RECENT.length / PAGE_SIZE);
+  const paginatedAlbums = RECENT.slice(
+    (currentPage - 1) * PAGE_SIZE,
+    currentPage * PAGE_SIZE
+  );
+
   return (
     <div className="homepage">
       {/* Top bar */}
@@ -67,15 +73,40 @@ export default function Homepage() {
       {/* Main content – Recently Logged */}
       <div className="main-content">
         <div className="section-header">
-          <div className="section-title">RECENTLY LOGGED</div>
+          <div className="section-title">Explore these Artists!</div>
           <button className="see-all-btn">See all</button>
         </div>
         <div className="grid">
-          {RECENT.map((album) => (
+          {paginatedAlbums.map((album) => (
             <div key={album.id} className="grid-item">
               <AlbumCard album={album} />
             </div>
           ))}
+        </div>
+
+        {/* Pagination controls */}
+        <div className="pagination">
+          <Pagination
+            count={totalPages}
+            page={currentPage}
+            onChange={(_, value) => setCurrentPage(value)}
+            sx={{
+              '& .MuiPaginationItem-root': {
+                color: '#8a8a8a',
+                borderColor: '#2a2a2a',
+              },
+              '& .MuiPaginationItem-root:hover': {
+                borderColor: '#00e544',
+                color: '#00e544',
+              },
+              '& .Mui-selected': {
+                backgroundColor: '#00e544 !important',
+                color: '#000 !important',
+              },
+            }}
+            variant="outlined"
+            shape="rounded"
+          />
         </div>
       </div>
     </div>
