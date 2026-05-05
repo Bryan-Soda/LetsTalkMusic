@@ -260,7 +260,27 @@ def get_all_user_reviews(user_id):
 
 @app.route('/reviews/<int:user_id>/<int:album_id>', methods=['GET'])
 def get_album_user_review(user_id, album_id):
-    pass
+    user = Users.query.get(user_id)
+
+    if user is None:
+        return {'user':'user not found'}, 404
+    
+    review = Reviews.query.get(user_id=user_id, album_id=album_id).first()
+
+    if review is None:
+        return {'error': 'review not found'}, 404
+
+    results = []
+    
+    results.append({
+        "review_id": review.id,
+        "album_id": review.album_id,
+        "review": review.review,
+        "rating": review.rating,
+        "album_title": review.album.title, 
+    })
+    
+    return jsonify(results), 200
 
 @app.route('/reviews/<int:user_id>/<int:album_id>', methods=['POST'])
 def make_review(user_id, album_id):
