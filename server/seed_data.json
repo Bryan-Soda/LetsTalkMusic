@@ -352,7 +352,7 @@
     {
         "artist_name": "Malcolm Todd",
         "genre": "Alternative/Indie",
-        "bio": "BIO",
+        "bio": "BIO3",
         "albums": [
             {
                 "title": "Sweet Boy" ,
@@ -369,9 +369,134 @@
                     {
                         "title": "On My Sholder",
                         "length": "2:49"
+                    },
+                    {
+                        "title": "Thailand",
+                        "length": "3:55"
+                    },
+                    {
+                        "title": "Ladygirl",
+                        "length": "2:40"
+                    },
+                    {
+                        "title": "Sweet Boy",
+                        "length": "3:00"
+                    },
+                    {
+                        "title": "Rodrick Rules",
+                        "length": "3:03"
+                    },
+                    {
+                        "title": "4Me 4Me",
+                        "length": "3:30"
+                    },
+                    {
+                        "title": "Art House",
+                        "length": "2:57"
+                    },
+                    {
+                        "title": "Sore Throat",
+                        "length": "2:55"
+                    },
+                    {
+                        "title": "Rockstar Boyfriend",
+                        "length": "1:47"
+                    },
+                    {
+                        "title": "New Friends(feat. Eem Triplin)",
+                        "length": "2:10"
+                    },
+                    {
+                        "title": "Accutane",
+                        "length": "3:13"
+                    },
+                    {
+                        "title": "Hot in NY",
+                        "length": "1:58"
+                    },
+                    {
+                        "title": "Pillow",
+                        "length": "2:53"
+                    },
+                    {
+                        "title": "Mr.Incorrect",
+                        "length": "2:50"
                     }
                 ]
             }
+        ]
+    },
+    {
+        "artist_name": "Tame Impala",
+        "genre": "Alternative/Indie",
+        "bio": "BIO4",
+        "albums": [
+            {
+                "title": "Currents",
+                "total_length": "Unknown",
+                "tracks": [
+                    {
+                        "title": "Let It Happen",
+                        "length": "7:47"
+                    },
+                    {
+                        "title": "Nangs",
+                        "length": "1:47"
+                    },
+                    {
+                        "title": "The Moment",
+                        "length": "4:15"
+                    },
+                    {
+                        "title":"Yes I'm Changing",
+                        "length": "4:30"
+                    },
+                    {
+                        "title": "Eventually",
+                        "length": "5:18"
+                    },
+                    {
+                        "title": "Gossip",
+                        "length": "0:55"
+                    },
+                    {
+                        "title": "The Less I Know The Better",
+                        "length": "3:36"
+                    },
+                    {
+                        "title": "Past Life",
+                        "length": "1:48"
+                    },
+                    {
+                        "title": "Disciples",
+                        "length": "1:48"
+                    },
+                    {
+                        "title": "Cause I'm A Man",
+                        "length": "4:01"
+                    },
+                    {
+                        "title": "Reality in Motion",
+                        "length": "4:12"
+                    }, 
+                    {
+                        "title": "Love/Paranoia",
+                        "length": "3:06"
+                    },
+                    {
+                        "title": "New Person, Same Old Mistake",
+                        "length": "6:02"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "artist_name": "Daft Punk",
+        "genre": "Electronic",
+        "bio": "BIO5",
+        "albums": [
+            
         ]
     }
 ]
