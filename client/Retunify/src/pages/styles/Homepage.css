@@ -136,14 +136,6 @@ body {
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5), 0 0 16px rgba(0, 229, 68, 0.3);
 }
 
-.album-vinyl {
-  width: 44%;
-  height: 44%;
-  border-radius: 50%;
-  border: 5px solid;
-  opacity: 0.4;
-}
-
 .album-overlay {
   position: absolute;
   inset: 0;
@@ -184,9 +176,14 @@ body {
   margin-bottom: 2px;
 }
 
-.album-rating {
-  color: #00e544;
-  margin-top: 4px;
+.view-text {
+  /* This is the class name in your current Homepage.jsx */
+  color: #00e544; /* Neon green to match the theme */
+  font-weight: bold;
+  font-size: 0.8rem;
+  
+  /* You can add a subtle text-shadow for that 'Matrix' glow effect */
+  text-shadow: 0 0 5px rgba(0, 229, 68, 0.4);
 }
 
 /* Responsive adjustments */
@@ -209,4 +206,57 @@ body {
   .grid {
     grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
   }
+}
+
+/* The wrapper for the whole card */
+.artist-card-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.2s ease;
+  cursor: pointer;
+}
+
+.artist-card-container:hover {
+  transform: translateY(-5px);
+}
+
+/* Ensure the circle stays a circle */
+.album-art {
+  width: 120px; /* or whatever size fits your grid */
+  height: 120px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  border: 2px solid rgba(255, 255, 255, 0.05);
+}
+
+/* Styling the labels below */
+.artist-label {
+  margin-top: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.artist-name-text {
+  color: #ffffff;
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.artist-genre-text {
+  color: #00e544; 
+  font-size: 0.7rem;
+  font-weight: 500;
+  opacity: 0.8;
+}
+
+.artist-card-link {
+  text-decoration: none;
 }
