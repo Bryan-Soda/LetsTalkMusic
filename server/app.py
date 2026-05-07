@@ -128,7 +128,7 @@ def authenticate():
     print("hashed password: ", submitted_password.encode('utf-8') )
     if bcrypt.checkpw(submitted_password.encode('utf-8'), user.password):
         print("Password Matches!")
-        return {'role': 'user'}
+        return {'role': 'user', 'id': user.id}
     else:
         return{'error':'incorrect password'}, 400
 
@@ -233,7 +233,7 @@ def get_artist_album(artist_id, album_id):
     return jsonify(results), 200
 
 # get all reviews from a certain album
-@app.route('/reviews/<int:album_id>', methods=['GET'])
+@app.route('/reviews/album/<int:album_id>', methods=['GET'])
 def get_all_album_reviews(album_id):
     all_reviews = Reviews.query.get(album_id=album_id)
 
@@ -252,7 +252,7 @@ def get_all_album_reviews(album_id):
     return {'SUCCESS':'Got all album reviews'}, 200
     
     
-@app.route('/reviews/<int:user_id>', methods=['GET'])
+@app.route('/reviews/user/<int:user_id>', methods=['GET'])
 def get_all_user_reviews(user_id):
     
     user = Users.query.get(user_id)
