@@ -1,0 +1,377 @@
+[
+    {
+        "artist_name": "The Marias",
+        "genre": "Indie",
+        "bio": "BIO",
+        "albums": [
+            {
+                "title": "CINEMA" ,
+                "total_length": "39:50",
+                "tracks": [
+                    {
+                        "title": "Just a Feeling",
+                        "length": "1:22"
+                    },
+                    {
+                        "title": "Calling U Back",
+                        "length": "3:19"
+                    },
+                    {
+                        "title": "Hush",
+                        "length": "3:01"
+                    },
+                    {
+                        "title": "All I Really Want Is You",
+                        "length": "3:11"
+                    },
+                    {
+                        "title": "Hable con Ella",
+                        "length": "0:33"
+                    },
+
+                    {
+                        "title": "Little by Little",
+                        "length": "2:58"
+                    },
+                    {
+                        "title": "Heavy",
+                        "length": "4:13"
+                    },
+                    {
+                        "title": "Un Million",
+                        "length": "2:47"
+                    },
+                    {
+                        "title": "Spin Me Around",
+                        "length": "2:26"
+                    },
+                    {
+                        "title": "The Mice Inside This Room",
+                        "length": "4:08"
+                    },
+                    {
+                        "title": "To Say Hello",
+                        "length": "3:22"
+                    },
+                    {
+                        "title": "Fog as a Bullet",
+                        "length": "2:57"
+                    },
+                    {
+                        "title": "Talk to Her",
+                        "length": "5:26"
+                    }
+                ]
+            },
+            {
+                "title": "Submarine",
+                "total_length": "45:13",
+                "tracks":[
+                    {
+                        "title": "Ride",
+                        "length": "1:21"
+                    },
+                    {
+                        "title": "Hamptons",
+                        "length": "3:08"
+                    },
+                    {
+                        "title": "Echo",
+                        "length": "3:29"
+                    },
+                    {
+                        "title": "Run Your Mouth",
+                        "length": "2:40"
+                    },
+
+                    {
+                        "title": "Real Life",
+                        "length": "3:26"
+                    },
+                    {
+                        "title": "Blur",
+                        "length": "3:45"
+                    },
+                    {
+                        "title": "Paranoia",
+                        "length": "3:51"
+                    },
+                    {
+                        "title": "Lejos de Ti",
+                        "length": "2:59"
+                    },
+                    {
+                        "title": "Love You Anyway",
+                        "length": "3:57"
+                    },
+                    {
+                        "title": "Ay No Puedo",
+                        "length": "3:01"
+                    },
+                    {
+                        "title": "No One Noticed",
+                        "length": "3:56"
+                    },
+                    {
+                        "title": "Vicious Sensitive Robot",
+                        "length": "3:14"
+                    },
+                    {
+                        "title": "If Only",
+                        "length": "2:36"
+                    },
+                    {
+                        "title": "Sienna",
+                        "length": "3:44"
+                    }
+                ]
+            },
+            {
+                "title": "Superclean",
+                "total_length": "18 min",
+                "tracks": [
+                    {
+                        "title": "I Don't Know You",
+                        "length": "3:30"
+                    },
+                    {
+                        "title": "Basta Ya",
+                        "length": "2:57"
+                    },
+                    {
+                        "title": "I Like It",
+                        "length": "3:24"
+                    },
+                    {
+                        "title": "Only in My Dreams",
+                        "length": "2:51"
+                    },
+                    {
+                        "title": "Superclean",
+                        "length": "2:36"
+                    },
+                    {
+                        "title": "Déjate Llevar",
+                        "length": "2:44"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "artist_name": "Michael Jackson",
+        "genre": "Pop",
+        "bio": "BIO1",
+        "albums": [
+            {
+                "title": "Thriller" ,
+                "total_length": "42:19",
+                "tracks": [
+                    {
+                        "title": "Wanna Be Startin' Somethin'",
+                        "length": "6:03"
+                    },
+                    {
+                        "title": "Baby Be Mine",
+                        "length": "4:20"
+                    },
+                    {
+                        "title": "The Girl is Mine (with Paul McCartney)",
+                        "length": "3:42"
+                    },
+                    {
+                        "title": "Thriller",
+                        "length": "5:58"
+                    },
+                    {
+                        "title": "Beat It",
+                        "length": "4:18"
+                    },
+
+                    {
+                        "title": "Billie Jean",
+                        "length": "4:53"
+                    },
+                    {
+                        "title": "Human Nature",
+                        "length": "4:05"
+                    },
+                    {
+                        "title": "P.Y.T.(Pretty Young Thing)",
+                        "length": "3:58"
+                    },
+                    {
+                        "title": "The Lady in My Life",
+                        "length": "4:58"
+                    }
+                ]
+            },
+            {
+                "title": "Off the Wall",
+                "total_length": "42:21",
+                "tracks":[
+                    {
+                        "title": "Don't Stop 'Til You Get Enough",
+                        "length": "6:04"
+                    },
+                    {
+                        "title": "Rock with You - Single Version",
+                        "length": "3:08"
+                    },
+                    {
+                        "title": "Workin' Day and Night",
+                        "length": "5:12"
+                    },
+                    {
+                        "title": "Get on the Floor",
+                        "length": "4:37"
+                    },
+
+                    {
+                        "title": "Off the Wall",
+                        "length": "4:05"
+                    },
+                    {
+                        "title": "Girlfriend",
+                        "length": "3:04"
+                    },
+                    {
+                        "title": "She's Out of My Life",
+                        "length": "3:38"
+                    },
+                    {
+                        "title": "I Can't Help It",
+                        "length": "4:29"
+                    },
+                    {
+                        "title": "It's the Falling in Love",
+                        "length": "3:48"
+                    },
+                    {
+                        "title": "Burn this Disco Out",
+                        "length": "3:41"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "artist_name": "PinkPantheress",
+        "genre": "Alt-Pop",
+        "bio": "BIO2",
+        "albums": [
+            {
+                "title": "Fancy That" ,
+                "total_length": "20:33",
+                "tracks": [
+                    {
+                        "title": "Illegal",
+                        "length": "2:29"
+                    },
+                    {
+                        "title": "Girl Like Me",
+                        "length": "2:25"
+                    },
+                    {
+                        "title": "Tonight",
+                        "length": "2:54"
+                    },
+                    {
+                        "title": "Intermission",
+                        "length": "0:24"
+                    },
+                    {
+                        "title": "Noises",
+                        "length": "1:44"
+                    },
+
+                    {
+                        "title": "Nice to Know You",
+                        "length": "2:50"
+                    },
+                    {
+                        "title": "Stateside",
+                        "length": "2:48"
+                    },
+                    {
+                        "title": "Romeo",
+                        "length": "2:34"
+                    }
+                ]
+            },
+            {
+                "title": "to hell with it",
+                "total_length": "18:36",
+                "tracks":[
+                    {
+                        "title": "Pain",
+                        "length": "1:38"
+                    },
+                    {
+                        "title": "I Must Apologize",
+                        "length": "1:48"
+                    },
+                    {
+                        "title": "Last Valentines",
+                        "length": "1:13"
+                    },
+                    {
+                        "title": "Passion",
+                        "length": "2:18"
+                    },
+
+                    {
+                        "title": "Just for Me",
+                        "length": "1:56"
+                    },
+                    {
+                        "title": "Noticed I Cried",
+                        "length": "1:22"
+                    },
+                    {
+                        "title": "Reason",
+                        "length": "2:11"
+                    },
+                    {
+                        "title": "All My Friends Know",
+                        "length": "1:58"
+                    },
+                    {
+                        "title": "Nineteen",
+                        "length": "2:33"
+                    },
+                    {
+                        "title": "Break It Off - Bonus",
+                        "length": "1:36"
+                    }
+                ]
+            }
+        ]
+        
+    },
+    {
+        "artist_name": "Malcolm Todd",
+        "genre": "Alternative/Indie",
+        "bio": "BIO4",
+        "albums": [
+            {
+                "title": "Sweet Boy" ,
+                "total_length": "45:16",
+                "tracks": [
+                    {
+                        "title": "Earrings",
+                        "length": "2:31"
+                    },
+                    {
+                        "title": "Roommates",
+                        "length": "3:34"
+                    },
+                    {
+                        "title": "On My Shoulder",
+                        "length": "2:49"
+                    }
+                ]
+            }
+        ]
+    }
+]
