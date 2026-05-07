@@ -433,7 +433,7 @@
         "albums": [
             {
                 "title": "Currents",
-                "total_length": "Unknown",
+                "total_length": "51 min 06 sec",
                 "tracks": [
                     {
                         "title": "Let It Happen",
@@ -496,7 +496,630 @@
         "genre": "Electronic",
         "bio": "BIO5",
         "albums": [
-            
+            {
+                "title": "Random Access Memories",
+                "total_length": "74 min 24 sec",
+                "tracks": [
+                    {
+                        "title": "Give Life back to Music",
+                        "length": "4:34"
+                    },
+                    {
+                        "title": "The Game of Love",
+                        "length": "5:22"
+                    },
+                    {
+                        "title": "Giorgio by Moroder",
+                        "length": "9:04"
+                    },
+                    {
+                        "title": "Within",
+                        "length": "3:48"
+                    },
+                    {
+                        "title": "Instant Crush",
+                        "length": "5:38"
+                    },
+                    {
+                        "title": "Lose Yourself to Dance",
+                        "length": "5:53"
+                    },
+                    {
+                        "title": "Touch",
+                        "length": "8:18"
+                    },
+                    {
+                        "title": "Get Lucky",
+                        "length": "6:09"
+                    },
+                    {
+                        "title": "Beyond",
+                        "length": "4:50"
+                    },
+                    {
+                        "title": "Motherboard",
+                        "length": "5:41"
+                    },
+                    {
+                        "title": "Fragments of Time",
+                        "length": "4:39"
+                    },
+                    {
+                        "title": "Doin' It Right",
+                        "length": "4:11"
+                    },
+                    {
+                        "title": "Contract",
+                        "length": "6:21"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "artist_name": "Yumi Zouma",
+        "genre": "Alternative/Indie",
+        "bio": "BIO6",
+        "albums": [
+            {
+                "title": "EP III",
+                "total_length": "43 min 20 sec",
+                "tracks": [
+                    {
+                        "title": "Powder Blue/Cascine Park",
+                        "length": "3:48"
+                    },
+                    {
+                        "title": "Crush (It's Late, Just Stay)",
+                        "length": "3:32"
+                    },
+                    {
+                        "title": "Looking Over Shoulders",
+                        "length": "3:28"
+                    },
+                    {
+                        "title": "In Camera",
+                        "length": "3:46"
+                    },
+                    {
+                        "title": "Grands Boulevards",
+                        "length": "3:34"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "artist_name": "Kendrick Lamar",
+        "genre": "Hip-Hop/Rap",
+        "bio": "BIO7",
+        "albums": [
+            {
+                "title": "Good Kid, M.A.A.D City",
+                "total_length": "68 min 23 sec",
+                "tracks": [
+                    {
+                        "title": "Sherane a.k.a Master Splinter's Daughter",
+                        "length": "4:33"
+                    },
+                    {
+                        "title": "Bitch, Don't Kill My Vibe",
+                        "length": "5:10"
+                    },
+                    {
+                        "title": "Backseat Freestyle",
+                        "length": "5:10"
+                    },
+                    {
+                        "length": "The Art of Peer Pressure",
+                        "title": "5:24"
+                    },
+                    {
+                        "title": "Money Tree",
+                        "length": "6:26"
+                    },
+                    {
+                        "title": "Poetic Justice",
+                        "length": "5:00"
+                    },
+                    {
+                        "title": "good kid",
+                        "length": "3:34"
+                    },
+                    {
+                        "title": "M.A.A.D City",
+                        "length": "5:50"
+                    },
+                    {
+                        "title": "Swimming Pools (Drank)",
+                        "length": "5:13"
+                    },
+                    {
+                        "title": "Sing About Me, I'm Dying of Thirst", 
+                        "length": "12:03"
+                    }, 
+                    {
+                        "title": "Real",
+                        "length": "7:23"
+                    },
+                    {
+                        "title": "Compton",
+                        "length": "4:08"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "artist_name": "Radiohead",
+        "genre": "Alternative/Indie",
+        "bio": "BIO8",
+        "albums": [
+            {
+                "title": "In Rainbows",
+                "total_length": "42 min 39 sec",
+                "tracks": [
+                    {
+                        "title": "15 Step",
+                        "length": "3:57"
+                    },
+                    {
+                        "title": "Bodysnatchers", 
+                        "length": "4:02"
+                    },
+                    {
+                        "title": "Nude",
+                        "length": "4:15"
+                    },
+                    {
+                        "title": "Weird Fishes/Arpeggi", 
+                        "length": "5:18"
+                    },
+                    {
+                        "title": "All I Need",
+                        "length": "3:48"
+                    },
+                    {
+                        "title": "Faust Arp",
+                        "length": "2:09"
+                    },
+                    {
+                        "title": "Reckoner",
+                        "length": "4:50"
+                    },
+                    {
+                        "title": "House of Cards",
+                        "length": "5:28"
+                    },
+                    {
+                        "title": "Jigsaw Falling into Place",
+                        "length": "4:08"
+                    },
+                    {
+                        "title": "Videotape",
+                        "length": "4:39"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "artist_name": "Clario",
+        "genre": "Alternative/Indie",
+        "bio": "BIO9",
+        "albums": [
+            {
+                "title": "Immunity",
+                "total_length": "43 min 53 sec",
+                "track": [
+                    {
+                        "title": "Alewife",
+                        "length": "3:50"
+                    },
+                    {
+                        "title": "Impossible",
+                        "length": "3:50"
+                    },
+                    {
+                        "title": "Closer to You",
+                        "length": "3:04"
+                    },
+                    {
+                        "title": "North",
+                        "length": "3:33"
+                    },
+                    {
+                        "title": "Bags",
+                        "length": "4:20"
+                    },
+                    {
+                        "title": "Softly",
+                        "length": "3:05"
+                    },
+                    {
+                        "title": "Sofia",
+                        "length": "3:08"
+                    },
+                    {
+                        "title": "White Flag",
+                        "length": "3:01"
+                    },
+                    {
+                        "title": "Feel Something",
+                        "length": "2:52"
+                    },
+                    {
+                        "title": "Sinking",
+                        "length": "3:10"
+                    },
+                    {
+                        "title": "I Wouldn't Ask You",
+                        "length": "6:56"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "artist_name": "Tyler, The Creator",
+        "genre": "Hip-Hop/Rap",
+        "bio": "BIO10",
+        "albums": [
+            {
+                "title": "CHROMAKOPIA",
+                "total_length": "52 min 54 sec",
+                "tracks": [
+                    {
+                        "title": "St. Chroma",
+                        "length": "3:17"
+                    },
+                    {
+                        "title": "Rah Tah Tah",
+                        "length": "2:45"
+                    },
+                    {
+                        "title": "Noid",
+                        "length": "4:44"
+                    },
+                    {
+                        "title": "Darling, I",
+                        "length": "4:13"
+                    },
+                    {
+                        "title": "Hey Jane",
+                        "length": "4:00"
+                    },
+                    {
+                        "title": "I Killed You",
+                        "length": "2:48"
+                    },
+                    {
+                        "title": "Judge Judy",
+                        "length": "4:29"
+                    },
+                    {
+                        "title": "Sticky",
+                        "length": "4:15"
+                    },
+                    {
+                        "title": "Take Your Mask Off",
+                        "length": "4:03"
+                    },
+                    {
+                        "title": "Tomorrow",
+                        "length": "3:02"
+                    },
+                    {
+                        "title": "Thought I was Dead",
+                        "length": "3:27"
+                    },
+                    {
+                        "title": "Like Him",
+                        "length": "4:38"
+                    },
+                    {
+                        "title": "Ballon",
+                        "length": "2:34"
+                    },
+                    {
+                        "title": "Hope You Find Your Way Home",
+                        "length": "4:29"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "artist_name": "Sabrina Carpenter",
+        "genre": "Pop",
+        "bio": "BIO11",
+        "albums": [
+            {
+                "title": "Short n' Sweet",
+                "total_length": "36 min 15 secs",
+                "tracks": [
+                    {
+                        "title": "Taste",
+                        "length": "2:37"
+                    },
+                    {
+                        "title": "Please Please Please",
+                        "length": "3:06"
+                    },
+                    {
+                        "title": "Good Graces",
+                        "length": "3:05"
+                    },
+                    {
+                        "title": "Sharpest Tool",
+                        "length": "3:38"
+                    },
+                    {
+                        "title": "Coincidence",
+                        "length": "2:44"
+                    },
+                    {
+                        "title": "Bed Chem",
+                        "length": "2:51"
+                    },
+                    {
+                        "title": "Espresso",
+                        "length": "2:55"
+                    },
+                    {
+                        "title": "Dumb & Poetic", 
+                        "length": "2:13"
+                    },
+                    {
+                        "title": "Slim Pickins",
+                        "length": "2:32"
+                    },
+                    {
+                        "title": "Juno",
+                        "length": "3:43"
+                    },
+                    {
+                        "title": "Lie to Girls",
+                        "length": "3:22"
+                    },
+                    {
+                        "title": "Don't Smile",
+                        "length": "3:26"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "artist_name": "MJ Lenderman",
+        "genre": "Alternative/Indie",
+        "bio": "BIO12",
+        "albums": [
+            {
+                "title": "Manning Fireworks",
+                "total_length": "37 min 13 sec",
+                "tracks": [
+                    {
+                        "title": "Manning Fireworks",
+                        "length": "3:20"
+                    },
+                    {
+                        "title": "Joker Lips",
+                        "length": "3:02"
+                    },
+                    {
+                        "title": "Rudolph",
+                        "length": "3:05"
+                    },
+                    {
+                        "title": "Wristwatch",
+                        "length": "3:32"
+                    },
+                    {
+                        "title": "She's Leaving You",
+                        "length": "3:47"
+                    },
+                    {
+                        "title": "Rip Torn",
+                        "length": "3:37"
+                    },
+                    {
+                        "title": "You Don't Know the Shape I'm In",
+                        "length": "3:40"
+                    },
+                    {
+                        "title": "On My Knees",
+                        "length": "3:10"
+                    },
+                    {
+                        "title": "Bark at the Moon",
+                        "length": "10:00"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "artist_name": "Big Thief",
+        "genre": "Alternative/Indie",
+        "bio": "BIO13",
+        "albums": [
+            {
+                "title": "Two Hands",
+                "total_length": "39 min 39 sec",
+                "tracks": [
+                    {
+                        "title": "Rock and Sing",
+                        "length": "2:03"
+                    },
+                    {
+                        "title": "Forgotten Eyes",
+                        "length": "3:31"
+                    },
+                    {
+                        "title": "The Toy",
+                        "length": "4:16"
+                    },
+                    {
+                        "title": "Two Hands",
+                        "length": "3:52"
+                    },
+                    {
+                        "title": "Those Girls",
+                        "length": "3:22"
+                    },
+                    {
+                        "title": "Shoulders",
+                        "length": "3:13"
+                    },
+                    {
+                        "title": "Not", 
+                        "length": "6:07"
+                    },
+                    {
+                        "title": "Wolf",
+                        "length": "4:42"
+                    },
+                    {
+                        "title": "Replaced",
+                        "length": "4:54"
+                    },
+                    {
+                        "title": "Cut My Hair",
+                        "length": "3:36"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "artist_name": "Adrianne Lenker",
+        "genre": "Alternative/Indie",
+        "bio": "BIO14",
+        "albums": [
+            {
+                "title": "Bright Future",
+                "total_length": "43:37",
+                "tracks": [
+                    {
+                        "title": "Real House", 
+                        "length": "5:58"
+                    },
+                    {
+                        "title": "Sadness As A Gift",
+                        "length": "4:19"
+                    },
+                    {
+                        "title": "Fool",
+                        "length": "2:54"
+                    },
+                    {
+                        "title": "No Machine",
+                        "length": "3:00"
+                    },
+                    {
+                        "title": "Free Treasure",
+                        "length": "3:35"
+                    },
+                    {
+                        "title": "Vampire Empire",
+                        "length": "3:55"
+                    },
+                    {
+                        "title": "Evol",
+                        "length": "4:42"
+                    },
+                    {
+                        "title": "Candyland",
+                        "length": "3:10"
+                    },
+                    {
+                        "title": "Already Lost",
+                        "length": "3:27"
+                    },
+                    {
+                        "title": "Cell Phone Says",
+                        "length": "2:38"
+                    },
+                    {
+                        "title": "Donut Seam",
+                        "length": "2:25"
+                    },
+                    {
+                        "title": "Ruined",
+                        "length": "4:34"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "artist_name": "Halsey",
+        "genre": "Pop",
+        "bio": "BIO15",
+        "albums": [
+            {
+                "title": "The Great Impersonator",
+                "total_length": "66 min 07 sec",
+                "tracks": [
+                    {
+                        "title": "Only Living Girl in LA",
+                        "length": "6:14"
+                    },
+                    {
+                        "title": "Ego",
+                        "length": "3:18"
+                    },
+                    {
+                        "title": "Dog Years",
+                        "length": "4:03"
+                    },
+                    {
+                        "title": "Letter to God (1974)",
+                        "length": "2:11"
+                    },
+                    {
+                        "title": "Hometown",
+                        "length": "3:24"
+                    },
+                    {
+                        "title": "I Never Loved You",
+                        "length": "4:09"
+                    },
+                    {
+                        "title": "Darwinism",
+                        "length": "3:45"
+                    },
+                    {
+                        "title": "Lonely is the Muse",
+                        "length": "4:01"
+                    },
+                    {
+                        "title": "Arsonist",
+                        "length": "4:38"
+                    },
+                    {
+                        "title": "Life of the Spider (Draft)",
+                        "length": "3:30"
+                    },
+                    {
+                        "title": "Hurt Feelings",
+                        "length": "3:54"
+                    },
+                    {
+                        "title": "Lucky",
+                        "length": "3:18"
+                    },
+                    {
+                        "title": "Letter to God (1998)",
+                        "length": "2:50"
+                    },
+                    {
+                        "title": "The Great Impersonator",
+                        "length": "3:22"
+                    }
+                ]
+            }
         ]
     }
 ]
