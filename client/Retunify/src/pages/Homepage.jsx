@@ -105,7 +105,7 @@ export default function Homepage() {
   const [currentPage, setCurrentPage] = useState(1);
   const PAGE_SIZE = 5;
 
-  const [isPopupOpen, setPopupOpen] = useState(true);
+  const [isPopupOpen, setPopupOpen] = useState(false);
 
   useEffect(() => {
     fetch('http://127.0.0.1:5000/artists')
@@ -149,13 +149,13 @@ export default function Homepage() {
     </Typography>
 
     <Typography variant="h6" sx={{ mb: 2, fontWeight: 'bold' }}>
-      What can you do here?
+      What can YOU do here?
     </Typography>
 
     <Typography variant="body2" sx={{ color: '#8a8a8a', lineHeight: '1.6' }}>
-      • Explore new artists or find your favorites.<br/>
-      • View album details and track lengths.<br/>
-      • Click the help icon anytime to see these instructions again!
+      • Explore NEW artists or find your favorites.<br/>
+      • VIEW album reviews from others or CREATE your own.<br/>
+      • Click the help button anytime to see these instructions again!<br/>
     </Typography>
   </DialogContent>
 
@@ -175,12 +175,32 @@ export default function Homepage() {
     </Button>
   </DialogActions>
 </Dialog>
-      <div className="topbar">
-        <div>
-          <div className="greeting">LetsTalkMusic!</div>
-        </div>
-        <div className="avatar">J</div>
-      </div>
+<div className="topbar">
+  <div style={{ display: 'flex', alignItems: 'center', gap: '15px' }}>
+    <div className="greeting">LetsTalkMusic!</div>
+    
+    <Button 
+      onClick={() => setPopupOpen(true)} 
+      variant="outlined"
+      sx={{ 
+        color: '#00e544', 
+        borderColor: 'rgba(0, 229, 68, 0.5)',
+        textTransform: 'none', // Keeps it from being all caps
+        fontWeight: 'bold',
+        fontSize: '0.75rem',
+        padding: '2px 10px',
+        '&:hover': { 
+          borderColor: '#00e544', 
+          backgroundColor: 'rgba(0, 229, 68, 0.05)' 
+        } 
+      }}
+    >
+      What can I do here?
+    </Button>
+  </div>
+  
+  <div className="avatar">J</div>
+</div>
 
       <div className="main-content">
         <div className="section-header">
