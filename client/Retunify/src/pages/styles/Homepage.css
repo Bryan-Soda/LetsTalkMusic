@@ -42,7 +42,7 @@ body {
 }
 
 .greeting {
-  font-size: 1.5rem;
+  font-size: 2rem !important;
   font-weight: 600;
   color: #ffffff;
 }
@@ -208,6 +208,14 @@ body {
   .grid {
     grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
   }
+}
+
+.artist-image-circle {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover; /* Prevents stretching */
+  display: block;
 }
 
 /* The wrapper for the whole card */

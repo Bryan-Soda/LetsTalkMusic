@@ -9,6 +9,9 @@ function ArtistCard({ artist }) {
   const colors = ['#d4a853', '#2d6a4f', '#5e4b8b', '#c9a14a', '#b5c4d1', '#8b3a3a', '#4a7c59', '#c2a8d0'];
   const artistColor = colors[artist.id % colors.length];
 
+  // Hardcoded image URL for The Marias
+  const mariasImageUrl = "./src/assets/TheMarias.jpg";
+
   return (
     <Link to={`/artists/${artist.id}`} className="artist-card-link">
       <div
@@ -20,7 +23,12 @@ function ArtistCard({ artist }) {
         <div
           className="album-art" 
           style={{
-            background: `linear-gradient(135deg, ${artistColor}cc, ${artistColor}66)`,
+            /* Use the image if it's The Marias, otherwise use the gradient */
+            background: artist.artist_name === "The Marias" 
+              ? `url(${mariasImageUrl}) center/cover no-repeat` 
+              : `linear-gradient(135deg, ${artistColor}cc, ${artistColor}66)`,
+            position: 'relative',
+            overflow: 'hidden'
           }}
         >
           {hovered && (
@@ -49,7 +57,6 @@ export default function Homepage() {
     fetch('http://127.0.0.1:5000/artists')
       .then(response => response.json())
       .then(data => {
-        // Ensure data is an array before setting state
         if (Array.isArray(data)) {
           setArtists(data);
         }
@@ -67,7 +74,7 @@ export default function Homepage() {
     <div className="homepage">
       <div className="topbar">
         <div>
-          <div className="greeting">Hi There, LetsTalkMusic! </div>
+          <div className="greeting">LetsTalkMusic!</div>
         </div>
         <div className="avatar">J</div>
       </div>
