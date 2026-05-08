@@ -1,6 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import './styles/Homepage.css';
-import { Pagination } from '@mui/material';
+import { 
+  Pagination, 
+  Dialog, 
+  DialogTitle, 
+  DialogContent, 
+  DialogActions, 
+  Button, 
+  Typography 
+} from '@mui/material';
 import { Link } from 'react-router-dom';
 
 import AdrianneL from '../assets/ArtistImages/AdrianneL.jpg';
@@ -53,6 +61,8 @@ function ArtistCard({ artist }) {
   const colors = ['#d4a853', '#2d6a4f', '#5e4b8b', '#c9a14a', '#b5c4d1', '#8b3a3a', '#4a7c59', '#c2a8d0'];
   const artistColor = colors[artist.id % colors.length];
 
+  
+
   // Try to find the image in our map
   const imageAsset = artistImageMap[artist.artist_name];
 
@@ -95,6 +105,8 @@ export default function Homepage() {
   const [currentPage, setCurrentPage] = useState(1);
   const PAGE_SIZE = 5;
 
+  const [isPopupOpen, setPopupOpen] = useState(true);
+
   useEffect(() => {
     fetch('http://127.0.0.1:5000/artists')
       .then(response => response.json())
@@ -114,6 +126,55 @@ export default function Homepage() {
 
   return (
     <div className="homepage">
+      <Dialog 
+        open={isPopupOpen} 
+        onClose={() => setPopupOpen(false)}
+        PaperProps={{
+          style: {
+            backgroundColor: '#1a1a1a', 
+            color: 'white',
+            borderRadius: '15px',
+            border: '1px solid #2a2a2a',
+            padding: '10px'
+          },
+        }}
+      >
+  <DialogTitle sx={{ color: '#00e544', fontWeight: 'bold', fontSize: '1.5rem' }}>
+    Welcome to LetsTalkMusic!
+  </DialogTitle>
+
+  <DialogContent>
+    <Typography variant="body1" sx={{ mb: 3 }}>
+      LetsTalkMusic is your personal music logging and discovery platform.
+    </Typography>
+
+    <Typography variant="h6" sx={{ mb: 2, fontWeight: 'bold' }}>
+      What can you do here?
+    </Typography>
+
+    <Typography variant="body2" sx={{ color: '#8a8a8a', lineHeight: '1.6' }}>
+      • Explore new artists or find your favorites.<br/>
+      • View album details and track lengths.<br/>
+      • Click the help icon anytime to see these instructions again!
+    </Typography>
+  </DialogContent>
+
+  <DialogActions sx={{ padding: '20px' }}>
+    <Button 
+      onClick={() => setPopupOpen(false)} 
+      sx={{ 
+        backgroundColor: '#00e544', 
+        color: 'black', 
+        fontWeight: 'bold',
+        '&:hover': { backgroundColor: '#00c139' },
+        borderRadius: '8px',
+        px: 3
+      }}
+    >
+      LET'S GO!
+    </Button>
+  </DialogActions>
+</Dialog>
       <div className="topbar">
         <div>
           <div className="greeting">LetsTalkMusic!</div>
