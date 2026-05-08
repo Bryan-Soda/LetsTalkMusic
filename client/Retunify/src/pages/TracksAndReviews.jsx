@@ -86,7 +86,7 @@ export default function TracksAndReviews() {
 
       <div className="main-content">
   <Typography variant="subtitle1" className="album-meta-subtitle">
-    {albumData.artist_name} | Total Album Length: {albumData.total_length}
+    {albumData.artist_name} | Total Album Length: {albumData.total_length} |
   </Typography>
 
   <Grid container spacing={4} sx={{ mt: 1 }}>
@@ -177,7 +177,7 @@ export default function TracksAndReviews() {
             textAlign: 'left'
           }}
         >
-          {albumData.synopsis || "Synopsis content will appear here."}
+          {albumData.synopsis || "CINEMA is the dreamy, sensual debut album by The Marías, released in June 2021, that blends psych-soul, bossa pop, and Latin influences with film-inspired storytelling. The album,, available to stream on Genius, is designed as a cinematic experience, with each song representing a unique scene focusing on love, vulnerability, and escapism."}
         </Typography>
       </Paper>
     </Grid>
