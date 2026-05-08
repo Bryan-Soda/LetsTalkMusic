@@ -2,7 +2,7 @@
 .tracks-reviews-page {
   background-color: #0a0a0a;
   min-height: 100vh;
-  zoom: 1.5;
+  zoom: 1.2;
 }
 
 /* Top Bar - Reused from ArtistAlbums/Homepage logic */
@@ -101,4 +101,64 @@
 .coming-soon-text {
   color: #4a4a4a;
   font-style: italic;
+}
+
+/* Update these specific sections in your CSS */
+
+.scrollable-panel {
+  height: 60vh;
+  overflow-y: auto;
+  border-radius: 12px !important;
+  /* Removed background-color here so the inline style works */
+}
+
+.track-name {
+  color: #fff;
+  font-weight: 600;
+  font-size: 1rem;
+  /* Added text shadow to make it readable on all background colors */
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.track-duration {
+  color: #fff;
+  font-size: 0.85rem;
+  opacity: 0.9; /* Increased opacity slightly for the colored background */
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.track-divider {
+  background-color: rgba(255, 255, 255, 0.2) !important;
+  width: 85%;
+  margin: 0 auto !important;
+}
+
+/* TracksAndReviews.css */
+
+.track-row {
+  display: flex;
+  justify-content: space-between; /* Keeps name left and duration right */
+  align-items: center;
+  width: 100%;
+  padding: 0 24px;
+}
+
+.track-name-grey {
+  color: #b3b3b3; /* Light grey */
+  font-weight: 500;
+  font-size: 0.95rem;
+}
+
+.track-duration-grey {
+  color: #8a8a8a; /* Slightly darker grey for the meta-data */
+  font-size: 0.85rem;
+  font-variant-numeric: tabular-nums;
+  padding-left: 30px;
+}
+
+.track-divider {
+  /* Matching the divider to the new grey theme */
+  background-color: rgba(255, 255, 255, 0.1) !important;
+  width: 90%;
+  margin: 0 auto !important;
 }

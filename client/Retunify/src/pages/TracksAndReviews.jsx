@@ -45,12 +45,14 @@ export default function TracksAndReviews() {
                 {albumData.tracks?.map((track, index) => (
                   <React.Fragment key={track.track_id}>
                     <ListItem sx={{ py: 2 }}>
-                      <ListItemText 
-                        primary={`${index + 1}. ${track.track_title}`} 
-                        className="track-text-primary"
-                        secondary={track.track_length}
-                        secondaryTypographyProps={{ className: "track-text-secondary" }}
-                      />
+                    <div className="track-row">
+                        <span className="track-name-grey">
+                        {index + 1}. {track.track_title}
+                        </span>
+                        <span className="track-duration-grey">
+                        {track.track_length}
+                        </span>
+                    </div>
                     </ListItem>
                     {index < albumData.tracks.length - 1 && <Divider className="track-divider" />}
                   </React.Fragment>

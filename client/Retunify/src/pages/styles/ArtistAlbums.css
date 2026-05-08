@@ -7,7 +7,7 @@
 
 .album-square-art {
   width: 100%;
-  aspect-ratio: 1 / 1; /* Forces the div to stay a perfect square */
+  aspect-ratio: 1 / 1;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -39,9 +39,5 @@
 }
 
 .artist-albums-page {
-  zoom: 1.5; /* Note: This is not supported in Firefox */
-  /* Alternative for better browser support: */
-  /* transform: scale(1.5); 
-     transform-origin: 0 0; 
-  */
+  zoom: 1.3;
 }
