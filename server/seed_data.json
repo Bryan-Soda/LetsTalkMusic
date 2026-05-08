@@ -2,11 +2,11 @@
     {
         "artist_name": "The Marias",
         "genre": "Indie",
-        "bio": "BIO",
         "albums": [
             {
                 "title": "CINEMA" ,
-                "total_length": "39:50",
+                "total_length": "39 mins 50 secs",
+                "synopsis": "S1" ,
                 "tracks": [
                     {
                         "title": "Just a Feeling",
@@ -65,7 +65,8 @@
             },
             {
                 "title": "Submarine",
-                "total_length": "45:13",
+                "total_length": "45 mins 13 secs",
+                "synopsis": "S2" ,
                 "tracks":[
                     {
                         "title": "Ride",
@@ -128,7 +129,8 @@
             },
             {
                 "title": "Superclean",
-                "total_length": "18 min",
+                "total_length": "18 mins",
+                "synopsis": "S2" ,
                 "tracks": [
                     {
                         "title": "I Don't Know You",
@@ -161,11 +163,11 @@
     {
         "artist_name": "Michael Jackson",
         "genre": "Pop",
-        "bio": "BIO1",
         "albums": [
             {
                 "title": "Thriller" ,
-                "total_length": "42:19",
+                "total_length": "42 mins 19 secs",
+                "synopsis": "S1" ,
                 "tracks": [
                     {
                         "title": "Wanna Be Startin' Somethin'",
@@ -208,7 +210,8 @@
             },
             {
                 "title": "Off the Wall",
-                "total_length": "42:21",
+                "total_length": "42 mins 21 secs",
+                "synopsis": "S2" ,                
                 "tracks":[
                     {
                         "title": "Don't Stop 'Til You Get Enough",
@@ -258,11 +261,11 @@
     {
         "artist_name": "PinkPantheress",
         "genre": "Alt-Pop",
-        "bio": "BIO2",
         "albums": [
             {
                 "title": "Fancy That" ,
-                "total_length": "20:33",
+                "total_length": "20 mins 33 secs",
+                "synopsis": "S2" ,
                 "tracks": [
                     {
                         "title": "Illegal",
@@ -301,7 +304,8 @@
             },
             {
                 "title": "to hell with it",
-                "total_length": "18:36",
+                "total_length": "18 mins 36 secs",
+                "synopsis": "S2" ,
                 "tracks":[
                     {
                         "title": "Pain",
@@ -352,11 +356,11 @@
     {
         "artist_name": "Malcolm Todd",
         "genre": "Alternative/Indie",
-        "bio": "BIO3",
         "albums": [
             {
                 "title": "Sweet Boy" ,
-                "total_length": "45 min 16 sec",
+                "total_length": "45 mins 16 secs",
+                "synopsis": "S2" ,
                 "tracks": [
                     {
                         "title": "Earrings",
@@ -429,11 +433,11 @@
     {
         "artist_name": "Tame Impala",
         "genre": "Alternative/Indie",
-        "bio": "BIO4",
         "albums": [
             {
                 "title": "Currents",
-                "total_length": "51 min 06 sec",
+                "total_length": "51 mins 06 secs",
+                "synopsis": "S2" ,
                 "tracks": [
                     {
                         "title": "Let It Happen",
@@ -494,11 +498,11 @@
     {
         "artist_name": "Daft Punk",
         "genre": "Electronic",
-        "bio": "BIO5",
         "albums": [
             {
                 "title": "Random Access Memories",
-                "total_length": "74 min 24 sec",
+                "total_length": "1 hr 14 mins 24 secs",
+                "synopsis": "S2" ,
                 "tracks": [
                     {
                         "title": "Give Life back to Music",
@@ -559,11 +563,11 @@
     {
         "artist_name": "Yumi Zouma",
         "genre": "Alternative/Indie",
-        "bio": "BIO6",
         "albums": [
             {
                 "title": "EP III",
-                "total_length": "43 min 20 sec",
+                "total_length": "43 mins 20 secs",
+                "synopsis": "S2" ,
                 "tracks": [
                     {
                         "title": "Powder Blue/Cascine Park",
@@ -592,11 +596,11 @@
     {
         "artist_name": "Kendrick Lamar",
         "genre": "Hip-Hop/Rap",
-        "bio": "BIO7",
         "albums": [
             {
                 "title": "Good Kid, M.A.A.D City",
-                "total_length": "68 min 23 sec",
+                "total_length": "1 hr 8 mins 23 secs",
+                "synopsis": "S2" ,
                 "tracks": [
                     {
                         "title": "Sherane a.k.a Master Splinter's Daughter",
@@ -653,11 +657,11 @@
     {
         "artist_name": "Radiohead",
         "genre": "Alternative/Indie",
-        "bio": "BIO8",
         "albums": [
             {
                 "title": "In Rainbows",
-                "total_length": "42 min 39 sec",
+                "total_length": "42 mins 39 secs",
+                "synopsis": "S2" ,
                 "tracks": [
                     {
                         "title": "15 Step",
@@ -706,11 +710,11 @@
     {
         "artist_name": "Clario",
         "genre": "Alternative/Indie",
-        "bio": "BIO9",
         "albums": [
             {
                 "title": "Immunity",
-                "total_length": "43 min 53 sec",
+                "total_length": "43 mins 53 secs",
+                "synopsis": "S2" ,
                 "track": [
                     {
                         "title": "Alewife",
@@ -763,11 +767,11 @@
     {
         "artist_name": "Tyler, The Creator",
         "genre": "Hip-Hop/Rap",
-        "bio": "BIO10",
         "albums": [
             {
                 "title": "CHROMAKOPIA",
-                "total_length": "52 min 54 sec",
+                "total_length": "52 mins 54 secs",
+                "synopsis": "S2" ,
                 "tracks": [
                     {
                         "title": "St. Chroma",
@@ -832,11 +836,11 @@
     {
         "artist_name": "Sabrina Carpenter",
         "genre": "Pop",
-        "bio": "BIO11",
         "albums": [
             {
                 "title": "Short n' Sweet",
-                "total_length": "36 min 15 secs",
+                "total_length": "36 mins 15 secs",
+                "synopsis": "S2" ,
                 "tracks": [
                     {
                         "title": "Taste",
@@ -893,11 +897,11 @@
     {
         "artist_name": "MJ Lenderman",
         "genre": "Alternative/Indie",
-        "bio": "BIO12",
         "albums": [
             {
                 "title": "Manning Fireworks",
-                "total_length": "37 min 13 sec",
+                "total_length": "37 mins 13 secs",
+                "synopsis": "S2" ,
                 "tracks": [
                     {
                         "title": "Manning Fireworks",
@@ -942,11 +946,11 @@
     {
         "artist_name": "Big Thief",
         "genre": "Alternative/Indie",
-        "bio": "BIO13",
         "albums": [
             {
                 "title": "Two Hands",
-                "total_length": "39 min 39 sec",
+                "total_length": "39 mins 39 secs",
+                "synopsis": "S2" ,
                 "tracks": [
                     {
                         "title": "Rock and Sing",
@@ -995,11 +999,11 @@
     {
         "artist_name": "Adrianne Lenker",
         "genre": "Alternative/Indie",
-        "bio": "BIO14",
         "albums": [
             {
                 "title": "Bright Future",
-                "total_length": "43:37",
+                "total_length": "43 mins 37 secs",
+                "synopsis": "S2" ,
                 "tracks": [
                     {
                         "title": "Real House", 
@@ -1056,11 +1060,11 @@
     {
         "artist_name": "Halsey",
         "genre": "Pop",
-        "bio": "BIO15",
         "albums": [
             {
                 "title": "The Great Impersonator",
-                "total_length": "66 min 07 sec",
+                "total_length": "1 hr 6 mins 7 secs",
+                "synopsis": "S2" ,
                 "tracks": [
                     {
                         "title": "Only Living Girl in LA",
@@ -1125,11 +1129,11 @@
     {
         "artist_name": "Lorde",
         "genre": "Pop/Alternative",
-        "bio": "BIO16",
         "albums": [
             {
                 "title": "Melodrama",
-                "total_length": "43 min 4 sec",
+                "total_length": "43 mins 4 secs",
+                "synopsis": "S2" ,
                 "tracks": [
                     {
                         "title": "Green Light",
@@ -1182,11 +1186,11 @@
     {
         "artist_name": "Frank Ocean",
         "genre": "R&B/Soul",
-        "bio": "BIO17",
         "albums": [
             {
                 "title": "Blonde",
-                "total_length": "60 min 8 sec",
+                "total_length": "1 hr 8 secs",
+                "synopsis": "S2" ,
                 "tracks": [
                     {
                         "title": "Nikes",
@@ -1263,11 +1267,11 @@
     {
         "artist_name": "Fleetwood Mac",
         "genre": "Classic Rock",
-        "bio": "BIO18",
         "albums": [
             {
                 "title": "Rumours",
-                "total_length": "39 min 43 sec",
+                "total_length": "39 mins 43 secs",
+                "synopsis": "S2" ,
                 "tracks": [
                     {
                         "title": "Second Hand News",
@@ -1320,11 +1324,11 @@
     {
         "artist_name": "SZA",
         "genre": "R&B/Neo Soul",
-        "bio": "BIO19",
         "albums": [
             {
                 "title": "CTRL",
-                "total_length": "49 min 1 sec",
+                "total_length": "49 mins 1 sec",
+                "synopsis": "S2" ,
                 "tracks": [
                     {
                         "title": "Supermodel",
