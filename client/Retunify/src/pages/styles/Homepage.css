@@ -130,6 +130,8 @@ body {
   overflow: hidden;
   border: 1px solid rgba(255, 255, 255, 0.06);
   transition: box-shadow 0.2s;
+  width: 180px !important;   /* Increased from 120px */
+  height: 180px !important; /* Increased from 120px */
 }
 
 .album-card:hover .album-art {

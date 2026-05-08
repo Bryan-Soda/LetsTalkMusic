@@ -159,7 +159,7 @@ def get_artist(artist_id):
     results.append({
             "id": artist.id,
             "artist_name": artist.name,
-            "genre": artist.overall_genre,
+            "genre": artist.genre,
             "bio": artist.bio,
         })
     
@@ -189,8 +189,8 @@ def get_artist_albums(artist_id):
         results.append({
             "album_id": albums.id,
             "album_title": albums.title,
-            "album_genre": albums.genre,
             "total_length": albums.total_length,
+            "artist_name": artist.name  # ADD THIS LINE
             #"tracks": tracklist,
         })
 

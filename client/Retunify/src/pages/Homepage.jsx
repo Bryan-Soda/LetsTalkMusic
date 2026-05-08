@@ -10,7 +10,7 @@ function ArtistCard({ artist }) {
   const artistColor = colors[artist.id % colors.length];
 
   return (
-    <Link to={`/artist/${artist.id}`} className="artist-card-link">
+    <Link to={`/artists/${artist.id}`} className="artist-card-link">
       <div
         className="artist-card-container"
         onMouseEnter={() => setHovered(true)}

@@ -1,0 +1,47 @@
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.album-square-art {
+  width: 100%;
+  aspect-ratio: 1 / 1; /* Forces the div to stay a perfect square */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 12px;
+  transition: transform 0.2s ease;
+}
+
+.album-square-card:hover .album-square-art {
+  transform: scale(1.03);
+}
+
+.album-initial {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #fff;
+  opacity: 0.6;
+}
+
+.album-title-text {
+  color: #fff;
+  font-weight: 600;
+  font-size: 1rem;
+  margin-bottom: 4px;
+}
+
+.album-meta {
+  color: #8a8a8a;
+  font-size: 0.85rem;
+}
+
+.artist-albums-page {
+  zoom: 1.5; /* Note: This is not supported in Firefox */
+  /* Alternative for better browser support: */
+  /* transform: scale(1.5); 
+     transform-origin: 0 0; 
+  */
+}
