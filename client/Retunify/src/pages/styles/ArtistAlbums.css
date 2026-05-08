@@ -41,3 +41,17 @@
 .artist-albums-page {
   zoom: 1.3;
 }
+
+/* ArtistAlbums.css */
+
+.album-link {
+  text-decoration: none !important; /* Removes the underline */
+  color: inherit;                  /* Ensures text doesn't turn blue */
+  display: block;                  /* Keeps the layout consistent */
+}
+
+.album-link:hover, 
+.album-link:active, 
+.album-link:visited {
+  text-decoration: none !important; /* Ensures it stays gone on interaction */
+}

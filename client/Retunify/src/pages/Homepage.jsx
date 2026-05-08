@@ -3,25 +3,25 @@ import './styles/Homepage.css';
 import { Pagination } from '@mui/material';
 import { Link } from 'react-router-dom';
 
-import AdrianneL from '../assets/AdrianneL.jpg';
+import AdrianneL from '../assets/ArtistImages/AdrianneL.jpg';
 import BigThief from '../assets/ArtistImages/BT.jpg'; //changed
 import Clario from '../assets/ArtistImages/Clairo.jpg';
-import DaftPunk from '../assets/DaftPunk.jpg';
+import DaftPunk from '../assets/ArtistImages/DaftPunk.jpg';
 import FleetwoodMac from '../assets/ArtistImages/FM.jpg'; //changed
-import FrankOcean from '../assets/FrankOcean.jpg';
-import Halsey from '../assets/Halsey.jpg';
-import KendrickLamar from '../assets/KendrickLamar.jpg';
-import Lorde from '../assets/Lorde.jpg';
-import MalcolmTodd from '../assets/MalcolmTodd.jpg';
-import MichaelJackson from '../assets//ArtistImages/MJ.jpg'; //changed
-import MJLenderman from '../assets/MJLenderman.jpg';
+import FrankOcean from '../assets/ArtistImages/FrankOcean.jpg';
+import Halsey from '../assets/ArtistImages/Halsey.jpg';
+import KendrickLamar from '../assets/ArtistImages/KendrickLamar.jpg';
+import Lorde from '../assets/ArtistImages/Lorde.jpg';
+import MalcolmTodd from '../assets/ArtistImages/MalcolmTodd.jpg';
+import MichaelJackson from '../assets/ArtistImages/MJ.jpg'; //changed
+import MJLenderman from '../assets/ArtistImages/MJLenderman.jpg';
 import PinkPantheress from '../assets/ArtistImages/PP.jpg'; //changed
 import RadioHead from '../assets/ArtistImages/RH.jpg'; //changed
-import SabrinaC from '../assets/SabrinaC.jpg';
-import SZA from '../assets/SZA.jpg';
-import TameImpala from '../assets/TameImpala.jpg';
+import SabrinaC from '../assets/ArtistImages/SabrinaC.jpg';
+import SZA from '../assets/ArtistImages/SZA.jpg';
+import TameImpala from '../assets/ArtistImages/TameImpala.jpg';
 import TheMarias from '../assets/ArtistImages/TheMarias.jpg';
-import TylerTheCreator from '../assets/TylerTheCreator.jpg';
+import TylerTheCreator from '../assets/ArtistImages/TylerTheCreator.jpg';
 import YumiZouma from '../assets/ArtistImages/YZ.jpg'; //changed
 
 const artistImageMap = {

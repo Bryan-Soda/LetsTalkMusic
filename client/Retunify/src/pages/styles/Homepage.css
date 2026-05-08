@@ -98,15 +98,21 @@ body {
   opacity: 0.7;
 }
 
-/* Responsive grid */
 .grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
-  gap: 24px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between; /* Spreads them out evenly */
+  align-items: center;
+  flex-wrap: nowrap; /* CRITICAL: Prevents stacking */
+  overflow-x: hidden; /* Keeps the UI clean */
+  padding: 20px 0;
+  gap: 15px;
 }
 
 .grid-item {
-  width: 100%;
+  flex: 1; /* Makes each card take up equal width */
+  min-width: 150px; /* Adjust based on your card size to prevent squishing */
+  max-width: 250px;
 }
 
 /* Album Card */

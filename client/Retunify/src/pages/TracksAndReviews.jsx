@@ -63,7 +63,7 @@ export default function TracksAndReviews() {
 
           {/* Reviews Column */}
           <Grid item xs={12} md={6}>
-            <Typography variant="overline" className="column-label">Reviews</Typography>
+            <Typography variant="overline" className="column-label">Album Reviews</Typography>
             <Paper elevation={0} className="scrollable-panel review-placeholder">
               <Typography className="coming-soon-text">
                 Review functionality coming soon.
