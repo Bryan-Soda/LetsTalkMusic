@@ -46,7 +46,7 @@ class Artists(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String, unique=True, nullable=False)
     genre = db.Column(db.String, nullable=False)
-    bio = db.Column(db.String, nullable=False, unique=False)
+    # bio = db.Column(db.String, nullable=False, unique=False)
 
     albums = db.relationship('Albums', backref='artist')
 
@@ -58,7 +58,7 @@ class Albums(db.Model):
     total_length = db.Column(db.String, nullable=False)
 
     tracks = db.relationship('Tracks', backref='album')
-    # synopsis = db.Column(db.String, nullable=False)
+    synopsis = db.Column(db.String, nullable=False)
 class Tracks(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     album_id = db.Column(db.Integer, db.ForeignKey('albums.id'), nullable=False) 
