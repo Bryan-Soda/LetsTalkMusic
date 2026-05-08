@@ -6,12 +6,18 @@ import os
 from flask_cors import CORS
 import bcrypt #used for hashing passwords
 
+from flask_limiter import Limiter
+from flask_limiter.util import get_remote_address
+
 from dotenv import load_dotenv #NOTE: Some portions require secrets. consult with others and do NOT place secrets within code plainly
 
 load_dotenv()
 admin_key = os.getenv('FLASK_ADMIN_KEY')
 
 app = Flask(__name__)
+
+limiter = Limiter(get_remote_address, app=app)
+
 cors = CORS(app, origins='*')
 
 basedir = os.path.abspath(os.path.dirname(__file__))
@@ -73,11 +79,14 @@ class Reviews(db.Model):
 #Api routes:
 
 @app.route('/')
+# @limiter.limit("3 per day")
 def index():
     return "Hello MusicApp DB World!"
 
 #Add new user (check if valid email, user, etc) Note: Currently only checks if user is valid
+
 @app.route('/user', methods=['POST'])
+
 def add_new_member():
     data = request.get_json()
     if not data:
@@ -189,6 +198,7 @@ def get_artist_albums(artist_id):
         results.append({
             "album_id": albums.id,
             "album_title": albums.title,
+            # "album_genre": albums.genre,
             "total_length": albums.total_length,
             "artist_name": artist.name  # ADD THIS LINE
             #"tracks": tracklist,
