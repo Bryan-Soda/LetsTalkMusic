@@ -6,7 +6,7 @@
         "albums": [
             {
                 "title": "CINEMA" ,
-                "total_length": "39:50",
+                "total_length": "39 min 50 secs",
                 "tracks": [
                     {
                         "title": "Just a Feeling",
@@ -65,7 +65,7 @@
             },
             {
                 "title": "Submarine",
-                "total_length": "45:13",
+                "total_length": "45 min 13 sec",
                 "tracks":[
                     {
                         "title": "Ride",
@@ -128,7 +128,7 @@
             },
             {
                 "title": "Superclean",
-                "total_length": "18 min",
+                "total_length": "18 min 00 secs",
                 "tracks": [
                     {
                         "title": "I Don't Know You",
@@ -165,7 +165,7 @@
         "albums": [
             {
                 "title": "Thriller" ,
-                "total_length": "42:19",
+                "total_length": "42 min 19 secs",
                 "tracks": [
                     {
                         "title": "Wanna Be Startin' Somethin'",
@@ -208,7 +208,7 @@
             },
             {
                 "title": "Off the Wall",
-                "total_length": "42:21",
+                "total_length": "42 min 21 secs",
                 "tracks":[
                     {
                         "title": "Don't Stop 'Til You Get Enough",
@@ -262,7 +262,7 @@
         "albums": [
             {
                 "title": "Fancy That" ,
-                "total_length": "20:33",
+                "total_length": "20 min 33 secs",
                 "tracks": [
                     {
                         "title": "Illegal",
@@ -301,7 +301,7 @@
             },
             {
                 "title": "to hell with it",
-                "total_length": "18:36",
+                "total_length": "18 min 36 sec",
                 "tracks":[
                     {
                         "title": "Pain",
@@ -356,7 +356,7 @@
         "albums": [
             {
                 "title": "Sweet Boy" ,
-                "total_length": "45 min 16 sec",
+                "total_length": "45 min 16 secs",
                 "tracks": [
                     {
                         "title": "Earrings",
@@ -433,7 +433,7 @@
         "albums": [
             {
                 "title": "Currents",
-                "total_length": "51 min 06 sec",
+                "total_length": "51 min 06 secs",
                 "tracks": [
                     {
                         "title": "Let It Happen",
@@ -498,7 +498,7 @@
         "albums": [
             {
                 "title": "Random Access Memories",
-                "total_length": "74 min 24 sec",
+                "total_length": "74 min 24 secs",
                 "tracks": [
                     {
                         "title": "Give Life back to Music",
@@ -549,7 +549,7 @@
                         "length": "4:11"
                     },
                     {
-                        "title": "Contract",
+                        "title": "Contact",
                         "length": "6:21"
                     }
                 ]
@@ -563,7 +563,7 @@
         "albums": [
             {
                 "title": "EP III",
-                "total_length": "43 min 20 sec",
+                "total_length": "43 min 20 secs",
                 "tracks": [
                     {
                         "title": "Powder Blue/Cascine Park",
@@ -596,7 +596,7 @@
         "albums": [
             {
                 "title": "Good Kid, M.A.A.D City",
-                "total_length": "68 min 23 sec",
+                "total_length": "68 min 23 secs",
                 "tracks": [
                     {
                         "title": "Sherane a.k.a Master Splinter's Daughter",
@@ -611,8 +611,8 @@
                         "length": "5:10"
                     },
                     {
-                        "length": "The Art of Peer Pressure",
-                        "title": "5:24"
+                        "title": "The Art of Peer Pressure",
+                        "length": "5:24"
                     },
                     {
                         "title": "Money Tree",
@@ -657,7 +657,7 @@
         "albums": [
             {
                 "title": "In Rainbows",
-                "total_length": "42 min 39 sec",
+                "total_length": "42 min 39 secs",
                 "tracks": [
                     {
                         "title": "15 Step",
@@ -704,14 +704,14 @@
         ]
     },
     {
-        "artist_name": "Clario",
+        "artist_name": "Clairo",
         "genre": "Alternative/Indie",
         "bio": "BIO9",
         "albums": [
             {
                 "title": "Immunity",
-                "total_length": "43 min 53 sec",
-                "track": [
+                "total_length": "43 min 53 secs",
+                "tracks": [
                     {
                         "title": "Alewife",
                         "length": "3:50"
@@ -767,7 +767,7 @@
         "albums": [
             {
                 "title": "CHROMAKOPIA",
-                "total_length": "52 min 54 sec",
+                "total_length": "52 min 54 secs",
                 "tracks": [
                     {
                         "title": "St. Chroma",
@@ -897,7 +897,7 @@
         "albums": [
             {
                 "title": "Manning Fireworks",
-                "total_length": "37 min 13 sec",
+                "total_length": "37 min 13 secs",
                 "tracks": [
                     {
                         "title": "Manning Fireworks",
@@ -946,7 +946,7 @@
         "albums": [
             {
                 "title": "Two Hands",
-                "total_length": "39 min 39 sec",
+                "total_length": "39 min 39 secs",
                 "tracks": [
                     {
                         "title": "Rock and Sing",
@@ -999,7 +999,7 @@
         "albums": [
             {
                 "title": "Bright Future",
-                "total_length": "43:37",
+                "total_length": "43 min 37 secs",
                 "tracks": [
                     {
                         "title": "Real House", 
@@ -1060,7 +1060,7 @@
         "albums": [
             {
                 "title": "The Great Impersonator",
-                "total_length": "66 min 07 sec",
+                "total_length": "66 min 07 secs",
                 "tracks": [
                     {
                         "title": "Only Living Girl in LA",
@@ -1129,7 +1129,7 @@
         "albums": [
             {
                 "title": "Melodrama",
-                "total_length": "43 min 4 sec",
+                "total_length": "43 min 4 secs",
                 "tracks": [
                     {
                         "title": "Green Light",
@@ -1186,7 +1186,7 @@
         "albums": [
             {
                 "title": "Blonde",
-                "total_length": "60 min 8 sec",
+                "total_length": "60 min 8 secs",
                 "tracks": [
                     {
                         "title": "Nikes",
@@ -1267,7 +1267,7 @@
         "albums": [
             {
                 "title": "Rumours",
-                "total_length": "39 min 43 sec",
+                "total_length": "39 min 43 secs",
                 "tracks": [
                     {
                         "title": "Second Hand News",
@@ -1324,7 +1324,7 @@
         "albums": [
             {
                 "title": "CTRL",
-                "total_length": "49 min 1 sec",
+                "total_length": "49 min 1 secs",
                 "tracks": [
                     {
                         "title": "Supermodel",
