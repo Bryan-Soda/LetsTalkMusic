@@ -29,7 +29,6 @@ import RAM from '../assets/AlbumCovers/RandomAccessMemories.jpg';
 import Rumours from '../assets/AlbumCovers/Rumours.jpg';
 import ShortAndSweet from '../assets/AlbumCovers/ShortAndSweet.jpg';
 
-// Map for specific album covers using the album_title as the key
 const albumCoverMap = {
   "Blonde": Blonde,
   "Sweet Boy": SweetBoy,
@@ -65,7 +64,6 @@ export default function TracksAndReviews() {
     fetch(`http://127.0.0.1:5000/artists/${artistId}/${albumId}`)
       .then(res => res.json())
       .then(data => {
-        // Handle both array and single object responses from Flask
         if (Array.isArray(data) && data.length > 0) setAlbumData(data[0]);
         else setAlbumData(data);
       })
@@ -74,7 +72,6 @@ export default function TracksAndReviews() {
 
   if (!albumData) return <div className="loading">Loading...</div>;
 
-  // Retrieve the correct cover from the map
   const displayCover = albumCoverMap[albumData.album_title] || "https://via.placeholder.com/400";
 
   return (
@@ -88,133 +85,139 @@ export default function TracksAndReviews() {
       </div>
 
       <div className="main-content">
-        <Typography variant="subtitle1" className="album-meta-subtitle">
-          {albumData.artist_name} | Total Album Length: {albumData.total_length} |
+  <Typography variant="subtitle1" className="album-meta-subtitle">
+    {albumData.artist_name} | Total Album Length: {albumData.total_length}
+  </Typography>
+
+  <Grid container spacing={4} sx={{ mt: 1 }}>
+    
+    {/* 1. LEFT CONTAINER: Tracklist */}
+    <Grid item xs={12} md={6}>
+      <Typography variant="overline" className="column-label">Tracklist</Typography>
+      <Paper 
+        elevation={0} 
+        className="scrollable-panel" 
+        sx={{ 
+          maxHeight: '450px', // Adjusted height for side-by-side balance
+          overflowY: 'auto',
+          backgroundColor: '#1a1a1a',
+          border: '1px solid #2a2a2a',
+          borderRadius: '12px'
+        }}
+      >
+        <List disablePadding>
+          {albumData.tracks?.map((track, index) => (
+            <React.Fragment key={track.track_id}>
+              <ListItem sx={{ py: 2 }}>
+                <div className="track-row">
+                  <span className="track-name-grey">
+                    {index + 1}. {track.track_title}
+                  </span>
+                  <span className="track-duration-grey">
+                    {track.track_length}
+                  </span>
+                </div>
+              </ListItem>
+              {index < albumData.tracks.length - 1 && <Divider className="track-divider" />}
+            </React.Fragment>
+          ))}
+        </List>
+      </Paper>
+    </Grid>
+
+    {/* 2. RIGHT CONTAINER: Album Cover */}
+    <Grid 
+      item 
+      xs={12} 
+      md={6} 
+      sx={{ 
+        display: 'flex', 
+        flexDirection: 'column', 
+        alignItems: 'center'
+      }}
+    >
+      <Typography variant="overline" className="column-label" sx={{ alignSelf: 'flex-start' }}>
+        Album Details
+      </Typography>
+      <Box
+        component="img"
+        src={displayCover}
+        alt={albumData.album_title}
+        sx={{
+          width: '100%',
+          maxWidth: '450px', // Matches larger screen widths
+          aspectRatio: '1/1',
+          objectFit: 'cover',
+          borderRadius: '12px',
+          border: '1px solid #2a2a2a',
+          boxShadow: '0 12px 40px rgba(0,0,0,0.7)'
+        }}
+      />
+    </Grid>
+
+    {/* 3. BOTTOM CONTAINER 1: Album Synopsis (Full Width) */}
+    <Grid item xs={12} sx={{ mt: 2 }}>
+      <Typography variant="overline" className="column-label">Album Synopsis</Typography>
+      <Paper 
+        elevation={0} 
+        sx={{ 
+          p: 3, 
+          backgroundColor: '#1a1a1a', 
+          border: '1px solid #2a2a2a', 
+          borderRadius: '12px',
+          width: '100%',
+          boxSizing: 'border-box'
+        }}
+      >
+        <Typography 
+          variant="body2" 
+          sx={{ 
+            color: '#8a8a8a', 
+            lineHeight: '1.8', 
+            textAlign: 'left'
+          }}
+        >
+          {albumData.synopsis || "Synopsis content will appear here."}
         </Typography>
+      </Paper>
+    </Grid>
 
-        <Grid container spacing={4} sx={{ mt: 1 }}>
-          {/* Left Column: Tracklist */}
-          <Grid item xs={12} md={5}>
-            <Typography variant="overline" className="column-label">Tracklist</Typography>
-            <Paper elevation={0} className="scrollable-panel" sx={{ maxHeight: '600px', overflowY: 'auto' }}>
-              <List disablePadding>
-                {albumData.tracks?.map((track, index) => (
-                  <React.Fragment key={track.track_id}>
-                    <ListItem sx={{ py: 2 }}>
-                      <div className="track-row">
-                        <span className="track-name-grey">
-                          {index + 1}. {track.track_title}
-                        </span>
-                        <span className="track-duration-grey">
-                          {track.track_length}
-                        </span>
-                      </div>
-                    </ListItem>
-                    {index < albumData.tracks.length - 1 && <Divider className="track-divider" />}
-                  </React.Fragment>
-                ))}
-              </List>
-            </Paper>
-          </Grid>
-
-          {/* Right Column: Centered Album Art & Synopsis */}
-          <Grid 
-            item 
-            xs={12} 
-            md={7} 
+    {/* 4. BOTTOM CONTAINER 2: Reviews (Full Width) */}
+    <Grid item xs={12} sx={{ mt: 2 }}>
+      <Typography variant="overline" className="column-label">Album Reviews</Typography>
+      <Box 
+        sx={{ 
+          display: 'flex', 
+          flexDirection: 'row', 
+          overflowX: 'auto', 
+          gap: 2, 
+          pb: 2
+        }}
+      >
+        {[1, 2, 3, 4, 5].map((item) => (
+          <Paper 
+            key={item} 
+            elevation={0} 
             sx={{ 
-              display: 'flex', 
-              flexDirection: 'column', 
-              alignItems: 'center', 
-              justifyContent: 'flex-start' 
+              minWidth: '300px', 
+              p: 2, 
+              backgroundColor: '#1a1a1a', 
+              border: '1px solid #2a2a2a',
+              borderRadius: '8px'
             }}
           >
-            <Typography variant="overline" className="column-label" sx={{ alignSelf: 'flex-start' }}>
-              Album Details
+            <Typography variant="caption" sx={{ color: '#00e544', display: 'block', mb: 1 }}>
+              USER_REVIEW_{item}
             </Typography>
-            
-            {/* Album Cover Art */}
-            <Box
-              component="img"
-              src={displayCover}
-              alt={albumData.album_title}
-              sx={{
-                width: '100%',
-                maxWidth: '400px',
-                aspectRatio: '1/1',
-                objectFit: 'cover',
-                borderRadius: '12px',
-                border: '1px solid #2a2a2a',
-                mb: 3,
-                boxShadow: '0 8px 32px rgba(0,0,0,0.6)'
-              }}
-            />
-
-            {/* Synopsis Box with text wrapping */}
-            <Paper 
-              elevation={0} 
-              sx={{ 
-                p: 3, 
-                backgroundColor: '#1a1a1a', 
-                border: '1px solid #2a2a2a', 
-                borderRadius: '12px',
-                width: '100%',
-                boxSizing: 'border-box'
-              }}
-            >
-              <Typography 
-                variant="body2" 
-                sx={{ 
-                  color: '#8a8a8a', 
-                  lineHeight: '1.8', 
-                  textAlign: 'center',
-                  whiteSpace: 'normal',
-                  wordBreak: 'break-word'
-                }}
-              >
-                {albumData.synopsis || "No synopsis available for this album yet."}
-              </Typography>
-            </Paper>
-          </Grid>
-
-          {/* Album Reviews Section */}
-          <Grid item xs={12} sx={{ mt: 4 }}>
-            <Typography variant="overline" className="column-label">Album Reviews</Typography>
-            <Box 
-              sx={{ 
-                display: 'flex', 
-                flexDirection: 'row', 
-                overflowX: 'auto', 
-                gap: 2, 
-                pb: 2,
-                '&::-webkit-scrollbar': { height: '8px' },
-                '&::-webkit-scrollbar-thumb': { backgroundColor: '#2a2a2a', borderRadius: '10px' }
-              }}
-            >
-              {[1, 2, 3, 4, 5].map((item) => (
-                <Paper 
-                  key={item} 
-                  elevation={0} 
-                  sx={{ 
-                    minWidth: '300px', 
-                    p: 2, 
-                    backgroundColor: '#1a1a1a', 
-                    border: '1px solid #2a2a2a',
-                    borderRadius: '8px'
-                  }}
-                >
-                  <Typography variant="caption" sx={{ color: '#00e544', display: 'block', mb: 1 }}>
-                    USER_REVIEW_{item}
-                  </Typography>
-                  <Typography variant="body2" sx={{ color: '#8a8a8a' }}>
-                    Review functionality coming soon.
-                  </Typography>
-                </Paper>
-              ))}
-            </Box>
-          </Grid>
-        </Grid>
-      </div>
+            <Typography variant="body2" sx={{ color: '#8a8a8a' }}>
+              Review functionality coming soon.
+            </Typography>
+          </Paper>
+        ))}
+      </Box>
+    </Grid>
+  </Grid>
+</div>
     </div>
   );
 }
