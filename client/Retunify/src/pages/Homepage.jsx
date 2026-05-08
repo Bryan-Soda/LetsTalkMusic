@@ -4,25 +4,25 @@ import { Pagination } from '@mui/material';
 import { Link } from 'react-router-dom';
 
 import AdrianneL from '../assets/AdrianneL.jpg';
-import BigThief from '../assets/BigThief.jpg';
-import Clario from '../assets/Clairo.jpg';
+import BigThief from '../assets/ArtistImages/BT.jpg'; //changed
+import Clario from '../assets/ArtistImages/Clairo.jpg';
 import DaftPunk from '../assets/DaftPunk.jpg';
-import FleetwoodMac from '../assets/FleetwoodMac.jpg';
+import FleetwoodMac from '../assets/ArtistImages/FM.jpg'; //changed
 import FrankOcean from '../assets/FrankOcean.jpg';
 import Halsey from '../assets/Halsey.jpg';
 import KendrickLamar from '../assets/KendrickLamar.jpg';
 import Lorde from '../assets/Lorde.jpg';
 import MalcolmTodd from '../assets/MalcolmTodd.jpg';
-import MichaelJackson from '../assets/MichaelJackson.jpg';
+import MichaelJackson from '../assets//ArtistImages/MJ.jpg'; //changed
 import MJLenderman from '../assets/MJLenderman.jpg';
-import PinkPantheress from '../assets/PinkPanthress.jpg'; // Matches your filename typo
-import RadioHead from '../assets/RadioHead.jpg';
+import PinkPantheress from '../assets/ArtistImages/PP.jpg'; //changed
+import RadioHead from '../assets/ArtistImages/RH.jpg'; //changed
 import SabrinaC from '../assets/SabrinaC.jpg';
 import SZA from '../assets/SZA.jpg';
 import TameImpala from '../assets/TameImpala.jpg';
-import TheMarias from '../assets/TheMarias.jpg';
+import TheMarias from '../assets/ArtistImages/TheMarias.jpg';
 import TylerTheCreator from '../assets/TylerTheCreator.jpg';
-import YumiZouma from '../assets/YumiZouma.jpg';
+import YumiZouma from '../assets/ArtistImages/YZ.jpg'; //changed
 
 const artistImageMap = {
   "Adrianne Lenker": AdrianneL,
