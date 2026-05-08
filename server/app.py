@@ -226,7 +226,7 @@ def get_artist_album(artist_id, album_id):
     results.append({
         "album_id": album_id,
         "album_title": album.title,
-        "album_genre": album.genre,
+        # "album_genre": album.genre,
         "total_length": album.total_length,
         "tracks": tracklist,
     })

@@ -1,0 +1,104 @@
+/* Page Wrapper */
+.tracks-reviews-page {
+  background-color: #0a0a0a;
+  min-height: 100vh;
+  zoom: 1.5;
+}
+
+/* Top Bar - Reused from ArtistAlbums/Homepage logic */
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: 1100;
+  background-color: rgba(10, 10, 10, 0.8);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid #1f1f1f;
+  padding: 20px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.back-link {
+  color: #00e544;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 0.8rem;
+  text-shadow: 0 0 5px rgba(0, 229, 68, 0.4);
+}
+
+.greeting {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.avatar {
+  width: 40px;
+  height: 40px;
+  background-color: #1a1a1a;
+  border: 2px solid #00e544;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: bold;
+}
+
+/* Content Layout */
+.main-content {
+  padding: 20px 40px;
+}
+
+.album-meta-subtitle {
+  color: #8a8a8a !important;
+  text-align: center;
+  margin-bottom: 20px !important;
+}
+
+.column-label {
+  color: #8a8a8a !important;
+  letter-spacing: 2px !important;
+  font-weight: bold !important;
+}
+
+/* Scrollable Containers */
+.scrollable-panel {
+  height: 60vh;
+  background-color: #161616 !important;
+  overflow-y: auto;
+  border-radius: 12px !important;
+  border: 1px solid #2a2a2a !important;
+}
+
+.scrollable-panel::-webkit-scrollbar { width: 8px; }
+.scrollable-panel::-webkit-scrollbar-thumb { background-color: #2a2a2a; border-radius: 4px; }
+
+/* Centered White Track Text */
+.track-text-primary {
+  color: #fff !important;
+  font-weight: 600 !important;
+  text-align: center;
+}
+
+.track-text-secondary {
+  color: #fff !important;
+  text-align: center;
+  opacity: 0.7;
+}
+
+.track-divider {
+  background-color: #262626 !important;
+}
+
+.review-placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.coming-soon-text {
+  color: #4a4a4a;
+  font-style: italic;
+}
