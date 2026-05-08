@@ -79,7 +79,7 @@ class Reviews(db.Model):
 #Api routes:
 
 @app.route('/')
-@limiter.limit("3 per day")
+# @limiter.limit("3 per day")
 def index():
     return "Hello MusicApp DB World!"
 
@@ -168,7 +168,7 @@ def get_artist(artist_id):
     results.append({
             "id": artist.id,
             "artist_name": artist.name,
-            "genre": artist.overall_genre,
+            "genre": artist.genre,
             "bio": artist.bio,
         })
     
@@ -198,7 +198,7 @@ def get_artist_albums(artist_id):
         results.append({
             "album_id": albums.id,
             "album_title": albums.title,
-            "album_genre": albums.genre,
+            # "album_genre": albums.genre,
             "total_length": albums.total_length,
             #"tracks": tracklist,
         })
@@ -235,7 +235,7 @@ def get_artist_album(artist_id, album_id):
     results.append({
         "album_id": album_id,
         "album_title": album.title,
-        "album_genre": album.genre,
+        # "album_genre": album.genre,
         "total_length": album.total_length,
         "tracks": tracklist,
     })
