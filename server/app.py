@@ -248,7 +248,7 @@ def get_artist_album(artist_id, album_id):
 # get all reviews from a certain album
 @app.route('/reviews/album/<int:album_id>', methods=['GET'])
 def get_all_album_reviews(album_id):
-    all_reviews = Reviews.query.get(album_id=album_id)
+    all_reviews = Reviews.query.filter_by(album_id=album_id).all()
 
     if all_reviews is None:
         return {'error':'reviews not found'}, 404
