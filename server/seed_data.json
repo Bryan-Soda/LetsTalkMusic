@@ -5,8 +5,8 @@
         "albums": [
             {
                 "title": "CINEMA" ,
-                "total_length": "39 mins 50 secs",
-                "synopsis": "S1" ,
+                "total_length": "39 min 50 secs",
+                "synopsis": "S!",
                 "tracks": [
                     {
                         "title": "Just a Feeling",
@@ -65,8 +65,8 @@
             },
             {
                 "title": "Submarine",
-                "total_length": "45 mins 13 secs",
-                "synopsis": "S2" ,
+                "total_length": "45 min 13 sec",
+                "synopsis": "S!",
                 "tracks":[
                     {
                         "title": "Ride",
@@ -129,8 +129,8 @@
             },
             {
                 "title": "Superclean",
-                "total_length": "18 mins 00 secs",
-                "synopsis": "S2" ,
+                "total_length": "18 min 00 secs",
+                "synopsis": "S!",
                 "tracks": [
                     {
                         "title": "I Don't Know You",
@@ -166,8 +166,8 @@
         "albums": [
             {
                 "title": "Thriller" ,
-                "total_length": "42 mins 19 secs",
-                "synopsis": "S1" ,
+                "total_length": "42 min 19 secs",
+                "synopsis": "S!",
                 "tracks": [
                     {
                         "title": "Wanna Be Startin' Somethin'",
@@ -210,8 +210,8 @@
             },
             {
                 "title": "Off the Wall",
-                "total_length": "42 mins 21 secs",
-                "synopsis": "S2" ,                
+                "total_length": "42 min 21 secs",
+                "synopsis": "S!",
                 "tracks":[
                     {
                         "title": "Don't Stop 'Til You Get Enough",
@@ -264,8 +264,8 @@
         "albums": [
             {
                 "title": "Fancy That" ,
-                "total_length": "20 mins 33 secs",
-                "synopsis": "S2" ,
+                "total_length": "20 min 33 secs",
+                "synopsis": "S!",
                 "tracks": [
                     {
                         "title": "Illegal",
@@ -304,8 +304,8 @@
             },
             {
                 "title": "to hell with it",
-                "total_length": "18 mins 36 secs",
-                "synopsis": "S2" ,
+                "total_length": "18 min 36 sec",
+                "synopsis": "S!",
                 "tracks":[
                     {
                         "title": "Pain",
@@ -359,8 +359,8 @@
         "albums": [
             {
                 "title": "Sweet Boy" ,
-                "total_length": "45 mins 16 secs",
-                "synopsis": "S2" ,
+                "total_length": "45 min 16 secs",
+                "synopsis": "S!",
                 "tracks": [
                     {
                         "title": "Earrings",
@@ -371,7 +371,7 @@
                         "length": "3:34"
                     },
                     {
-                        "title": "On My Shoulder",
+                        "title": "On My Sholder",
                         "length": "2:49"
                     },
                     {
@@ -436,8 +436,8 @@
         "albums": [
             {
                 "title": "Currents",
-                "total_length": "51 mins 06 secs",
-                "synopsis": "S2" ,
+                "total_length": "51 min 06 secs",
+                "synopsis": "S!",
                 "tracks": [
                     {
                         "title": "Let It Happen",
@@ -501,8 +501,8 @@
         "albums": [
             {
                 "title": "Random Access Memories",
-                "total_length": "74 mins 24 secs",
-                "synopsis": "S2" ,
+                "total_length": "74 min 24 secs",
+                "synopsis": "S!",
                 "tracks": [
                     {
                         "title": "Give Life back to Music",
@@ -566,8 +566,8 @@
         "albums": [
             {
                 "title": "EP III",
-                "total_length": "18 mins 00 secs",
-                "synopsis": "S2" ,
+                "total_length": "43 min 20 secs",
+                "synopsis": "S!",
                 "tracks": [
                     {
                         "title": "Powder Blue/Cascine Park",
@@ -599,8 +599,8 @@
         "albums": [
             {
                 "title": "Good Kid, M.A.A.D City",
-                "total_length": "68 mins 23 secs",
-                "synopsis": "S2" ,
+                "total_length": "68 min 23 secs",
+                "synopsis": "S!",
                 "tracks": [
                     {
                         "title": "Sherane a.k.a Master Splinter's Daughter",
@@ -660,8 +660,8 @@
         "albums": [
             {
                 "title": "In Rainbows",
-                "total_length": "42 mins 39 secs",
-                "synopsis": "S2" ,
+                "total_length": "42 min 39 secs",
+                "synopsis": "S!",
                 "tracks": [
                     {
                         "title": "15 Step",
@@ -713,8 +713,8 @@
         "albums": [
             {
                 "title": "Immunity",
-                "total_length": "43 mins 53 secs",
-                "synopsis": "S2" ,
+                "total_length": "43 min 53 secs",
+                "synopsis": "S!",
                 "tracks": [
                     {
                         "title": "Alewife",
@@ -770,8 +770,8 @@
         "albums": [
             {
                 "title": "CHROMAKOPIA",
-                "total_length": "52 mins 54 secs",
-                "synopsis": "S2" ,
+                "total_length": "52 min 54 secs",
+                "synopsis": "S!",
                 "tracks": [
                     {
                         "title": "St. Chroma",
@@ -839,8 +839,8 @@
         "albums": [
             {
                 "title": "Short n' Sweet",
-                "total_length": "36 mins 15 secs",
-                "synopsis": "S2" ,
+                "total_length": "36 min 15 secs",
+                "synopsis": "S!",
                 "tracks": [
                     {
                         "title": "Taste",
@@ -900,8 +900,8 @@
         "albums": [
             {
                 "title": "Manning Fireworks",
-                "total_length": "37 mins 13 secs",
-                "synopsis": "S2" ,
+                "total_length": "37 min 13 secs",
+                "synopsis": "S!",
                 "tracks": [
                     {
                         "title": "Manning Fireworks",
@@ -949,8 +949,8 @@
         "albums": [
             {
                 "title": "Two Hands",
-                "total_length": "39 mins 39 secs",
-                "synopsis": "S2" ,
+                "total_length": "39 min 39 secs",
+                "synopsis": "S!",
                 "tracks": [
                     {
                         "title": "Rock and Sing",
@@ -1002,8 +1002,8 @@
         "albums": [
             {
                 "title": "Bright Future",
-                "total_length": "43 mins 37 secs",
-                "synopsis": "S2" ,
+                "total_length": "43 min 37 secs",
+                "synopsis": "S!",
                 "tracks": [
                     {
                         "title": "Real House", 
@@ -1063,8 +1063,8 @@
         "albums": [
             {
                 "title": "The Great Impersonator",
-                "total_length": "1 hr 6 mins 7 secs",
-                "synopsis": "S2" ,
+                "total_length": "66 min 07 secs",
+                "synopsis": "S!",
                 "tracks": [
                     {
                         "title": "Only Living Girl in LA",
@@ -1132,8 +1132,8 @@
         "albums": [
             {
                 "title": "Melodrama",
-                "total_length": "43 mins 4 secs",
-                "synopsis": "S2" ,
+                "total_length": "43 min 4 secs",
+                "synopsis": "S!",
                 "tracks": [
                     {
                         "title": "Green Light",
@@ -1189,8 +1189,8 @@
         "albums": [
             {
                 "title": "Blonde",
-                "total_length": "1 hr 8 secs",
-                "synopsis": "S2" ,
+                "total_length": "60 min 8 secs",
+                "synopsis": "S!",
                 "tracks": [
                     {
                         "title": "Nikes",
@@ -1270,8 +1270,8 @@
         "albums": [
             {
                 "title": "Rumours",
-                "total_length": "39 mins 43 secs",
-                "synopsis": "S2" ,
+                "total_length": "39 min 43 secs",
+                "synopsis": "S!",
                 "tracks": [
                     {
                         "title": "Second Hand News",
@@ -1327,8 +1327,8 @@
         "albums": [
             {
                 "title": "CTRL",
-                "total_length": "49 mins 1 sec",
-                "synopsis": "S2" ,
+                "total_length": "49 min 1 secs",
+                "synopsis": "S!",
                 "tracks": [
                     {
                         "title": "Supermodel",
