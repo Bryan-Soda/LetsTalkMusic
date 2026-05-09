@@ -3,11 +3,20 @@ import { Routes, Route } from 'react-router-dom';
 import Homepage from './pages/Homepage.jsx';
 import ArtistAlbums from './pages/ArtistAlbums.jsx';
 import TracksAndReviews from './pages/TracksAndReviews.jsx';
+import LoginScreen from './pages/LoginScreen'; 
+import CreateAccount from './pages/CreateAccount';
 
 const App = () => {
   return (
     <Routes>
-      <Route path="/" element={<Homepage />} />
+      {/* Landing page defaults to login */}
+      <Route path="/" element={<LoginScreen />} />
+
+      {/* Page for account creation */}
+      <Route path="/create-account" element={<CreateAccount />} />
+
+      {/* Main landing page after login */}
+      <Route path="/home" element={<Homepage />} />
 
       {/* Dynamic route for artist's discography */}
       <Route path="/artists/:artistId" element={<ArtistAlbums />} />
@@ -16,6 +25,6 @@ const App = () => {
       <Route path="/album/:artistId/:albumId" element={<TracksAndReviews />} />
     </Routes>
   );
-}
+};
 
 export default App;

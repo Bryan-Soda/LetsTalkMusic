@@ -8,6 +8,8 @@ import bcrypt #used for hashing passwords
 
 # from flask_limiter import Limiter
 # from flask_limiter.util import get_remote_address
+# from flask_limiter import Limiter
+# from flask_limiter.util import get_remote_address
 
 from dotenv import load_dotenv #NOTE: Some portions require secrets. consult with others and do NOT place secrets within code plainly
 
@@ -16,6 +18,7 @@ admin_key = os.getenv('FLASK_ADMIN_KEY')
 
 app = Flask(__name__)
 
+# limiter = Limiter(get_remote_address, app=app)
 # limiter = Limiter(get_remote_address, app=app)
 
 cors = CORS(app, origins='*')
@@ -158,7 +161,7 @@ def get_all_artists():
 
 @app.route('/artists/<int:artist_id>', methods=['GET'])
 def get_artist(artist_id):
-    # Gets the a particular artist's genre, bio, etc.
+    # Gets the a particular artist's genre, etc.
 
     results = []
 
@@ -235,6 +238,7 @@ def get_artist_album(artist_id, album_id):
         "album_id": album_id,
         "album_title": album.title,
         "total_length": album.total_length,
+        "synopsis": album.synopsis,
         "synopsis": album.synopsis,
         "tracks": tracklist,
     })

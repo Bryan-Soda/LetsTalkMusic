@@ -1,0 +1,78 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    overflow: hidden; 
+} /* things to correct the commented out code from index and app css files */
+
+.login-page-container {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #0a0a0a;
+
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 1)), url('../../assets/loginScreenBG.jpg');
+    
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.login-card-paper {
+    padding: 40px;
+    background-color: #121212 !important;
+    border: 1px solid #333;
+    border-radius: 16px !important;
+    text-align: center;
+}
+
+.login-title {
+    color: #1ED760 !important;
+    font-weight: bold !important;
+    margin-bottom: 30px !important;
+    letter-spacing: 1px;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.login-input .MuiOutlinedInput-root {
+    color: white !important;
+}
+
+.login-input .MuiOutlinedInput-notchedOutline {
+    border-color: #444 !important;
+}
+
+.login-input:hover .MuiOutlinedInput-notchedOutline {
+    border-color: #1ED760 !important;
+}
+
+.login-input .Mui-focused .MuiOutlinedInput-notchedOutline {
+    border-color: #1ED760 !important;
+}
+
+.login-input .MuiInputLabel-root {
+    color: #888 !important;
+}
+
+.login-input .Mui-focused .MuiInputLabel-root {
+    color: #1ED760 !important;
+}
+
+.login-submit-btn {
+    background-color: #1ED760 !important;
+    color: black !important;
+    font-weight: bold !important;
+    padding: 12px !important;
+    margin-top: 10px !important;
+    border-radius: 8px !important;
+}
+
+.login-submit-btn:hover {
+    background-color: #17b350 !important;
+}
+

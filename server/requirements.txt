@@ -3,3 +3,4 @@ Flask-SQLAlchemy
 Flask_CORS
 flask-admin
 dotenv
+bcrypt
