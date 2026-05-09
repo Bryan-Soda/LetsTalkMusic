@@ -29,7 +29,7 @@ const ProfilePage = () => {
 
                 if (response.ok) {
                     const data = await response.json();
-                    
+                    console.log("data: ",data);
                     const formattedReviews = data.map(item => ({
                         id: item.review_id,
                         album_id: item.album_id, 
