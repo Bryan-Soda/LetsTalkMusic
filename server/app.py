@@ -6,8 +6,8 @@ import os
 from flask_cors import CORS
 import bcrypt #used for hashing passwords
 
-from flask_limiter import Limiter
-from flask_limiter.util import get_remote_address
+# from flask_limiter import Limiter
+# from flask_limiter.util import get_remote_address
 
 from dotenv import load_dotenv #NOTE: Some portions require secrets. consult with others and do NOT place secrets within code plainly
 
@@ -16,7 +16,7 @@ admin_key = os.getenv('FLASK_ADMIN_KEY')
 
 app = Flask(__name__)
 
-limiter = Limiter(get_remote_address, app=app)
+# limiter = Limiter(get_remote_address, app=app)
 
 cors = CORS(app, origins='*')
 
@@ -56,9 +56,9 @@ class Albums(db.Model):
     title = db.Column(db.String, nullable=False)
     # genre = db.Column(db.String, nullable=False)
     total_length = db.Column(db.String, nullable=False)
+    synopsis = db.Column(db.String, nullable=False)
 
     tracks = db.relationship('Tracks', backref='album')
-    synopsis = db.Column(db.String, nullable=False)
 class Tracks(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     album_id = db.Column(db.Integer, db.ForeignKey('albums.id'), nullable=False) 
@@ -152,7 +152,6 @@ def get_all_artists():
             "id": a.id,
             "artist_name": a.name,
             "genre": a.genre,
-            "bio": a.bio,
         })
     
     return jsonify(results), 200
@@ -169,7 +168,6 @@ def get_artist(artist_id):
             "id": artist.id,
             "artist_name": artist.name,
             "genre": artist.genre,
-            "bio": artist.bio,
         })
     
     return jsonify(results), 200
@@ -198,7 +196,6 @@ def get_artist_albums(artist_id):
         results.append({
             "album_id": albums.id,
             "album_title": albums.title,
-            # "album_genre": albums.genre,
             "total_length": albums.total_length,
             "artist_name": artist.name  # ADD THIS LINE
             #"tracks": tracklist,
@@ -231,13 +228,14 @@ def get_artist_album(artist_id, album_id):
             "track_id": track.id,
             "track_title": track.title,
             "track_length": track.length,
+
         })
 
     results.append({
         "album_id": album_id,
         "album_title": album.title,
-        # "album_genre": album.genre,
         "total_length": album.total_length,
+        "synopsis": album.synopsis,
         "tracks": tracklist,
     })
     return jsonify(results), 200
