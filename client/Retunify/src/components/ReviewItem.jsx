@@ -4,7 +4,8 @@ import EditIcon from '@mui/icons-material/Edit';
 import DeleteIcon from '@mui/icons-material/Delete';
 import './styles/ReviewItem.css'; 
 
-const ReviewItem = ({ albumCover, albumName, rating, reviewText, onDelete }) => {
+// Added album_id and onUpdate to the props
+const ReviewItem = ({ album_id, albumCover, albumName, rating, reviewText, onDelete, onUpdate }) => {
     const [isEditing, setIsEditing] = useState(false);
     const [currentRating, setCurrentRating] = useState(rating);
     const [currentReviewText, setCurrentReviewText] = useState(reviewText);
@@ -12,6 +13,10 @@ const ReviewItem = ({ albumCover, albumName, rating, reviewText, onDelete }) => 
     const isLongText = currentReviewText.length > 150;
 
     const handleEditClick = () => {
+        // If we are currently editing and click the button, it means we are SAVING
+        if (isEditing) {
+            onUpdate(album_id, currentRating, currentReviewText);
+        }
         setIsEditing(!isEditing);
     };
 
@@ -32,19 +37,17 @@ const ReviewItem = ({ albumCover, albumName, rating, reviewText, onDelete }) => 
 
     return (
         <Paper elevation={0} className="review-item-container">
-            {/* Left side: Album Cover */}
             <Box 
                 component="img"
                 src={albumCover}
                 className="review-album-img"
                 alt={albumName}
                 sx={{
-                    transition: 'transform 0.32 ease-in-out',
+                    transition: 'transform 0.3s ease-in-out',
                     '&:hover' : { transform: 'scale(1.05)' }
                 }}
             />
 
-            {/* Middle: Information and Content */}
             <Box className="review-info-wrapper">
                 
                 <Box className="boxed-label">
@@ -124,7 +127,6 @@ const ReviewItem = ({ albumCover, albumName, rating, reviewText, onDelete }) => 
                 </Box>
             </Box>
 
-            {/* Right side: Action Buttons */}
             <Stack spacing={3} className="action-stack">
                 <Button 
                     variant={isEditing ? "outlined" : "contained"} 
@@ -159,7 +161,7 @@ const ReviewItem = ({ albumCover, albumName, rating, reviewText, onDelete }) => 
                     Delete Review?
                 </DialogTitle>
                 <DialogContent>
-                    <DialogContentText>
+                    <DialogContentText sx={{ color: '#ccc' }}>
                         Are you sure you want to delete your review for <strong>{albumName}</strong>? This action cannot be undone.
                     </DialogContentText>
                 </DialogContent>

@@ -7,45 +7,93 @@ import WeeklyDigest from '../components/WeeklyDigest'
 
 const ProfilePage = () => {
     const username = localStorage.getItem('username') || 'User';
-
-    const [isLoading, setIsLoading] = useState(true);
-
-    useEffect(() => {
-        const timer = setTimeout(() => {
-            setIsLoading(false);
-        }, 1500);
-        return () => clearTimeout(timer);
-    }, []);
+    const userId = localStorage.getItem('userId') || 1; 
     
-    const [reviews, setReviews] = useState([
-        {
-            id: 1,
-            albumCover: '../src/assets/SweetBoy.jpg', 
-            albumName: 'Sweet Boy',
-            rating: 5,
-            reviewText: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt sit eius qui quia optio maxime possimus magnam eos placeat ea? Neque distinctio ipsam officiis nulla! Quibusdam voluptate consequatur non rerum?'
-        },
-        {
-            id: 2,
-            albumCover: '../src/assets/SuperClean_Vol.1.jpg',
-            albumName: 'Superclean, Vol.I',
-            rating: 1,
-            reviewText: 'The singer is puerto rican :(.'
-        }
-    ]);
+    const [isLoading, setIsLoading] = useState(true);
+    const [reviews, setReviews] = useState([]);
+
+    const API_URL = 'http://127.0.0.1:5000';
+
+    // 1. GET REVIEWS ON COMPONENT MOUNT
+    useEffect(() => {
+        const fetchReviews = async () => {
+            try {
+                const response = await fetch(`${API_URL}/reviews/user/${userId}`);
+                
+                if (response.status === 404) {
+                    console.log("User not found or no reviews yet.");
+                    setReviews([]);
+                    setIsLoading(false);
+                    return;
+                }
+
+                if (response.ok) {
+                    const data = await response.json();
+                    
+                    const formattedReviews = data.map(item => ({
+                        id: item.review_id,
+                        album_id: item.album_id, 
+                        albumName: item.album_title,
+                        rating: item.rating,
+                        reviewText: item.review,
+                        albumCover: DefaultAvatar 
+                    }));
+                    
+                    setReviews(formattedReviews);
+                }
+            } catch (error) {
+                console.error("Error fetching reviews:", error);
+            } finally {
+                setIsLoading(false);
+            }
+        };
+
+        fetchReviews();
+    }, [userId]);
 
     const amountOfReviews = reviews.length;
 
-    const handleDeleteReview = (idToDelete) => {
-        setReviews(reviews.filter(review => review.id !== idToDelete));
+    // 2. DELETE API ROUTE
+    const handleDeleteReview = async (reviewId, albumId) => {
+        try {
+            const response = await fetch(`${API_URL}/reviews/${userId}/${albumId}`, {
+                method: 'DELETE',
+            });
+
+            if (response.ok) {
+                setReviews(reviews.filter(review => review.id !== reviewId));
+            } else {
+                console.error("Failed to delete review on backend");
+            }
+        } catch (error) {
+            console.error("Error deleting review:", error);
+        }
     }
 
-    const averageRating = amountOfReviews > 0 
-    ? (reviews.reduce((acc, curr) => acc + curr.rating, 0) / amountOfReviews).toFixed(1): 0;
+    // 3. EDIT (PUT) API ROUTE
+    const handleUpdateReview = async (albumId, newRating, newReviewText) => {
+        try {
+            const response = await fetch(`${API_URL}/reviews/${userId}/${albumId}`, {
+                method: 'PUT',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    rating: parseFloat(newRating),
+                    review: newReviewText
+                })
+            });
+
+            if (!response.ok) {
+                console.error("Failed to update review on backend");
+            }
+        } catch (error) {
+            console.error("Error updating review:", error);
+        }
+    }
 
     return (
         <Container maxWidth="md" className="profile-mui-container">
-            {/* Header Section */}
             <Box className="profile-header-box" sx={{ display: 'flex', alignItems: 'center', gap: 2, mb: 3 }}>
                 <Avatar 
                     src={DefaultAvatar} 
@@ -59,7 +107,6 @@ const ProfilePage = () => {
 
             <Divider className="profile-divider-mui" sx={{ mb: 4 }} />
 
-            {/* My Activity Center */}
             <section className='activity-section' style={{ marginBottom: '2rem' }}>
                 <Typography variant='h6' className='activity-title-text' sx={{ mb: 2, fontWeight: 700, letterSpacing: 1}}>
                     MY ACTIVITY
@@ -79,10 +126,9 @@ const ProfilePage = () => {
                 
                 <Box className="reviews-list-container">
                     {isLoading ? (
-                        [1, 2].map((n) => ( 
+                        [1, 2].map((n) => (
                             <Paper key={n} elevation={0} className="review-item-container" sx={{ opacity: 0.8, mb: 2 }}>
                                 <Skeleton variant="rectangular" width={120} height={120} sx={{ borderRadius: 2, bgcolor: '#222' }}/>
-
                                 <Box sx={{ flexGrow: 1, display: 'flex', flexDirection: 'column', gap: 1.5 }}>
                                     <Skeleton variant="text" width="40%" height={30} sx={{ bgcolor: '#222', borderRadius: 1}}/>
                                     <Skeleton variant="text" width="20%" height={24} sx={{ bgcolor: '#222', borderRadius: 1}}/>
@@ -94,12 +140,15 @@ const ProfilePage = () => {
                                 </Stack>
                             </Paper>
                         ))
+                    ) : reviews.length === 0 ? (
+                        <Typography sx={{ color: '#888', mt: 2 }}>No reviews written yet.</Typography>
                     ) : (
                         reviews.map(item => (
                             <ReviewItem
                                 key={item.id}
                                 {...item}
-                                onDelete={() => handleDeleteReview(item.id)}
+                                onDelete={() => handleDeleteReview(item.id, item.album_id)}
+                                onUpdate={handleUpdateReview}
                             />
                         ))
                     )}
@@ -108,7 +157,5 @@ const ProfilePage = () => {
         </Container>
     );
 };
-
-
 
 export default ProfilePage;
