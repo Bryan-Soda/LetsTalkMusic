@@ -32,9 +32,9 @@ export default function WeeklyDigest({ userName = 'Jesper', reviewsWritten = 38 
       }}
     >
       <Box sx={{ flex: 1, maxWidth: 520, zIndex: 1 }}>
-        <Typography variant="overline" sx={{ color: '#00e544', letterSpacing: 3, fontWeight: 600, fontSize: 11 }}>
-          Your weekly digest
-        </Typography>
+        {/* <Typography variant="overline" sx={{ color: '#00e544', letterSpacing: 3, fontWeight: 600, fontSize: 11 }}>
+          Your digest
+        </Typography> */}
         <Typography variant="h3" sx={{ fontFamily: 'DM Serif Display, serif', color: '#fff', my: 1 }}>
           Keep the Music Playin'
         </Typography>
@@ -55,7 +55,7 @@ export default function WeeklyDigest({ userName = 'Jesper', reviewsWritten = 38 
             <Typography variant="caption" sx={{ color: '#8a8a8a', textTransform: 'uppercase' }}>Reviews Written</Typography>
           </Paper>
         </Stack>
-        <Button
+        {/* <Button
           variant="contained"
           sx={{
             bgcolor: '#00e544',
@@ -65,7 +65,7 @@ export default function WeeklyDigest({ userName = 'Jesper', reviewsWritten = 38 
           }}
         >
           Browse New Releases
-        </Button>
+        </Button> */}
       </Box>
       {/* Optional decorative stack – you can add the rotating records back if needed */}
     </Paper>
