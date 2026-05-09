@@ -2,6 +2,7 @@ import { Routes, Route } from 'react-router-dom';
 // import LoginScreen from './pages/LoginScreen'; 
 // import Homepage from './pages/Homepage';
 import Profilepage from './pages/Profilepage';
+import TestLogin from './Test_Pages/MainTest.jsx'
 
 function App() {
   return (
@@ -13,7 +14,8 @@ function App() {
       {/* <Route path="/home" element={<Homepage />} />  */}
 
       {/* Route for the profilepage after homepage */}
-      <Route path="/" element={<Profilepage />} /> 
+      <Route path='/' element={<TestLogin/>}></Route>
+      <Route path="/profile-page" element={<Profilepage />} /> 
 
       
     </Routes>
