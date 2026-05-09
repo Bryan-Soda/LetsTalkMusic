@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom'; // 1. Added useNavigate import
 import './styles/Homepage.css';
 import { 
   Pagination, 
@@ -12,25 +13,25 @@ import {
 import { Link } from 'react-router-dom';
 
 import AdrianneL from '../assets/ArtistImages/AdrianneL.jpg';
-import BigThief from '../assets/ArtistImages/BT.jpg'; //changed
+import BigThief from '../assets/ArtistImages/BT.jpg';
 import Clairo from '../assets/ArtistImages/Clairo.jpg';
 import DaftPunk from '../assets/ArtistImages/DaftPunk.jpg';
-import FleetwoodMac from '../assets/ArtistImages/FM.jpg'; //changed
+import FleetwoodMac from '../assets/ArtistImages/FM.jpg';
 import FrankOcean from '../assets/ArtistImages/FrankOcean.jpg';
 import Halsey from '../assets/ArtistImages/Halsey.jpg';
 import KendrickLamar from '../assets/ArtistImages/KendrickLamar.jpg';
 import Lorde from '../assets/ArtistImages/Lorde.jpg';
 import MalcolmTodd from '../assets/ArtistImages/MalcolmTodd.jpg';
-import MichaelJackson from '../assets/ArtistImages/MJ.jpg'; //changed
+import MichaelJackson from '../assets/ArtistImages/MJ.jpg';
 import MJLenderman from '../assets/ArtistImages/MJLenderman.jpg';
-import PinkPantheress from '../assets/ArtistImages/PP.jpg'; //changed
-import RadioHead from '../assets/ArtistImages/RH.jpg'; //changed
+import PinkPantheress from '../assets/ArtistImages/PP.jpg';
+import RadioHead from '../assets/ArtistImages/RH.jpg';
 import SabrinaC from '../assets/ArtistImages/SabrinaC.jpg';
 import SZA from '../assets/ArtistImages/SZA.jpg';
 import TameImpala from '../assets/ArtistImages/TameImpala.jpg';
 import TheMarias from '../assets/ArtistImages/TheMarias.jpg';
 import TylerTheCreator from '../assets/ArtistImages/TylerTheCreator.jpg';
-import YumiZouma from '../assets/ArtistImages/YZ.jpg'; //changed
+import YumiZouma from '../assets/ArtistImages/YZ.jpg';
 
 const artistImageMap = {
   "Adrianne Lenker": AdrianneL,
@@ -56,14 +57,9 @@ const artistImageMap = {
 };
 
 function ArtistCard({ artist }) {
-
   const [hovered, setHovered] = useState(false);
   const colors = ['#d4a853', '#2d6a4f', '#5e4b8b', '#c9a14a', '#b5c4d1', '#8b3a3a', '#4a7c59', '#c2a8d0'];
   const artistColor = colors[artist.id % colors.length];
-
-  
-
-  // Try to find the image in our map
   const imageAsset = artistImageMap[artist.artist_name];
 
   return (
@@ -76,7 +72,6 @@ function ArtistCard({ artist }) {
         <div
           className="album-art" 
           style={{
-            /* Use the image from the map if it exists, otherwise use gradient */
             background: imageAsset 
               ? `url(${imageAsset}) center/cover no-repeat` 
               : `linear-gradient(135deg, ${artistColor}cc, ${artistColor}66)`,
@@ -101,14 +96,18 @@ function ArtistCard({ artist }) {
 }
 
 export default function Homepage() {
-
   const api = "http://127.0.0.1:5000";
+  const navigate = useNavigate(); // 2. Initialized navigate hook
 
   const [artists, setArtists] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
   const PAGE_SIZE = 5;
-
   const [isPopupOpen, setPopupOpen] = useState(false);
+
+  const handleSignOut = () => {
+    localStorage.clear(); // Clears all session data
+    navigate("/");        // Redirects to Login
+  };
 
   useEffect(() => {
     fetch(`${api}/artists`)
@@ -142,68 +141,87 @@ export default function Homepage() {
           },
         }}
       >
-  <DialogTitle sx={{ color: '#00e544', fontWeight: 'bold', fontSize: '1.5rem' }}>
-    Welcome to LetsTalkMusic!
-  </DialogTitle>
+        <DialogTitle sx={{ color: '#00e544', fontWeight: 'bold', fontSize: '1.5rem' }}>
+          Welcome to LetsTalkMusic!
+        </DialogTitle>
+        <DialogContent>
+          <Typography variant="body1" sx={{ mb: 3 }}>
+            LetsTalkMusic is your personal music logging and discovery platform.
+          </Typography>
+          <Typography variant="h6" sx={{ mb: 2, fontWeight: 'bold' }}>
+            What can YOU do here?
+          </Typography>
+          <Typography variant="body2" sx={{ color: '#8a8a8a', lineHeight: '1.6' }}>
+            • Explore NEW artists or find your favorites.<br/>
+            • VIEW album reviews from others or CREATE your own.<br/>
+            • Click the help button anytime to see these instructions again!<br/>
+          </Typography>
+        </DialogContent>
+        <DialogActions sx={{ padding: '20px' }}>
+          <Button 
+            onClick={() => setPopupOpen(false)} 
+            sx={{ 
+              backgroundColor: '#00e544', 
+              color: 'black', 
+              fontWeight: 'bold',
+              '&:hover': { backgroundColor: '#00c139' },
+              borderRadius: '8px',
+              px: 3
+            }}
+          >
+            LET'S GO!
+          </Button>
+        </DialogActions>
+      </Dialog>
 
-  <DialogContent>
-    <Typography variant="body1" sx={{ mb: 3 }}>
-      LetsTalkMusic is your personal music logging and discovery platform.
-    </Typography>
+      <div className="topbar">
+        <div style={{ display: 'flex', alignItems: 'center', gap: '15px' }}>
+          <div className="greeting">LetsTalkMusic!</div>
+          
+          <Button 
+            onClick={() => setPopupOpen(true)} 
+            variant="outlined"
+            sx={{ 
+              color: '#00e544', 
+              borderColor: 'rgba(0, 229, 68, 0.5)',
+              textTransform: 'none',
+              fontWeight: 'bold',
+              fontSize: '0.75rem',
+              padding: '2px 10px',
+              '&:hover': { 
+                borderColor: '#00e544', 
+                backgroundColor: 'rgba(0, 229, 68, 0.05)' 
+              } 
+            }}
+          >
+            What can I do here?
+          </Button>
 
-    <Typography variant="h6" sx={{ mb: 2, fontWeight: 'bold' }}>
-      What can YOU do here?
-    </Typography>
-
-    <Typography variant="body2" sx={{ color: '#8a8a8a', lineHeight: '1.6' }}>
-      • Explore NEW artists or find your favorites.<br/>
-      • VIEW album reviews from others or CREATE your own.<br/>
-      • Click the help button anytime to see these instructions again!<br/>
-    </Typography>
-  </DialogContent>
-
-  <DialogActions sx={{ padding: '20px' }}>
-    <Button 
-      onClick={() => setPopupOpen(false)} 
-      sx={{ 
-        backgroundColor: '#00e544', 
-        color: 'black', 
-        fontWeight: 'bold',
-        '&:hover': { backgroundColor: '#00c139' },
-        borderRadius: '8px',
-        px: 3
-      }}
-    >
-      LET'S GO!
-    </Button>
-  </DialogActions>
-</Dialog>
-<div className="topbar">
-  <div style={{ display: 'flex', alignItems: 'center', gap: '15px' }}>
-    <div className="greeting">LetsTalkMusic!</div>
-    
-    <Button 
-      onClick={() => setPopupOpen(true)} 
-      variant="outlined"
-      sx={{ 
-        color: '#00e544', 
-        borderColor: 'rgba(0, 229, 68, 0.5)',
-        textTransform: 'none', // Keeps it from being all caps
-        fontWeight: 'bold',
-        fontSize: '0.75rem',
-        padding: '2px 10px',
-        '&:hover': { 
-          borderColor: '#00e544', 
-          backgroundColor: 'rgba(0, 229, 68, 0.05)' 
-        } 
-      }}
-    >
-      What can I do here?
-    </Button>
-  </div>
-  
-  <div className="avatar">J</div>
-</div>
+          <Button 
+            variant="outlined" 
+            onClick={handleSignOut}
+            sx={{ 
+              color: '#ff4444', 
+              borderColor: '#ff4444',
+              textTransform: 'none',
+              fontWeight: 'bold',
+              fontSize: '0.80rem',
+              padding: '2px 10px',
+              '&:hover': { 
+                borderColor: '#cc0000', 
+                backgroundColor: 'rgba(255, 68, 68, 0.05)' 
+              } 
+            }}
+          >
+            Sign Out
+          </Button>
+        </div>
+        
+        {/* 3. Dynamic Initial based on logged-in user */}
+        <div className="avatar">
+          {localStorage.getItem('username')?.charAt(0).toUpperCase() || 'U'}
+        </div>
+      </div>
 
       <div className="main-content">
         <div className="section-header">
