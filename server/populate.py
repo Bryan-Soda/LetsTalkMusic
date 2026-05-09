@@ -28,8 +28,7 @@ class Artists(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String, unique=True, nullable=False)
     genre = db.Column(db.String, nullable=False)
-    bio = db.Column(db.String, nullable=True, unique=False)
-
+    
     albums = db.relationship('Albums', backref='artist')
 
 class Albums(db.Model):
@@ -40,7 +39,7 @@ class Albums(db.Model):
     total_length = db.Column(db.String, nullable=False)
 
     tracks = db.relationship('Tracks', backref='album')
-    # synopsis = db.Column(db.String, nullable=False)
+    synopsis = db.Column(db.String, nullable=False)
 class Tracks(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     album_id = db.Column(db.Integer, db.ForeignKey('albums.id'), nullable=False) 
@@ -69,7 +68,7 @@ def populate(data):
         if exisitng:
             artist = exisitng
         else:
-            artist = Artists(name=artist_data['artist_name'], genre=artist_data['genre'], bio=artist_data['bio'])
+            artist = Artists(name=artist_data['artist_name'], genre=artist_data['genre'])
 
         db.session.add(artist)
         db.session.flush()
@@ -86,7 +85,7 @@ def populate(data):
             if exisiting:
                 album = exisiting
             else:
-                album = Albums(artist_id=artist.id, title=album_data['title'], total_length=album_data['total_length'])
+                album = Albums(artist_id=artist.id, title=album_data['title'], total_length=album_data['total_length'], synopsis=album_data.get('synopsis'))
             
             db.session.add(album)
             db.session.flush()

@@ -6,12 +6,18 @@ import os
 from flask_cors import CORS
 import bcrypt #used for hashing passwords
 
+# from flask_limiter import Limiter
+# from flask_limiter.util import get_remote_address
+
 from dotenv import load_dotenv #NOTE: Some portions require secrets. consult with others and do NOT place secrets within code plainly
 
 load_dotenv()
 admin_key = os.getenv('FLASK_ADMIN_KEY')
 
 app = Flask(__name__)
+
+# limiter = Limiter(get_remote_address, app=app)
+
 cors = CORS(app, origins='*')
 
 basedir = os.path.abspath(os.path.dirname(__file__))
@@ -40,7 +46,7 @@ class Artists(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String, unique=True, nullable=False)
     genre = db.Column(db.String, nullable=False)
-    bio = db.Column(db.String, nullable=False, unique=False)
+    # bio = db.Column(db.String, nullable=False, unique=False)
 
     albums = db.relationship('Albums', backref='artist')
 
@@ -52,7 +58,7 @@ class Albums(db.Model):
     total_length = db.Column(db.String, nullable=False)
 
     tracks = db.relationship('Tracks', backref='album')
-    # synopsis = db.Column(db.String, nullable=False)
+    synopsis = db.Column(db.String, nullable=False)
 class Tracks(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     album_id = db.Column(db.Integer, db.ForeignKey('albums.id'), nullable=False) 
@@ -73,11 +79,14 @@ class Reviews(db.Model):
 #Api routes:
 
 @app.route('/')
+# @limiter.limit("3 per day")
 def index():
     return "Hello MusicApp DB World!"
 
 #Add new user (check if valid email, user, etc) Note: Currently only checks if user is valid
+
 @app.route('/user', methods=['POST'])
+
 def add_new_member():
     data = request.get_json()
     if not data:
@@ -104,7 +113,6 @@ def add_new_member():
     
     new_user = Users(username=name, password=hashed_pass, role='u')
     
-    print()
     db.session.add(new_user)
     db.session.commit()
 
@@ -129,7 +137,7 @@ def authenticate():
     print("hashed password: ", submitted_password.encode('utf-8') )
     if bcrypt.checkpw(submitted_password.encode('utf-8'), user.password):
         print("Password Matches!")
-        return {'role': 'user'}
+        return {'role': 'user', 'id': user.id}
     else:
         return{'error':'incorrect password'}, 400
 
@@ -143,15 +151,14 @@ def get_all_artists():
         results.append({
             "id": a.id,
             "artist_name": a.name,
-            "genre": a.overall_genre,
-            "bio": a.bio,
+            "genre": a.genre,
         })
     
     return jsonify(results), 200
 
 @app.route('/artists/<int:artist_id>', methods=['GET'])
 def get_artist(artist_id):
-    # Gets the a particular artist's genre, bio, etc.
+    # Gets the a particular artist's genre, etc.
 
     results = []
 
@@ -160,8 +167,7 @@ def get_artist(artist_id):
     results.append({
             "id": artist.id,
             "artist_name": artist.name,
-            "genre": artist.overall_genre,
-            "bio": artist.bio,
+            "genre": artist.genre,
         })
     
     return jsonify(results), 200
@@ -190,9 +196,7 @@ def get_artist_albums(artist_id):
         results.append({
             "album_id": albums.id,
             "album_title": albums.title,
-            "album_genre": albums.genre,
             "total_length": albums.total_length,
-            #"tracks": tracklist,
         })
 
     return jsonify(results), 200
@@ -227,14 +231,14 @@ def get_artist_album(artist_id, album_id):
     results.append({
         "album_id": album_id,
         "album_title": album.title,
-        "album_genre": album.genre,
         "total_length": album.total_length,
+        "synopsis": album.synopsis,
         "tracks": tracklist,
     })
     return jsonify(results), 200
 
 # get all reviews from a certain album
-@app.route('/reviews/<int:album_id>', methods=['GET'])
+@app.route('/reviews/album/<int:album_id>', methods=['GET'])
 def get_all_album_reviews(album_id):
     all_reviews = Reviews.query.get(album_id=album_id)
 
@@ -253,7 +257,7 @@ def get_all_album_reviews(album_id):
     return {'SUCCESS':'Got all album reviews'}, 200
     
     
-@app.route('/reviews/<int:user_id>', methods=['GET'])
+@app.route('/reviews/user/<int:user_id>', methods=['GET'])
 def get_all_user_reviews(user_id):
     
     user = Users.query.get(user_id)
