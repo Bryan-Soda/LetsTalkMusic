@@ -33,8 +33,18 @@ const CreateAccount = () => {
                 return;
             }
 
+            // --- ADD THESE LINES ---
+            // Store the username and potentially the ID if your backend returns it
+            localStorage.setItem('username', username); 
+            if (data.id) {
+                localStorage.setItem('userId', data.id);
+            }
+            // -----------------------
+
             setSuccess(true);
             setTimeout(() => {
+                // You can navigate to "/home" if you want them logged in immediately,
+                // or stay at "/" to make them log in manually.
                 navigate("/"); 
             }, 2000);
 
