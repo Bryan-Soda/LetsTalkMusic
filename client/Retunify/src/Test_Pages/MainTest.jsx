@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom'
 import React from 'react'
 
 const MainTest = () => {
-    
+    // TEST
     const api = "http://127.0.0.1:5000";
     const navigate = useNavigate()
     const [pass, setPass] = useState('');
