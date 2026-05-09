@@ -94,7 +94,7 @@ export default function TracksAndReviews() {
 
       <div className="main-content">
         <Typography variant="subtitle1" className="album-meta-subtitle" sx={{ textAlign: 'center' }}>
-          {albumData.artist_name} | Total Album Length: {albumData.total_length}
+          {albumData.artist_name} | Total Length: {albumData.total_length} |
         </Typography>
 
         <Grid container spacing={4} sx={{ mt: 1 }}>
