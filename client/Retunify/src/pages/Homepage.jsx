@@ -13,7 +13,7 @@ import { Link } from 'react-router-dom';
 
 import AdrianneL from '../assets/ArtistImages/AdrianneL.jpg';
 import BigThief from '../assets/ArtistImages/BT.jpg'; //changed
-import Clario from '../assets/ArtistImages/Clairo.jpg';
+import Clairo from '../assets/ArtistImages/Clairo.jpg';
 import DaftPunk from '../assets/ArtistImages/DaftPunk.jpg';
 import FleetwoodMac from '../assets/ArtistImages/FM.jpg'; //changed
 import FrankOcean from '../assets/ArtistImages/FrankOcean.jpg';
@@ -35,7 +35,7 @@ import YumiZouma from '../assets/ArtistImages/YZ.jpg'; //changed
 const artistImageMap = {
   "Adrianne Lenker": AdrianneL,
   "Big Thief": BigThief,
-  "Clario": Clario,
+  "Clairo": Clairo,
   "Daft Punk": DaftPunk,
   "Fleetwood Mac": FleetwoodMac,
   "Frank Ocean": FrankOcean,

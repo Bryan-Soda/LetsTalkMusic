@@ -85,7 +85,7 @@ export default function ArtistAlbums() {
   return (
     <div className="artist-albums-page">
       <div className="topbar">
-        <Link to="/" className="back-link" style={{color: '#00e544', textDecoration: 'none'}}>← BACK</Link>
+        <Link to="/home" className="back-link" style={{color: '#00e544', textDecoration: 'none'}}>← BACK</Link>
         <div className="greeting">{artistName ? `${artistName.toUpperCase()}` : "ALBUMS"}</div>
         <div className="avatar">J</div>
       </div>
