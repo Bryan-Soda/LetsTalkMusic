@@ -1,3 +1,25 @@
+/* Ensure these settings are in your main CSS file */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: auto;           /* Allow height to grow with content */
+  min-height: 100%;
+  overflow-x: hidden;     /* Prevent horizontal wobble */
+  overflow-y: auto;       /* Explicitly allow vertical scrolling */
+  background-color: #0a0a0a;
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+
+
+
+
+
 /* :root {
   --text: #6b6375;
   --text-h: #08060d;
@@ -94,3 +116,4 @@ code {
   padding: 4px 8px;
   background: var(--code-bg);
 } */
+

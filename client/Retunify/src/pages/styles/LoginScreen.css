@@ -1,8 +1,11 @@
-body, html {
+html, body {
     margin: 0;
     padding: 0;
-    overflow: hidden; 
-} /* things to correct the commented out code from index and app css files */
+    overflow-x: hidden; /* Prevent sideways wobbling */
+    overflow-y: auto;   /* Enable vertical scrolling */
+    height: auto;
+    min-height: 100%;
+}
 
 .login-page-container {
     height: 100vh;
