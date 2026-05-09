@@ -39,7 +39,8 @@ class Users(db.Model):
     reviews = db.relationship('Reviews', backref='user')
     # May need some relations down the line
     #   > Stored data for user's analytics, etc.
-
+    def __repr__(self):
+        return self.username
     # May need to store some webapi tokens for the user's spotify to be able to login?
 
 class Artists(db.Model):
@@ -50,6 +51,8 @@ class Artists(db.Model):
 
     albums = db.relationship('Albums', backref='artist')
 
+    def __repr__(self):
+        return self.name
 class Albums(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     artist_id = db.Column(db.Integer, db.ForeignKey('artists.id'), nullable=False) 
@@ -59,13 +62,18 @@ class Albums(db.Model):
 
     tracks = db.relationship('Tracks', backref='album')
     synopsis = db.Column(db.String, nullable=False)
+
+    def __repr__(self):
+        return self.title
 class Tracks(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     album_id = db.Column(db.Integer, db.ForeignKey('albums.id'), nullable=False) 
     artist_id = db.Column(db.Integer, db.ForeignKey('artists.id'), nullable=False)  
     title = db.Column(db.String, nullable=False) 
     length = db.Column(db.String, nullable=False) #denote the track length
-
+    
+    def __repr__(self):
+        return self.title   
 class Reviews(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     user_id = db.Column(db.Integer, db.ForeignKey('users.id'), nullable=False)
@@ -75,7 +83,7 @@ class Reviews(db.Model):
     rating = db.Column(db.Float, nullable=False)
 
     album = db.relationship('Albums', backref='reviews')
-
+ 
 #Api routes:
 
 @app.route('/')
