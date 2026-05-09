@@ -191,39 +191,44 @@ export default function TracksAndReviews() {
           </Grid>
 
           {/* 4. BOTTOM CONTAINER 2: Reviews */}
-          <Grid item xs={12} sx={{ mt: 2 }}>
-            <Typography variant="overline" className="column-label">Album Reviews</Typography>
-            <Box 
-              sx={{ 
-                display: 'flex', 
-                flexDirection: 'row', 
-                overflowX: 'auto', 
-                gap: 2, 
-                pb: 2
-              }}
-            >
-              {[1, 2, 3, 4, 5].map((item) => (
-                <Paper 
-                  key={item} 
-                  elevation={0} 
-                  sx={{ 
-                    minWidth: '300px', 
-                    p: 2, 
-                    backgroundColor: '#1a1a1a', 
-                    border: '1px solid #2a2a2a',
-                    borderRadius: '8px'
-                  }}
-                >
-                  <Typography variant="caption" sx={{ color: '#00e544', display: 'block', mb: 1 }}>
-                    USER_REVIEW_{item}
-                  </Typography>
-                  <Typography variant="body2" sx={{ color: '#8a8a8a' }}>
-                    Review functionality coming soon.
-                  </Typography>
-                </Paper>
-              ))}
-            </Box>
-          </Grid>
+<Grid item xs={12} sx={{ mt: 2, width: '100%' }}>
+  <Typography variant="overline" className="column-label">Album Reviews</Typography>
+  <Box 
+    sx={{ 
+      display: 'flex', 
+      flexDirection: 'row', 
+      overflowX: 'auto', // Ensures horizontal scrolling
+      gap: 2, 
+      pb: 2,
+      width: '100%',
+      '&::-webkit-scrollbar': { height: '8px' }, // Optional: style the scrollbar
+      '&::-webkit-scrollbar-thumb': { backgroundColor: '#2a2a2a', borderRadius: '4px' }
+    }}
+  >
+    {[1, 2, 3, 4, 5].map((item) => (
+      <Paper 
+        key={item} 
+        elevation={0} 
+        sx={{ 
+          minWidth: '280px', // Fixed width to force the overflow
+          maxWidth: '300px',
+          p: 2, 
+          backgroundColor: '#1a1a1a', 
+          border: '1px solid #2a2a2a',
+          borderRadius: '8px',
+          flexShrink: 0 // Prevents the cards from squishing
+        }}
+      >
+        <Typography variant="caption" sx={{ color: '#00e544', display: 'block', mb: 1 }}>
+          USER_REVIEW_{item}
+        </Typography>
+        <Typography variant="body2" sx={{ color: '#8a8a8a' }}>
+          Review functionality coming soon.
+        </Typography>
+      </Paper>
+    ))}
+  </Box>
+</Grid>
         </Grid>
       </div>
     </div>

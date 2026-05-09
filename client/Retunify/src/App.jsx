@@ -5,6 +5,7 @@ import ArtistAlbums from './pages/ArtistAlbums.jsx';
 import TracksAndReviews from './pages/TracksAndReviews.jsx';
 import LoginScreen from './pages/LoginScreen'; 
 import CreateAccount from './pages/CreateAccount';
+// import Profilepage from './pages/Profilepage';
 
 const App = () => {
   return (
@@ -17,6 +18,9 @@ const App = () => {
 
       {/* Main landing page after login */}
       <Route path="/home" element={<Homepage />} />
+
+      {/* Main landing page after login */}
+      {/* <Route path="/profile" element={<ProfilePage />} /> */}
 
       {/* Dynamic route for artist's discography */}
       <Route path="/artists/:artistId" element={<ArtistAlbums />} />
