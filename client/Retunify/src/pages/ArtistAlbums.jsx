@@ -61,7 +61,6 @@ export default function ArtistAlbums() {
   const [albums, setAlbums] = useState([]);
   const [artistName, setArtistName] = useState("");
 
-  // Color palette for dynamic square backgrounds
   const colors = ['#d4a853', '#2d6a4f', '#5e4b8b', '#c9a14a', '#b5c4d1', '#8b3a3a', '#4a7c59', '#c2a8d0'];
 
   useEffect(() => {
@@ -71,7 +70,6 @@ export default function ArtistAlbums() {
         return res.json();
       })
       .then(data => {
-        console.log("Fetched Data:", data);
         if (Array.isArray(data)) {
           setAlbums(data);
           if (data.length > 0 && data[0].artist_name) {
@@ -84,10 +82,23 @@ export default function ArtistAlbums() {
 
   return (
     <div className="artist-albums-page">
-      <div className="topbar">
-        <Link to="/home" className="back-link" style={{color: '#00e544', textDecoration: 'none'}}>← BACK</Link>
-        <div className="greeting">{artistName ? `${artistName.toUpperCase()}` : "ALBUMS"}</div>
-        <div className="avatar">J</div>
+      <div className="topbar" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+        {/* Left side: Back link */}
+        <Link 
+          to="/home" 
+          className="back-link" 
+          style={{ color: '#00e544', textDecoration: 'none', width: '80px' }}
+        >
+          ← BACK
+        </Link>
+
+        {/* Center: Artist Name */}
+        <div className="greeting" style={{ flex: 1, textAlign: 'center' }}>
+          {artistName ? artistName.toUpperCase() : "ALBUMS"}
+        </div>
+
+        {/* Right side: Spacer for balance */}
+        <div style={{ width: '80px' }}></div>
       </div>
 
       <div className="main-content">
@@ -95,7 +106,6 @@ export default function ArtistAlbums() {
           {albums.length > 0 ? (
             albums.map((album) => {
               const albumColor = colors[album.album_id % colors.length];
-              // Retrieve the hardcoded image from the map
               const hardcodedCover = albumCoverMap[album.album_title];
               
               return (
@@ -108,7 +118,6 @@ export default function ArtistAlbums() {
                     <div 
                       className="album-square-art"
                       style={{
-                        // Use the image if found, otherwise use the gradient
                         background: hardcodedCover 
                           ? `url(${hardcodedCover}) center/cover no-repeat` 
                           : `linear-gradient(135deg, ${albumColor}cc, ${albumColor}66)`,
