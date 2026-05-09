@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom'; // 1. Added useNavigate import
+import { useNavigate } from 'react-router-dom';
 import './styles/Homepage.css';
 import { 
   Pagination, 
@@ -13,25 +13,25 @@ import {
 import { Link } from 'react-router-dom';
 
 import AdrianneL from '../assets/ArtistImages/AdrianneL.jpg';
-import BigThief from '../assets/ArtistImages/BT.jpg';
+import BigThief from '../assets/ArtistImages/BT.jpg'; 
 import Clairo from '../assets/ArtistImages/Clairo.jpg';
 import DaftPunk from '../assets/ArtistImages/DaftPunk.jpg';
-import FleetwoodMac from '../assets/ArtistImages/FM.jpg';
+import FleetwoodMac from '../assets/ArtistImages/FM.jpg'; 
 import FrankOcean from '../assets/ArtistImages/FrankOcean.jpg';
 import Halsey from '../assets/ArtistImages/Halsey.jpg';
 import KendrickLamar from '../assets/ArtistImages/KendrickLamar.jpg';
 import Lorde from '../assets/ArtistImages/Lorde.jpg';
 import MalcolmTodd from '../assets/ArtistImages/MalcolmTodd.jpg';
-import MichaelJackson from '../assets/ArtistImages/MJ.jpg';
+import MichaelJackson from '../assets/ArtistImages/MJ.jpg'; 
 import MJLenderman from '../assets/ArtistImages/MJLenderman.jpg';
-import PinkPantheress from '../assets/ArtistImages/PP.jpg';
-import RadioHead from '../assets/ArtistImages/RH.jpg';
+import PinkPantheress from '../assets/ArtistImages/PP.jpg'; 
+import RadioHead from '../assets/ArtistImages/RH.jpg'; 
 import SabrinaC from '../assets/ArtistImages/SabrinaC.jpg';
 import SZA from '../assets/ArtistImages/SZA.jpg';
 import TameImpala from '../assets/ArtistImages/TameImpala.jpg';
 import TheMarias from '../assets/ArtistImages/TheMarias.jpg';
 import TylerTheCreator from '../assets/ArtistImages/TylerTheCreator.jpg';
-import YumiZouma from '../assets/ArtistImages/YZ.jpg';
+import YumiZouma from '../assets/ArtistImages/YZ.jpg'; 
 
 const artistImageMap = {
   "Adrianne Lenker": AdrianneL,
@@ -54,6 +54,19 @@ const artistImageMap = {
   "The Marias": TheMarias,
   "Tyler, The Creator": TylerTheCreator,
   "Yumi Zouma": YumiZouma
+};
+
+const stringToColor = (string) => {
+  let hash = 0;
+  for (let i = 0; i < string.length; i++) {
+    hash = string.charCodeAt(i) + ((hash << 5) - hash);
+  }
+  let color = '#';
+  for (let i = 0; i < 3; i++) {
+    const value = (hash >> (i * 8)) & 0xFF;
+    color += ('00' + value.toString(16)).slice(-2);
+  }
+  return color;
 };
 
 function ArtistCard({ artist }) {
@@ -97,16 +110,19 @@ function ArtistCard({ artist }) {
 
 export default function Homepage() {
   const api = "http://127.0.0.1:5000";
-  const navigate = useNavigate(); // 2. Initialized navigate hook
+  const navigate = useNavigate();
 
   const [artists, setArtists] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
   const PAGE_SIZE = 5;
   const [isPopupOpen, setPopupOpen] = useState(false);
 
+  const username = localStorage.getItem('username') || "Guest";
+  const avatarColor = stringToColor(username);
+
   const handleSignOut = () => {
-    localStorage.clear(); // Clears all session data
-    navigate("/");        // Redirects to Login
+    localStorage.clear(); 
+    navigate("/");        
   };
 
   useEffect(() => {
@@ -217,9 +233,18 @@ export default function Homepage() {
           </Button>
         </div>
         
-        {/* 3. Dynamic Initial based on logged-in user */}
-        <div className="avatar">
-          {localStorage.getItem('username')?.charAt(0).toUpperCase() || 'U'}
+        {/* Avatar Box Logic */}
+        <div 
+          className="avatar" 
+          style={{ 
+            backgroundColor: avatarColor, 
+            borderRadius: '8px', // Changed from circle to box/rounded square
+            border: '1px solid rgba(255,255,255,0.1)',
+            width: '55px',
+            height: '35px'
+          }}
+        >
+        Profile
         </div>
       </div>
 
