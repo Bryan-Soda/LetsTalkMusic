@@ -55,7 +55,8 @@ const albumCoverMap = {
   "Two Hands": TwoHands
 };
 
-export default function ArtistAlbums() {
+export default function ArtistAlbums() { 
+  const api = "http://127.0.0.1:5000";
   const { artistId } = useParams();
   const [albums, setAlbums] = useState([]);
   const [artistName, setArtistName] = useState("");
@@ -64,7 +65,7 @@ export default function ArtistAlbums() {
   const colors = ['#d4a853', '#2d6a4f', '#5e4b8b', '#c9a14a', '#b5c4d1', '#8b3a3a', '#4a7c59', '#c2a8d0'];
 
   useEffect(() => {
-    fetch(`http://127.0.0.1:5000/artists/${artistId}/albums`)
+    fetch(`${api}/artists/${artistId}/albums`)
       .then(res => {
         if (!res.ok) throw new Error("Server error");
         return res.json();

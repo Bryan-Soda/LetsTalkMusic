@@ -57,11 +57,14 @@ const albumCoverMap = {
 };
 
 export default function TracksAndReviews() {
+
+  const api = "http://127.0.0.1:5000";
+
   const { artistId, albumId } = useParams();
   const [albumData, setAlbumData] = useState(null);
 
   useEffect(() => {
-    fetch(`http://127.0.0.1:5000/artists/${artistId}/${albumId}`)
+    fetch(`${api}/artists/${artistId}/${albumId}`)
       .then(res => res.json())
       .then(data => {
         if (Array.isArray(data) && data.length > 0) setAlbumData(data[0]);
@@ -177,7 +180,7 @@ export default function TracksAndReviews() {
             textAlign: 'left'
           }}
         >
-          {albumData.synopsis || "CINEMA is the dreamy, sensual debut album by The Marías, released in June 2021, that blends psych-soul, bossa pop, and Latin influences with film-inspired storytelling. The album,, available to stream on Genius, is designed as a cinematic experience, with each song representing a unique scene focusing on love, vulnerability, and escapism."}
+          {albumData.synopsis || "Synopsis not loaded..."}
         </Typography>
       </Paper>
     </Grid>

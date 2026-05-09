@@ -56,8 +56,8 @@ const artistImageMap = {
 };
 
 function ArtistCard({ artist }) {
+
   const [hovered, setHovered] = useState(false);
-  
   const colors = ['#d4a853', '#2d6a4f', '#5e4b8b', '#c9a14a', '#b5c4d1', '#8b3a3a', '#4a7c59', '#c2a8d0'];
   const artistColor = colors[artist.id % colors.length];
 
@@ -101,6 +101,9 @@ function ArtistCard({ artist }) {
 }
 
 export default function Homepage() {
+
+  const api = "http://127.0.0.1:5000";
+
   const [artists, setArtists] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
   const PAGE_SIZE = 5;
@@ -108,7 +111,7 @@ export default function Homepage() {
   const [isPopupOpen, setPopupOpen] = useState(false);
 
   useEffect(() => {
-    fetch('http://127.0.0.1:5000/artists')
+    fetch(`${api}/artists`)
       .then(response => response.json())
       .then(data => {
         if (Array.isArray(data)) {
