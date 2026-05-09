@@ -262,7 +262,7 @@ def get_all_album_reviews(album_id):
             "rating": rev.rating,
         })
     
-    return {'SUCCESS':'Got all album reviews'}, 200
+    return jsonify(results), 200
     
     
 @app.route('/reviews/user/<int:user_id>', methods=['GET'])
