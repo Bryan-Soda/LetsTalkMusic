@@ -238,7 +238,7 @@ export default function Homepage() {
           className="avatar" 
           style={{ 
             backgroundColor: avatarColor, 
-            borderRadius: '8px', // Changed from circle to box/rounded square
+            borderRadius: '8px', 
             border: '1px solid rgba(255,255,255,0.1)',
             width: '55px',
             height: '35px'
