@@ -6,7 +6,7 @@ import '../pages/styles/Profilepage.css';
 import WeeklyDigest from '../components/WeeklyDigest'
 
 const ProfilePage = () => {
-    const username = localStorage.getItem('username') || 'User';
+    const username = localStorage.getItem('username') || 'Welcome to the User Page';
     const userId = localStorage.getItem('userId') || 1; 
     
     const [isLoading, setIsLoading] = useState(true);
@@ -29,16 +29,28 @@ const ProfilePage = () => {
 
                 if (response.ok) {
                     const data = await response.json();
-                    console.log("data: ",data);
-                    const formattedReviews = data.map(item => ({
-                        id: item.review_id,
-                        album_id: item.album_id, 
-                        albumName: item.album_title,
-                        rating: item.rating,
-                        reviewText: item.review,
-                        albumCover: DefaultAvatar 
+                    const formattedReviews = await Promise.all(data.map(async (item) => {
+                        let fetchedCover = DefaultAvatar;
+
+                        try {
+                            const itunesRes = await fetch(`https://itunes.apple.com/search?term=${encodeURIComponent(item.album_title)}&entity=album&limit=1`);
+                            const itunesData = await itunesRes.json();
+
+                            if (itunesData.results && itunesData.results.length > 0) {
+                                fetchedCover = itunesData.results[0].artworkUrl100.replace('100x100bb', '600x600bb');
+                            }
+                        } catch (imageError) {
+                            console.error("Failed to fetch album cover for", item.album_title);
+                        }
+                        return {
+                            id: item.review_id,
+                            album_id: item.album_id, 
+                            albumName: item.album_title,
+                            rating: item.rating,
+                            reviewText: item.review,
+                            albumCover: fetchedCover 
+                        };
                     }));
-                    
                     setReviews(formattedReviews);
                 }
             } catch (error) {
