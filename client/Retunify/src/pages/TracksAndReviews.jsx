@@ -62,6 +62,7 @@ export default function TracksAndReviews() {
 
   const { artistId, albumId } = useParams();
   const userId = localStorage.getItem('userId');
+  const username = localStorage.getItem('username');
   const [albumData, setAlbumData] = useState(null);
   const [reviews, setReviews] = useState([]);
   const [newReviewText, setNewReviewText] = useState('');
@@ -100,9 +101,9 @@ export default function TracksAndReviews() {
       });
       if (response.ok) {
         // Optimistically add the new review to the screen
-        const username = localStorage.getItem('username') || "User";
-        setReviews([...reviews, { user: username, rating: newRating, review: newReviewText }]);
-        
+        const createdRev = await response.json()
+        console.log(createdRev);
+        setReviews(prev => [...prev, createdRev]);
         // Clear the state
         setNewReviewText(''); 
         setNewRating(0);
@@ -252,7 +253,7 @@ export default function TracksAndReviews() {
               }}
             >
             {/* Write a Review Box */}
-            {userId && (
+            {userId && !reviews.some(rev => rev.user === username) ? (
               <Paper elevation={0} 
               sx={{ 
                 minWidth: '320px', 
@@ -277,6 +278,51 @@ export default function TracksAndReviews() {
                   </Button>
 
                   {/* Render Fetched Reviews */}
+                  {/* {reviews.length === 0 ? (
+                    <Typography sx={{ color: '#8a8a8a', p: 2 }} >
+                      No Reviews Yet. Be The First!
+                    </Typography>
+                  ) : (
+                    reviews.map((rev, index) => (
+                      <Paper key={index} elevation={0} sx={{ minWidth: '280px', maxWidth: '300px', p: 2, backgroundColor: '#1a1a1a', border: '1px solid #2a2a2a', borderRadius: '8px', flexShrink: 0, display: 'flex', flexDirection: 'column'}}>
+                        <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', mb: 1}}>
+                          <Typography variant="caption" sx={{ color: '#00e544', fontWeight: 'bold' }}>
+                            @{rev.user}
+                          </Typography>
+                          <Rating value={rev.rating} readOnly size="small" precision={0.5}/>
+                        </Box>
+                        <Typography variant="body2" sx={{ color: '#8a8a8a' }}>
+                          {rev.review || "No text provided"}
+                        </Typography>
+                      </Paper>
+                    ))
+                  )} */}
+              </Paper>
+            ): userId ? (
+              <Paper
+                elevation={0}
+                sx={{
+                  minWidth: '320px',
+                  maxWidth: '320px',
+                  p: 2,
+                  backgroundColor: '#1a1a1a',
+                  border: '1px solid #2a2a2a',
+                  borderRadius: '8px',
+                  flexShrink: 0,
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center'
+                }}
+              >
+                <Typography
+                  variant="body2"
+                  sx={{ color: '8a8a8a', textAlign: 'center' }}
+                >
+                  You have already reviewed this album! Head to your profile to edit it.
+                </Typography>
+              </Paper>
+            ): null}
+            {/* Render Fetched Reviews */}
                   {reviews.length === 0 ? (
                     <Typography sx={{ color: '#8a8a8a', p: 2 }} >
                       No Reviews Yet. Be The First!
@@ -296,8 +342,6 @@ export default function TracksAndReviews() {
                       </Paper>
                     ))
                   )}
-              </Paper>
-            )}
               {/* {[1, 2, 3, 4, 5].map((item) => (
                 <Paper 
                   key={item} 

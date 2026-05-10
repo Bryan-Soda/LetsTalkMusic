@@ -149,7 +149,7 @@ def authenticate():
     print("hashed password: ", submitted_password.encode('utf-8') )
     if bcrypt.checkpw(submitted_password.encode('utf-8'), user.password):
         print("Password Matches!")
-        return {'role': 'user', 'id': user.id}
+        return {'role': 'user', 'id': user.id, 'username': user.username}
     else:
         return{'error':'incorrect password'}, 400
 
@@ -327,7 +327,7 @@ def make_review(user_id, album_id):
     check_review = Reviews.query.filter_by(user_id=user_id, album_id=album_id).first()
 
     if check_review is not None:
-        return {'error': 'Review already exists!'}
+        return {'error': 'Review already exists!'}, 40
 
     data = request.get_json()
     if 'rating' not in data: #frontend must use 'rating' json key
@@ -340,7 +340,7 @@ def make_review(user_id, album_id):
         
     if review is None:
         review = ''
-    elif review.length() > 255:
+    elif len(review) > 255:
         return {'error': 'review is too large'}
     
     review = Reviews(user_id=user_id, album_id=album_id, review=review, rating=rating)
@@ -348,7 +348,11 @@ def make_review(user_id, album_id):
     db.session.add(review)
     db.session.commit()
 
-    return {"Success":f"Review Made for {album_id}!"}
+    return {
+        "user": user.username,
+        "rating": review.rating,
+        "review": review.review,
+            }, 200
     
 @app.route('/reviews/<int:user_id>/<int:album_id>', methods=['PUT'])
 def edit_review(user_id, album_id):
@@ -382,7 +386,7 @@ def edit_review(user_id, album_id):
 
     db.session.commit()
 
-    return {'SUCCESS':'Review edited!'}
+    return {'SUCCESS':'Review edited!'}, 200
 
 @app.route('/reviews/<int:user_id>/<int:album_id>', methods=['DELETE'])
 def delete_review(user_id, album_id):
