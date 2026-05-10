@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { Box, Grid, Typography, Paper, List, ListItem, Divider, TextField, Button, Rating, Stack } from '@mui/material';
 import './styles/TracksAndReviews.css';
@@ -67,6 +67,7 @@ export default function TracksAndReviews() {
   const [reviews, setReviews] = useState([]);
   const [newReviewText, setNewReviewText] = useState('');
   const [newRating, setNewRating] = useState(0);
+  const [ratingAvg, setRatingAvg] = useState(0);
 
   useEffect(() => {
     fetch(`${api}/artists/${artistId}/${albumId}`)
@@ -85,6 +86,13 @@ export default function TracksAndReviews() {
       .catch(err => console.error("Fetch error for reviews:", err));
 
   }, [artistId, albumId]);
+
+  const avgRating = useMemo(() =>{
+    if(!reviews || reviews.length === 0) return 0;
+    const total = reviews.reduce((sum, rev)=> sum + rev.rating, 0);
+    const avg = total/ reviews.length;
+    return parseFloat(avg.toFixed(1)); 
+  }, [reviews]) 
 
   const handleSubmitReview = async () => {
     if (!userId) return alert("You must be logged in to post a review!");
@@ -147,8 +155,8 @@ export default function TracksAndReviews() {
         <Grid container spacing={4} sx={{ mt: 1 }}>
           
           {/* 1. LEFT CONTAINER: Tracklist */}
-          <Grid item xs={12} md={6}>
-            <Typography variant="overline" className="column-label">Tracklist</Typography>
+          <Grid item xs={12} md={4}>
+            <Typography variant="overline" className="column-label" sx={{mb:1}}>Tracklist</Typography>
             <Paper 
               elevation={0} 
               className="scrollable-panel" 
@@ -184,30 +192,75 @@ export default function TracksAndReviews() {
           <Grid 
             item 
             xs={12} 
-            md={6} 
+            md={3} 
             sx={{ 
               display: 'flex', 
               flexDirection: 'column', 
               alignItems: 'center'
+              
             }}
           >
             <Typography variant="overline" className="column-label" sx={{ alignSelf: 'flex-start' }}>
               Album Details
             </Typography>
-            <Box
-              component="img"
-              src={displayCover}
-              alt={albumData.album_title}
+
+            <Box sx={{display:'flex', flexDirection:'row', gap:2, width:'100%'}}>
+              <Box
+                component="img"
+                src={displayCover}
+                alt={albumData.album_title}
+                sx={{
+                  height: '500',
+                  width: '100%',
+                  maxWidth: '450px',
+                  aspectRatio: '1/1',
+                  objectFit: 'cover',
+                  borderRadius: '12px',
+                  border: '1px solid #2a2a2a',
+                  boxShadow: '0 12px 40px rgba(0,0,0,0.7)'
+                }}
+              />
+
+
+            </Box>
+          </Grid>
+          <Grid item md={2} sx={{display:{xs:'none', md:'block'}}} />
+          {/* 3. Container used to store Ratings component */}
+          <Grid item xs={12} md={3} sx={{display:'flex', flexDirection:'column'}}>
+            <Typography variant='overline' className='column-label'>
+              Album Average Rating:
+            </Typography>
+            <Paper 
+              elevation = {0}
               sx={{
-                width: '100%',
-                maxWidth: '450px',
-                aspectRatio: '1/1',
-                objectFit: 'cover',
+                // flex:1,
+                backgroundColor: '#1a1a1a', 
+                border: '1px solid #2a2a2a', 
                 borderRadius: '12px',
-                border: '1px solid #2a2a2a',
-                boxShadow: '0 12px 40px rgba(0,0,0,0.7)'
+                minWidth: '200px',
+                height: '200px',
+                p:2,
+                alignItems: 'center',
+                display:'flex',
+                flexDirection: 'column',
+                justifyContent: 'center', 
               }}
-            />
+            >
+
+              <Typography variant='h3' sx={{mb:2,color: '#00e544', fontWeight:'bold'}}>
+                {avgRating > 0 ? avgRating:'--'}
+              </Typography>
+              <Rating
+                value={avgRating}
+                readOnly
+                size='large'
+                precision={0.1}
+                sx={{mt:1}}
+              />
+              <Typography variant='caption' sx={{color:'#8a8a8a', mt:1}}>
+                {reviews.length} {reviews.length === 1 ? 'review':'reviews'}
+              </Typography>
+            </Paper>
           </Grid>
 
           {/* 3. BOTTOM CONTAINER 1: Album Synopsis */}
@@ -316,13 +369,13 @@ export default function TracksAndReviews() {
               >
                 <Typography
                   variant="body2"
-                  sx={{ color: '8a8a8a', textAlign: 'center' }}
+                  sx={{ color: 'white', textAlign: 'center' }}
                 >
                   You have already reviewed this album! Head to your profile to edit it.
                 </Typography>
               </Paper>
-            ): null}
-            {/* Render Fetched Reviews */}
+              ): null}
+              {/* Render Fetched Reviews */}
                   {reviews.length === 0 ? (
                     <Typography sx={{ color: '#8a8a8a', p: 2 }} >
                       No Reviews Yet. Be The First!
