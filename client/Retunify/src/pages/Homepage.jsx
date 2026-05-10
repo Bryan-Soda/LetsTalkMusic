@@ -259,7 +259,13 @@ export default function Homepage() {
           <button className="see-all-btn">See all</button>
         </div>
         
-        <div className="grid">
+        <div className="grid" style={{
+          display: 'flex',
+          flexWrap: 'wrap',
+          justifyContent: 'center',
+          gap: '20px'
+        }}
+        >
           {paginatedArtists.length > 0 ? (
             paginatedArtists.map((artist) => (
               <div key={artist.id} className="grid-item">
@@ -272,7 +278,11 @@ export default function Homepage() {
         </div>
 
         {paginatedArtists.length > 0 && (
-          <div className="pagination">
+          <div className="pagination" style={{
+            display: 'flex',
+            justifyContent: 'center',
+            marginTop: '30px'
+          }}>
             <Pagination
               count={totalPages}
               page={currentPage}
