@@ -267,13 +267,13 @@ export default function TracksAndReviews() {
                 <Typography variant="caption" sx={{ color: '#1ED760', display: 'block', mb: 1, fontWeight: 'bold' }}>
                     WRITE A REVIEW
                 </Typography>
-                <Rating value={newRating} onChange={(e, val) => setNewRating(val)} precision={0.5} size="small" sx={{ mb: 1 }}/>
+                <Rating value={newRating} onChange={(e, val) => setNewRating(val)} precision={0.5} size="medium" sx={{ mb: 1 }}/>
                   <TextField
-                    multiline fullWidth minRows={2} placeholder="What did you think?" value={newReviewText} onChange={(e) => setNewReviewText(e.target.value)} size="small" 
+                    multiline fullWidth minRows={2} placeholder="What did you think?" value={newReviewText} onChange={(e) => setNewReviewText(e.target.value)} size="medium" 
                     inputProps={{ style: {color: 'white', fontSize: '14px' } }}
                     sx={{ '& .MuiOutlinedInput-root': { backgroundColor: 'grey', '& fieldset': { borderColor: '#333' }, '&.Mui-focused fieldset': { borderColor: '#1ED760' } }, mb: 1 }}
                   />
-                  <Button fullWidth variant="contained" size="small" onClick={handleSubmitReview} sx={{ backgroundColor: '#1ED760', color: 'black', fontWeight: 'bold', '&:hover': { backgroundColor: '#18b951' } }}>
+                  <Button fullWidth variant="contained" size="medium" onClick={handleSubmitReview} sx={{ backgroundColor: '#1ED760', color: 'black', fontWeight: 'bold', '&:hover': { backgroundColor: '#18b951' } }}>
                     Post Review
                   </Button>
 
@@ -289,7 +289,7 @@ export default function TracksAndReviews() {
                           <Typography variant="caption" sx={{ color: '#00e544', fontWeight: 'bold' }}>
                             @{rev.user}
                           </Typography>
-                          <Rating value={rev.rating} readOnly size="small" precision={0.5}/>
+                          <Rating value={rev.rating} readOnly size="medium" precision={0.5}/>
                         </Box>
                         <Typography variant="body2" sx={{ color: '#8a8a8a' }}>
                           {rev.review || "No text provided"}
@@ -334,7 +334,7 @@ export default function TracksAndReviews() {
                           <Typography variant="caption" sx={{ color: '#00e544', fontWeight: 'bold' }}>
                             @{rev.user}
                           </Typography>
-                          <Rating value={rev.rating} readOnly size="small" precision={0.5}/>
+                          <Rating value={rev.rating} readOnly size="medium" precision={0.5}/>
                         </Box>
                         <Typography variant="body2" sx={{ color: '#8a8a8a' }}>
                           {rev.review || "No text provided"}

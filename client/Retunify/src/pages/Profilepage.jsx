@@ -4,6 +4,7 @@ import ReviewItem from '../components/ReviewItem';
 import DefaultAvatar from '../assets/templatePFP.jpg'; 
 import '../pages/styles/Profilepage.css'; 
 import WeeklyDigest from '../components/WeeklyDigest'
+import { Link } from 'react-router-dom';
 
 const ProfilePage = () => {
     const username = localStorage.getItem('username') || 'Welcome to the User Page';
@@ -106,12 +107,22 @@ const ProfilePage = () => {
 
     return (
         <Container maxWidth="md" className="profile-mui-container">
+            <Box 
+            sx={{ width:'100%', display: 'flex', mb: 2, mt: 2 }}>
+                <Link 
+                        to="/home" 
+                        className="back-link" 
+                        style={{ color: '#00e544', textDecoration: 'none', width: '80px' }}
+                    >
+                        ← BACK
+                </Link>
+            </Box>
             <Box className="profile-header-box" sx={{ display: 'flex', alignItems: 'center', gap: 2, mb: 3 }}>
-                <Avatar 
+                {/* <Avatar 
                     src={DefaultAvatar} 
                     className="profile-avatar-mui"
                     sx={{ width: 80, height: 80 }}
-                />
+                /> */}
                 <Typography variant="h4" className="profile-username-text">
                     {username}
                 </Typography>

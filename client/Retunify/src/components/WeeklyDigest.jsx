@@ -55,7 +55,7 @@ export default function WeeklyDigest({ userName = 'Jesper', reviewsWritten = 38 
             <Typography variant="caption" sx={{ color: '#8a8a8a', textTransform: 'uppercase' }}>Reviews Written</Typography>
           </Paper>
         </Stack>
-        <Button
+        {/* <Button
           variant="contained"
           sx={{
             bgcolor: '#00e544',
@@ -65,7 +65,7 @@ export default function WeeklyDigest({ userName = 'Jesper', reviewsWritten = 38 
           }}
         >
           Browse New Releases
-        </Button>
+        </Button> */}
       </Box>
       {/* Optional decorative stack – you can add the rotating records back if needed */}
     </Paper>
