@@ -327,7 +327,7 @@ def make_review(user_id, album_id):
     check_review = Reviews.query.filter_by(user_id=user_id, album_id=album_id).first()
 
     if check_review is not None:
-        return {'error': 'Review already exists!'}
+        return {'error': 'Review already exists!'}, 40
 
     data = request.get_json()
     if 'rating' not in data: #frontend must use 'rating' json key
