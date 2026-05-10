@@ -28,6 +28,7 @@ import Thriller from '../assets/AlbumCovers/Thriller.jpg';
 import ToHellWithIt from '../assets/AlbumCovers/tohellwithit.jpg';
 import TwoHands from '../assets/AlbumCovers/TwoHands.jpg';
 
+// Keys must be EXACT name as in seed_data!!
 const albumCoverMap = {
   "Blonde": Blonde,
   "Bright Future": BrightFuture,
@@ -47,7 +48,7 @@ const albumCoverMap = {
   "Rumours": Rumours,
   "Short n' Sweet": ShortAndSweet,
   "Submarine": Submarine,
-  "Superclean": SuperCleanVol1,
+  "Superclean Vol. I": SuperCleanVol1,
   "Sweet Boy": SweetBoy,
   "The Great Impersonator": TheGreatImpersonator,
   "Thriller": Thriller,
