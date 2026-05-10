@@ -427,6 +427,69 @@
                         "length": "2:50"
                     }
                 ]
+            },
+            {
+                "title": "Malcolm Todd" ,
+                "total_length": "37 min 33 secs",
+                "synopsis": "Malcolm Todd is the debut studio album by the American singer-songwriter and musician Malcolm Todd. The album is primarily an alternative R&B and indie pop album. The album is produced by Todd along with his bandmate Jonah Cochran and Charlie Ziman. It contains funky guitar riffs, drum beats, and electronic synthesizers",
+                "tracks": [
+                    {
+                        "title": "Harry Styles",
+                        "length": "1:31"
+                    },
+                    {
+                        "title": "Make Me a Better Man",
+                        "length": "3:30"
+                    },
+                    {
+                        "title": "Who's the Fool",
+                        "length": "1:56"
+                    },
+                    {
+                        "title": "Chest Pain (I Love)",
+                        "length": "3:20"
+                    },
+                    {
+                        "title": "Doll",
+                        "length": "1:59"
+                    },
+                    {
+                        "title": "Bleed (feat. Omar Apollo",
+                        "length": "2:59"
+                    },
+                    {
+                        "title": "Good Job Malcolm",
+                        "length": "1:00"
+                    },
+                    {
+                        "title": "Lying",
+                        "length": "2:03"
+                    },
+                    {
+                        "title": "Walk to Class",
+                        "length": "3:48"
+                    },
+                    {
+                        "title": "Florence",
+                        "length": "3:05"
+                    },
+                    {
+                        "title": "Concrete",
+                        "length": "2:53"
+                    },
+                    {
+                        "title": "I Do",
+                        "length": "1:00"
+                    },
+                    {
+                        "title": "Cheer Me On",
+                        "length": "4:17"
+                    },
+                    {
+                        "title": "I'll Come Back For You",
+                        "length": "4:07"
+                    }                   
+                ]
             }
         ]
     },
