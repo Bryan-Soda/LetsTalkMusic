@@ -767,6 +767,61 @@
                         "length": "4:39"
                     }
                 ]
+            }, 
+            {
+                "title": "OK Computer",
+                "total_length": "53 min 41 secs",
+                "synopsis": "OK Computer is the third studio album by the English rock band Radiohead. The lyrics depict a dystopian world fraught with rampant consumerism, social alienation, technological anxiety and political corruption, while also exploring themes of transport, conformity, paranoia, death, modern British life and globalisation. In this capacity, OK Computer is said to have prescient insight into the mood of 21st-century life. Radiohead used unconventional production techniques, including natural reverberation, and no audio separation.",
+                "tracks": [
+                    {
+                        "title": "Airbag",
+                        "length": "4:47"
+                    },
+                    {
+                        "title": "Paranoid Android", 
+                        "length": "6:27"
+                    },
+                    {
+                        "title": "Subterranean Homesick Alien",
+                        "length": "4:27"
+                    },
+                    {
+                        "title": "Exit Music (For A Film)", 
+                        "length": "4:27"
+                    },
+                    {
+                        "title": "Let Down",
+                        "length": "4:59"
+                    },
+                    {
+                        "title": "Karma Police",
+                        "length": "4:24"
+                    },
+                    {
+                        "title": "Fitter Happier",
+                        "length": "1:57"
+                    },
+                    {
+                        "title": "Electioneering",
+                        "length": "3:50"
+                    },
+                    {
+                        "title": "Climbing Up the Walls",
+                        "length": "4:45"
+                    },
+                    {
+                        "title": "No Surprises",
+                        "length": "3:49"
+                    },
+                    {
+                        "title": "Lucky",
+                        "length": "4:18"
+                    },
+                    {
+                        "title": "The Tourist",
+                        "length": "5:26"
+                    }
+                ]
             }
         ]
     },
