@@ -258,7 +258,7 @@ export default function TracksAndReviews() {
                 minWidth: '320px', 
                 maxWidth: '320px', 
                 p: 2, 
-                backgroundColor: '#111',
+                backgroundColor: '#454545',
                 border: '1px solid #1ED760',
                 borderRadius: '8px',
                 flexShrink: '0'
