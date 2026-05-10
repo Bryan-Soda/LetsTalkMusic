@@ -186,16 +186,16 @@ const ProfilePage = () => {
                     sx={{ width: 80, height: 80 }}
                 /> */}
                 <Typography variant="h4" className="profile-username-text">
-                    {username}
+                    Hello {username}!
                 </Typography>
             </Box>
 
             <Divider className="profile-divider-mui" sx={{ mb: 4 }} />
 
-            <section className='activity-section' style={{ marginBottom: '2rem' }}>
-                <Typography variant='h6' className='activity-title-text' sx={{ mb: 2, fontWeight: 700, letterSpacing: 1}}>
+            <section className='activity-section' style={{ marginBottom: '2rem',  }}>
+                {/* <Typography variant='h6' className='activity-title-text' sx={{ mb: 2, fontWeight: 700, letterSpacing: 1}}>
                     MY ACTIVITY
-                </Typography>
+                </Typography> */}
                 <WeeklyDigest
                     userName={username}
                     reviewsWritten={amountOfReviews}

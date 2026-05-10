@@ -32,10 +32,10 @@ export default function WeeklyDigest({ userName = 'Jesper', reviewsWritten = 38 
       }}
     >
       <Box sx={{ flex: 1, maxWidth: 520, zIndex: 1 }}>
-        <Typography variant="overline" sx={{ color: '#00e544', letterSpacing: 3, fontWeight: 600, fontSize: 11 }}>
-          Your weekly digest
+        <Typography variant="overline" sx={{ color: '#00e544', letterSpacing: 3, fontWeight: 600, fontSize: 14 }}>
+          Your Activity
         </Typography>
-        <Typography variant="h3" sx={{ fontFamily: 'DM Serif Display, serif', color: '#fff', my: 1 }}>
+        <Typography variant="h3" sx={{ fontFamily: 'DM Serif Display, serif', color: '#fff', my: 1 , marginBottom:'40px'}}>
           Keep the Music Playin'
         </Typography>
         {/* <Typography variant="body1" sx={{ mb: 3 }}>
@@ -50,7 +50,7 @@ export default function WeeklyDigest({ userName = 'Jesper', reviewsWritten = 38 
             <Typography variant="h5" fontWeight={700} sx={{ color: '#00e544' }}>{avgRating}</Typography>
             <Typography variant="caption" sx={{ color: '#8a8a8a', textTransform: 'uppercase' }}>Avg Rating</Typography>
           </Paper> */}
-          <Paper sx={{ p: 1.5, textAlign: 'center', bgcolor: '#1a1a1a', borderColor: '#1f1f1f', minWidth: 90 }} elevation={0}>
+          <Paper sx={{ p: 1.5, textAlign: 'center', bgcolor: '#1a1a1a', borderColor: '#1f1f1f', minWidth: 90,}} elevation={0}>
             <Typography variant="h5" fontWeight={700} sx={{ color: '#00e544' }}>{reviewsWritten}</Typography>
             <Typography variant="caption" sx={{ color: '#8a8a8a', textTransform: 'uppercase' }}>Reviews Written</Typography>
           </Paper>
