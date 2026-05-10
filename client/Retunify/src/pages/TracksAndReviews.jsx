@@ -62,6 +62,7 @@ export default function TracksAndReviews() {
 
   const { artistId, albumId } = useParams();
   const userId = localStorage.getItem('userId');
+  const username = localStorage.getItem('username');
   const [albumData, setAlbumData] = useState(null);
   const [reviews, setReviews] = useState([]);
   const [newReviewText, setNewReviewText] = useState('');
@@ -100,9 +101,9 @@ export default function TracksAndReviews() {
       });
       if (response.ok) {
         // Optimistically add the new review to the screen
-        const username = localStorage.getItem('username') || "User";
-        setReviews([...reviews, { user: username, rating: newRating, review: newReviewText }]);
-        
+        const createdRev = await response.json()
+        console.log(createdRev);
+        setReviews(prev => [...prev, createdRev]);
         // Clear the state
         setNewReviewText(''); 
         setNewRating(0);
