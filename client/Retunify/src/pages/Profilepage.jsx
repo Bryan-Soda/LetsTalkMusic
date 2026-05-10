@@ -6,57 +6,69 @@ import '../pages/styles/Profilepage.css';
 import WeeklyDigest from '../components/WeeklyDigest'
 import { Link } from 'react-router-dom';
 
-// Import local album covers
+// Import Album Covers
 import Blonde from '../assets/AlbumCovers/Blonde.jpg';
-import SweetBoy from '../assets/AlbumCovers/SweetBoy.jpg';
 import BrightFuture from '../assets/AlbumCovers/BrightFuture.jpg';
 import Chromakopia from '../assets/AlbumCovers/Chromakopia.jpg';
 import Cinema from '../assets/AlbumCovers/CINEMA.jpg';
-import Submarine from '../assets/AlbumCovers/Submarine.jpg';
-import Superclean from '../assets/AlbumCovers/SupercleanVol1.jpg';
-import CTRL from '../assets/AlbumCovers/CTRL.jpg';
+import Ctrl from '../assets/AlbumCovers/CTRL.jpg';
 import Currents from '../assets/AlbumCovers/Currents.jpg';
 import EP3 from '../assets/AlbumCovers/EP3.jpg';
 import FancyThat from '../assets/AlbumCovers/FancyThat.jpg';
-import tohellwithit from '../assets/AlbumCovers/tohellwithit.jpg';
 import GoodKidMadCity from '../assets/AlbumCovers/GoodKidMadCity.jpg';
 import Immunity from '../assets/AlbumCovers/Immunity.jpg';
 import InRainbows from '../assets/AlbumCovers/InRainbows.jpg';
 import ManningFireworks from '../assets/AlbumCovers/ManningFireworks.jpg';
 import Melodrama from '../assets/AlbumCovers/Melodrama.jpg';
 import OffTheWall from '../assets/AlbumCovers/OffTheWall.jpg';
-import Thriller from '../assets/AlbumCovers/Thriller.jpg';
-import TwoHands from '../assets/AlbumCovers/TwoHands.jpg';
-import TheGreatImpersonator from '../assets/AlbumCovers/TheGreatImpersonator.jpg';
-import RAM from '../assets/AlbumCovers/RandomAccessMemories.jpg';
+import RandomAccessMemories from '../assets/AlbumCovers/RandomAccessMemories.jpg';
 import Rumours from '../assets/AlbumCovers/Rumours.jpg';
 import ShortAndSweet from '../assets/AlbumCovers/ShortAndSweet.jpg';
+import Submarine from '../assets/AlbumCovers/Submarine.jpg';
+import SuperCleanVol1 from '../assets/AlbumCovers/SuperCleanVol1.jpg';
+import SweetBoy from '../assets/AlbumCovers/SweetBoy.jpg';
+import TheGreatImpersonator from '../assets/AlbumCovers/TheGreatImpersonator.jpg';
+import Thriller from '../assets/AlbumCovers/Thriller.jpg';
+import ToHellWithIt from '../assets/AlbumCovers/tohellwithit.jpg';
+import TwoHands from '../assets/AlbumCovers/TwoHands.jpg';
+import CMIYGL from '../assets/AlbumCovers/CMIYGL.png';
+import Malcolm from '../assets/AlbumCovers/Malcolm_todd.png';
+import OKCPU from '../assets/AlbumCovers/OkComp.png';
+import ChannelO from '../assets/AlbumCovers/ChannelO.png';
+import TPAB from '../assets/AlbumCovers/TPAB.png';
 
+
+// Keys must be EXACT name as in seed_data!!
 const albumCoverMap = {
   "Blonde": Blonde,
-  "Sweet Boy": SweetBoy,
   "Bright Future": BrightFuture,
   "CHROMAKOPIA": Chromakopia,
   "CINEMA": Cinema,
-  "Submarine": Submarine,
-  "Superclean": Superclean,
-  "CTRL": CTRL,
+  "CTRL": Ctrl,
   "Currents": Currents,
   "EP III": EP3,
   "Fancy That": FancyThat,
-  "to hell with it": tohellwithit,
   "Good Kid, M.A.A.D City": GoodKidMadCity,
   "Immunity": Immunity,
   "In Rainbows": InRainbows,
   "Manning Fireworks": ManningFireworks,
   "Melodrama": Melodrama,
   "Off the Wall": OffTheWall,
-  "Thriller": Thriller,
-  "Two Hands": TwoHands,
-  "The Great Impersonator": TheGreatImpersonator,
-  "Random Access Memories": RAM,
+  "Random Access Memories": RandomAccessMemories,
   "Rumours": Rumours,
-  "Short n' Sweet": ShortAndSweet
+  "Short n' Sweet": ShortAndSweet,
+  "Submarine": Submarine,
+  "Superclean Vol. I": SuperCleanVol1,
+  "Sweet Boy": SweetBoy,
+  "The Great Impersonator": TheGreatImpersonator,
+  "Thriller": Thriller,
+  "to hell with it": ToHellWithIt,
+  "Two Hands": TwoHands,
+  "CALL ME IF YOU GET LOST": CMIYGL,
+  "Malcolm Todd": Malcolm,
+  "OK Computer": OKCPU,
+  "channel ORANGE": ChannelO,
+  "To Pimp A Butterfly": TPAB,
 };
 
 const ProfilePage = () => {

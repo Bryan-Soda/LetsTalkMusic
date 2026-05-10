@@ -256,7 +256,7 @@ export default function Homepage() {
       <div className="main-content">
         <div className="section-header">
           <div className="section-title">Explore these Artists!</div>
-          <button className="see-all-btn">See all</button>
+          {/* <button className="see-all-btn">See all</button> */}
         </div>
         
         <div className="grid" style={{

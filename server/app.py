@@ -145,7 +145,7 @@ def authenticate():
         print("DNE")
         return {'error': 'user not found'}, 404
     submitted_password = data['password']
-
+    submitted_password[:72]
     print("hashed password: ", submitted_password.encode('utf-8') )
     if bcrypt.checkpw(submitted_password.encode('utf-8'), user.password):
         print("Password Matches!")

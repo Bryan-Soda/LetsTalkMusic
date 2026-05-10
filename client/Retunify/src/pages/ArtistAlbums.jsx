@@ -27,6 +27,12 @@ import TheGreatImpersonator from '../assets/AlbumCovers/TheGreatImpersonator.jpg
 import Thriller from '../assets/AlbumCovers/Thriller.jpg';
 import ToHellWithIt from '../assets/AlbumCovers/tohellwithit.jpg';
 import TwoHands from '../assets/AlbumCovers/TwoHands.jpg';
+import CMIYGL from '../assets/AlbumCovers/CMIYGL.png';
+import Malcolm from '../assets/AlbumCovers/Malcolm_todd.png';
+import OKCPU from '../assets/AlbumCovers/OkComp.png';
+import ChannelO from '../assets/AlbumCovers/ChannelO.png';
+import TPAB from '../assets/AlbumCovers/TPAB.png';
+
 
 // Keys must be EXACT name as in seed_data!!
 const albumCoverMap = {
@@ -53,7 +59,12 @@ const albumCoverMap = {
   "The Great Impersonator": TheGreatImpersonator,
   "Thriller": Thriller,
   "to hell with it": ToHellWithIt,
-  "Two Hands": TwoHands
+  "Two Hands": TwoHands,
+  "CALL ME IF YOU GET LOST": CMIYGL,
+  "Malcolm Todd": Malcolm,
+  "OK Computer": OKCPU,
+  "channel ORANGE": ChannelO,
+  "To Pimp A Butterfly": TPAB,
 };
 
 export default function ArtistAlbums() { 
