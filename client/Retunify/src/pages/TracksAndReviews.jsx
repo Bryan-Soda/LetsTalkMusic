@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
-import { Box, Grid, Typography, Paper, List, ListItem, Divider } from '@mui/material';
+import { Box, Grid, Typography, Paper, List, ListItem, Divider, TextField, Button, Rating, Stack } from '@mui/material';
 import './styles/TracksAndReviews.css';
 
 // Import local album covers
@@ -61,7 +61,11 @@ export default function TracksAndReviews() {
   const api = "http://127.0.0.1:5000";
 
   const { artistId, albumId } = useParams();
+  const userId = localStorage.getItem('userId');
   const [albumData, setAlbumData] = useState(null);
+  const [reviews, setReviews] = useState([]);
+  const [newReviewText, setNewReviewText] = useState('');
+  const [newRating, setNewRating] = useState(0);
 
   useEffect(() => {
     fetch(`${api}/artists/${artistId}/${albumId}`)
@@ -71,7 +75,49 @@ export default function TracksAndReviews() {
         else setAlbumData(data);
       })
       .catch(err => console.error("Fetch error:", err));
+
+      fetch(`${api}/reviews/album/${albumId}`)
+      .then(res => res.json())
+      .then(data => {
+        if (Array.isArray(data)) setReviews(data);
+      })
+      .catch(err => console.error("Fetch error for reviews:", err));
+
   }, [artistId, albumId]);
+
+  const handleSubmitReview = async () => {
+    if (!userId) return alert("You must be logged in to post a review!");
+    if (newRating === 0) return alert("Please leave a rating!");
+
+    try {
+      const response = await fetch(`${api}/reviews/${userId}/${albumId}`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          rating: newRating,
+          review: newReviewText
+        })
+      });
+      if (response.ok) {
+        // Optimistically add the new review to the screen
+        const username = localStorage.getItem('username') || "User";
+        setReviews([...reviews, { user: username, rating: newRating, review: newReviewText }]);
+        
+        // Clear the state
+        setNewReviewText(''); 
+        setNewRating(0);
+        
+        // NEW: Wipe the saved drafts from local storage so the box empties out
+        localStorage.removeItem(`draft_review_${albumId}`);
+        localStorage.removeItem(`draft_rating_${albumId}`);
+      } else {
+        const errData = await response.json();
+        alert(`Error: ${errData.error || "Failed to post review"}`);
+      }
+    } catch (error) {
+      console.error("Failed to submit review:", error);
+    }
+  };
 
   if (!albumData) return <div className="loading">Loading...</div>;
 
@@ -191,44 +237,91 @@ export default function TracksAndReviews() {
           </Grid>
 
           {/* 4. BOTTOM CONTAINER 2: Reviews */}
-<Grid item xs={12} sx={{ mt: 2, width: '100%' }}>
-  <Typography variant="overline" className="column-label">Album Reviews</Typography>
-  <Box 
-    sx={{ 
-      display: 'flex', 
-      flexDirection: 'row', 
-      overflowX: 'auto', // Ensures horizontal scrolling
-      gap: 2, 
-      pb: 2,
-      width: '100%',
-      '&::-webkit-scrollbar': { height: '8px' }, // Optional: style the scrollbar
-      '&::-webkit-scrollbar-thumb': { backgroundColor: '#2a2a2a', borderRadius: '4px' }
-    }}
-  >
-    {[1, 2, 3, 4, 5].map((item) => (
-      <Paper 
-        key={item} 
-        elevation={0} 
-        sx={{ 
-          minWidth: '280px', // Fixed width to force the overflow
-          maxWidth: '300px',
-          p: 2, 
-          backgroundColor: '#1a1a1a', 
-          border: '1px solid #2a2a2a',
-          borderRadius: '8px',
-          flexShrink: 0 // Prevents the cards from squishing
-        }}
-      >
-        <Typography variant="caption" sx={{ color: '#00e544', display: 'block', mb: 1 }}>
-          USER_REVIEW_{item}
-        </Typography>
-        <Typography variant="body2" sx={{ color: '#8a8a8a' }}>
-          Review functionality coming soon.
-        </Typography>
-      </Paper>
-    ))}
-  </Box>
-</Grid>
+          <Grid item xs={12} sx={{ mt: 2, width: '100%' }}>
+            <Typography variant="overline" className="column-label">Album Reviews</Typography>
+            <Box 
+              sx={{ 
+                display: 'flex', 
+                flexDirection: 'row', 
+                overflowX: 'auto', // Ensures horizontal scrolling
+                gap: 2, 
+                pb: 2,
+                width: '100%',
+                '&::-webkit-scrollbar': { height: '8px' }, // Optional: style the scrollbar
+                '&::-webkit-scrollbar-thumb': { backgroundColor: '#2a2a2a', borderRadius: '4px' }
+              }}
+            >
+            {/* Write a Review Box */}
+            {userId && (
+              <Paper elevation={0} 
+              sx={{ 
+                minWidth: '320px', 
+                maxWidth: '320px', 
+                p: 2, 
+                backgroundColor: '#111',
+                border: '1px solid #1ED760',
+                borderRadius: '8px',
+                flexShrink: '0'
+              }}>
+                <Typography variant="caption" sx={{ color: '#1ED760', display: 'block', mb: 1, fontWeight: 'bold' }}>
+                    WRITE A REVIEW
+                </Typography>
+                <Rating value={newRating} onChange={(e, val) => setNewRating(val)} precision={0.5} size="small" sx={{ mb: 1 }}/>
+                  <TextField
+                    multiline fullWidth minRows={2} placeholder="What did you think?" value={newReviewText} onChange={(e) => setNewReviewText(e.target.value)} size="small" 
+                    inputProps={{ style: {color: 'white', fontSize: '14px' } }}
+                    sx={{ '& .MuiOutlinedInput-root': { backgroundColor: 'grey', '& fieldset': { borderColor: '#333' }, '&.Mui-focused fieldset': { borderColor: '#1ED760' } }, mb: 1 }}
+                  />
+                  <Button fullWidth variant="contained" size="small" onClick={handleSubmitReview} sx={{ backgroundColor: '#1ED760', color: 'black', fontWeight: 'bold', '&:hover': { backgroundColor: '#18b951' } }}>
+                    Post Review
+                  </Button>
+
+                  {/* Render Fetched Reviews */}
+                  {reviews.length === 0 ? (
+                    <Typography sx={{ color: '#8a8a8a', p: 2 }} >
+                      No Reviews Yet. Be The First!
+                    </Typography>
+                  ) : (
+                    reviews.map((rev, index) => (
+                      <Paper key={index} elevation={0} sx={{ minWidth: '280px', maxWidth: '300px', p: 2, backgroundColor: '#1a1a1a', border: '1px solid #2a2a2a', borderRadius: '8px', flexShrink: 0, display: 'flex', flexDirection: 'column'}}>
+                        <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', mb: 1}}>
+                          <Typography variant="caption" sx={{ color: '#00e544', fontWeight: 'bold' }}>
+                            @{rev.user}
+                          </Typography>
+                          <Rating value={rev.rating} readOnly size="small" precision={0.5}/>
+                        </Box>
+                        <Typography variant="body2" sx={{ color: '#8a8a8a' }}>
+                          {rev.review || "No text provided"}
+                        </Typography>
+                      </Paper>
+                    ))
+                  )}
+              </Paper>
+            )}
+              {/* {[1, 2, 3, 4, 5].map((item) => (
+                <Paper 
+                  key={item} 
+                  elevation={0} 
+                  sx={{ 
+                    minWidth: '280px', // Fixed width to force the overflow
+                    maxWidth: '300px',
+                    p: 2, 
+                    backgroundColor: '#1a1a1a', 
+                    border: '1px solid #2a2a2a',
+                    borderRadius: '8px',
+                    flexShrink: 0 // Prevents the cards from squishing
+                  }}
+                >
+                  <Typography variant="caption" sx={{ color: '#00e544', display: 'block', mb: 1 }}>
+                    USER_REVIEW_{item}
+                  </Typography>
+                  <Typography variant="body2" sx={{ color: '#8a8a8a' }}>
+                    Review functionality coming soon.
+                  </Typography>
+                </Paper>
+              ))} */}
+            </Box>
+          </Grid>
         </Grid>
       </div>
     </div>
