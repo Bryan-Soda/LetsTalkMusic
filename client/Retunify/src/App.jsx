@@ -5,7 +5,7 @@ import ArtistAlbums from './pages/ArtistAlbums.jsx';
 import TracksAndReviews from './pages/TracksAndReviews.jsx';
 import LoginScreen from './pages/LoginScreen'; 
 import CreateAccount from './pages/CreateAccount';
-// import Profilepage from './pages/Profilepage';
+import ProfilePage from './pages/Profilepage.jsx';
 
 const App = () => {
   return (
@@ -20,7 +20,7 @@ const App = () => {
       <Route path="/home" element={<Homepage />} />
 
       {/* Main landing page after login */}
-      <Route path="/profile" element={<ProfilePage />} />
+      <Route path="/profile/:userId" element={<ProfilePage />} />
 
       {/* Dynamic route for artist's discography */}
       <Route path="/artists/:artistId" element={<ArtistAlbums />} />

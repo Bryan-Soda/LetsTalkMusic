@@ -125,6 +125,10 @@ export default function Homepage() {
     navigate("/");        
   };
 
+  const handleProfile = () => {
+    navigate("/profile/:userId");
+  }
+
   useEffect(() => {
     fetch(`${api}/artists`)
       .then(response => response.json())
@@ -243,6 +247,7 @@ export default function Homepage() {
             width: '55px',
             height: '35px'
           }}
+          onClick={handleProfile}
         >
         Profile
         </div>
