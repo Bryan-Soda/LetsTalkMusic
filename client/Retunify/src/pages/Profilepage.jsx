@@ -6,6 +6,59 @@ import '../pages/styles/Profilepage.css';
 import WeeklyDigest from '../components/WeeklyDigest'
 import { Link } from 'react-router-dom';
 
+// Import local album covers
+import Blonde from '../assets/AlbumCovers/Blonde.jpg';
+import SweetBoy from '../assets/AlbumCovers/SweetBoy.jpg';
+import BrightFuture from '../assets/AlbumCovers/BrightFuture.jpg';
+import Chromakopia from '../assets/AlbumCovers/Chromakopia.jpg';
+import Cinema from '../assets/AlbumCovers/CINEMA.jpg';
+import Submarine from '../assets/AlbumCovers/Submarine.jpg';
+import Superclean from '../assets/AlbumCovers/SupercleanVol1.jpg';
+import CTRL from '../assets/AlbumCovers/CTRL.jpg';
+import Currents from '../assets/AlbumCovers/Currents.jpg';
+import EP3 from '../assets/AlbumCovers/EP3.jpg';
+import FancyThat from '../assets/AlbumCovers/FancyThat.jpg';
+import tohellwithit from '../assets/AlbumCovers/tohellwithit.jpg';
+import GoodKidMadCity from '../assets/AlbumCovers/GoodKidMadCity.jpg';
+import Immunity from '../assets/AlbumCovers/Immunity.jpg';
+import InRainbows from '../assets/AlbumCovers/InRainbows.jpg';
+import ManningFireworks from '../assets/AlbumCovers/ManningFireworks.jpg';
+import Melodrama from '../assets/AlbumCovers/Melodrama.jpg';
+import OffTheWall from '../assets/AlbumCovers/OffTheWall.jpg';
+import Thriller from '../assets/AlbumCovers/Thriller.jpg';
+import TwoHands from '../assets/AlbumCovers/TwoHands.jpg';
+import TheGreatImpersonator from '../assets/AlbumCovers/TheGreatImpersonator.jpg';
+import RAM from '../assets/AlbumCovers/RandomAccessMemories.jpg';
+import Rumours from '../assets/AlbumCovers/Rumours.jpg';
+import ShortAndSweet from '../assets/AlbumCovers/ShortAndSweet.jpg';
+
+const albumCoverMap = {
+  "Blonde": Blonde,
+  "Sweet Boy": SweetBoy,
+  "Bright Future": BrightFuture,
+  "CHROMAKOPIA": Chromakopia,
+  "CINEMA": Cinema,
+  "Submarine": Submarine,
+  "Superclean": Superclean,
+  "CTRL": CTRL,
+  "Currents": Currents,
+  "EP III": EP3,
+  "Fancy That": FancyThat,
+  "to hell with it": tohellwithit,
+  "Good Kid, M.A.A.D City": GoodKidMadCity,
+  "Immunity": Immunity,
+  "In Rainbows": InRainbows,
+  "Manning Fireworks": ManningFireworks,
+  "Melodrama": Melodrama,
+  "Off the Wall": OffTheWall,
+  "Thriller": Thriller,
+  "Two Hands": TwoHands,
+  "The Great Impersonator": TheGreatImpersonator,
+  "Random Access Memories": RAM,
+  "Rumours": Rumours,
+  "Short n' Sweet": ShortAndSweet
+};
+
 const ProfilePage = () => {
     const username = localStorage.getItem('username') || 'Welcome to the User Page';
     const userId = localStorage.getItem('userId') || 1; 
@@ -31,18 +84,19 @@ const ProfilePage = () => {
                 if (response.ok) {
                     const data = await response.json();
                     const formattedReviews = await Promise.all(data.map(async (item) => {
-                        let fetchedCover = DefaultAvatar;
+                        // let fetchedCover = DefaultAvatar;
 
-                        try {
-                            const itunesRes = await fetch(`https://itunes.apple.com/search?term=${encodeURIComponent(item.album_title)}&entity=album&limit=1`);
-                            const itunesData = await itunesRes.json();
+                        // try {
+                        //     const itunesRes = await fetch(`https://itunes.apple.com/search?term=${encodeURIComponent(item.album_title)}&entity=album&limit=1`);
+                        //     const itunesData = await itunesRes.json();
 
-                            if (itunesData.results && itunesData.results.length > 0) {
-                                fetchedCover = itunesData.results[0].artworkUrl100.replace('100x100bb', '600x600bb');
-                            }
-                        } catch (imageError) {
-                            console.error("Failed to fetch album cover for", item.album_title);
-                        }
+                        //     if (itunesData.results && itunesData.results.length > 0) {
+                        //         fetchedCover = itunesData.results[0].artworkUrl100.replace('100x100bb', '600x600bb');
+                        //     }
+                        // } catch (imageError) {
+                        //     console.error("Failed to fetch album cover for", item.album_title);
+                        // }
+                        const fetchedCover = albumCoverMap[item.album_title] || DefaultAvatar;
                         return {
                             id: item.review_id,
                             album_id: item.album_id, 
@@ -98,6 +152,14 @@ const ProfilePage = () => {
             });
 
             if (!response.ok) {
+                setReviews(prevReviews => 
+                    prevReviews.map(review =>
+                        review.album_id === albumId
+                        ? {...review, rating: parseFloat(newRating), reviewText }
+                        : review
+                    )
+                );
+            } else {
                 console.error("Failed to update review on backend");
             }
         } catch (error) {
