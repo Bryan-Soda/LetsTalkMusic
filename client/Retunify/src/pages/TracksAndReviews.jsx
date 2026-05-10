@@ -70,7 +70,7 @@ const albumCoverMap = {
 
 export default function TracksAndReviews() {
 
-  const api = "http://127.0.0.1:5000";
+  const API = import.meta.env.VITE_API_URL;
 
   const { artistId, albumId } = useParams();
   const userId = localStorage.getItem('userId');
@@ -82,7 +82,7 @@ export default function TracksAndReviews() {
   const [ratingAvg, setRatingAvg] = useState(0);
 
   useEffect(() => {
-    fetch(`${api}/artists/${artistId}/${albumId}`)
+    fetch(`${API}/artists/${artistId}/${albumId}`)
       .then(res => res.json())
       .then(data => {
         if (Array.isArray(data) && data.length > 0) setAlbumData(data[0]);
@@ -90,7 +90,7 @@ export default function TracksAndReviews() {
       })
       .catch(err => console.error("Fetch error:", err));
 
-      fetch(`${api}/reviews/album/${albumId}`)
+      fetch(`${API}/reviews/album/${albumId}`)
       .then(res => res.json())
       .then(data => {
         if (Array.isArray(data)) setReviews(data);
@@ -111,7 +111,7 @@ export default function TracksAndReviews() {
     if (newRating === 0) return alert("Please leave a rating!");
 
     try {
-      const response = await fetch(`${api}/reviews/${userId}/${albumId}`, {
+      const response = await fetch(`${API}/reviews/${userId}/${albumId}`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({

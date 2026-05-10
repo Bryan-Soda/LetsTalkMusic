@@ -9,7 +9,7 @@ const LoginScreen = () => {
     const [error, setError] = useState('');
     const navigate = useNavigate();
     
-    const api = "http://127.0.0.1:5000";
+    const API = import.meta.env.VITE_API_URL;
 
     const authenticate = async () => {
         setError('');
@@ -20,7 +20,7 @@ const LoginScreen = () => {
         }
 
         try {
-            const response = await fetch(`${api}/auth`, {
+            const response = await fetch(`${API}/auth`, {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({ 

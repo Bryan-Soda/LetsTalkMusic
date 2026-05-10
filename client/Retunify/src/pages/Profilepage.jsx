@@ -78,13 +78,13 @@ const ProfilePage = () => {
     const [isLoading, setIsLoading] = useState(true);
     const [reviews, setReviews] = useState([]);
 
-    const API_URL = 'http://127.0.0.1:5000';
+    const API = import.meta.env.VITE_API_URL;
 
     // 1. GET REVIEWS ON COMPONENT MOUNT
     useEffect(() => {
         const fetchReviews = async () => {
             try {
-                const response = await fetch(`${API_URL}/reviews/user/${userId}`);
+                const response = await fetch(`${API}/reviews/user/${userId}`);
                 
                 if (response.status === 404) {
                     console.log("User not found or no reviews yet.");
@@ -135,7 +135,7 @@ const ProfilePage = () => {
     // 2. DELETE API ROUTE
     const handleDeleteReview = async (reviewId, albumId) => {
         try {
-            const response = await fetch(`${API_URL}/reviews/${userId}/${albumId}`, {
+            const response = await fetch(`${API}/reviews/${userId}/${albumId}`, {
                 method: 'DELETE',
             });
 
@@ -152,7 +152,7 @@ const ProfilePage = () => {
     // 3. EDIT (PUT) API ROUTE
     const handleUpdateReview = async (albumId, newRating, newReviewText) => {
         try {
-            const response = await fetch(`${API_URL}/reviews/${userId}/${albumId}`, {
+            const response = await fetch(`${API}/reviews/${userId}/${albumId}`, {
                 method: 'PUT',
                 headers: {
                     'Content-Type': 'application/json',

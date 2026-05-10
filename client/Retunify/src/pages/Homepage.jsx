@@ -109,7 +109,7 @@ function ArtistCard({ artist }) {
 }
 
 export default function Homepage() {
-  const api = "http://127.0.0.1:5000";
+  const API = import.meta.env.VITE_API_URL;
   const navigate = useNavigate();
 
   const [artists, setArtists] = useState([]);
@@ -130,7 +130,7 @@ export default function Homepage() {
   }
 
   useEffect(() => {
-    fetch(`${api}/artists`)
+    fetch(`${API}/artists`)
       .then(response => response.json())
       .then(data => {
         if (Array.isArray(data)) {

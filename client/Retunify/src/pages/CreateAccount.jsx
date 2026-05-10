@@ -10,7 +10,7 @@ const CreateAccount = () => {
     const [success, setSuccess] = useState(false);
     const navigate = useNavigate();
     
-    const api = "http://127.0.0.1:5000";
+    const API = import.meta.env.VITE_API_URL;
 
     const handleCreateAccount = async () => {
         setError('');
@@ -20,7 +20,7 @@ const CreateAccount = () => {
         }
 
         try {
-            const response = await fetch(`${api}/user`, {
+            const response = await fetch(`${API}/user`, {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({ username: username, password: pass })

@@ -4,7 +4,7 @@ import React from 'react'
 
 const MainTest = () => {
     // TEST
-    const api = "http://127.0.0.1:5000";
+    const API = import.meta.env.VITE_API_URL;
     const navigate = useNavigate()
     const [pass, setPass] = useState('');
     const [username, setUsername] = useState('');
@@ -15,7 +15,7 @@ const MainTest = () => {
             return;
         }
         try{
-            const response = await fetch(`${api}/user`,{
+            const response = await fetch(`${API}/user`,{
                 method: "POST",
                 headers:{"Content-Type":"application/json",},
                 body: JSON.stringify({username: username, password: pass})
@@ -37,7 +37,7 @@ const MainTest = () => {
             return;
         }
         try{
-            const response = await fetch(`${api}/auth`,{
+            const response = await fetch(`${API}/auth`,{
                 method: "POST",
                 headers:{"Content-Type":"application/json",},
                 body: JSON.stringify({username: username, password: pass})

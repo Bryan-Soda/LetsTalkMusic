@@ -68,7 +68,7 @@ const albumCoverMap = {
 };
 
 export default function ArtistAlbums() { 
-  const api = "http://127.0.0.1:5000";
+  const API = import.meta.env.VITE_API_URL;
   const { artistId } = useParams();
   const [albums, setAlbums] = useState([]);
   const [artistName, setArtistName] = useState("");
@@ -76,7 +76,7 @@ export default function ArtistAlbums() {
   const colors = ['#d4a853', '#2d6a4f', '#5e4b8b', '#c9a14a', '#b5c4d1', '#8b3a3a', '#4a7c59', '#c2a8d0'];
 
   useEffect(() => {
-    fetch(`${api}/artists/${artistId}/albums`)
+    fetch(`${API}/artists/${artistId}/albums`)
       .then(res => {
         if (!res.ok) throw new Error("Server error");
         return res.json();
