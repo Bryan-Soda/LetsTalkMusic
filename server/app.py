@@ -360,13 +360,13 @@ def edit_review(user_id, album_id):
         return {'error': 'must have a rating'}, 400
 
 
-    review = Reviews.query.get(user_id=user_id, album_id=album_id)
+    review = Reviews.query.filter_by(user_id=user_id, album_id=album_id).first()
     if review is None:
         return {'error':'review required to edit'}, 404
     new_review = data['review']
     if new_review is None:
         new_review = ''
-    elif new_review.length() > 255:
+    elif len(new_review) > 255:
         return {'error': 'review is too large'}
 
     rating = float(data['rating'])
@@ -375,6 +375,11 @@ def edit_review(user_id, album_id):
 
     review.rating = data['rating']
     review.review = new_review
+
+    print(new_review)
+    print(review.review)
+    print(review.rating)
+
     db.session.commit()
 
     return {'SUCCESS':'Review edited!'}

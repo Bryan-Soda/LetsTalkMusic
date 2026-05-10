@@ -1,0 +1,82 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    background-color: #0a0a0a; /* Dark background to match login */
+    color: white;
+    font-family: 'Roboto', 'Helvetica', 'Arial', sans-serif;
+    min-height: 100vh;
+}
+
+.review-item-container {
+    display: flex !important; 
+    gap: 20px;
+    padding: 16px;
+    background-color: rgba(0, 255, 0, 0.02) !important;
+    border: 1px solid #333 !important;
+    border-radius: 12px !important;
+    align-items: center;
+}
+
+.review-album-img {
+    width: 120px;
+    height: 120px;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.review-info-wrapper {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    min-width: 0;
+}
+
+.boxed-label {
+    background-color: black;
+    padding: 4px 12px;
+    border-radius: 6px;
+    align-self: flex-start;
+}
+
+.album-name-text {
+    color: #1ED760 !important;
+    font-weight: bold !important;
+    text-transform: uppercase;
+}
+
+.rating-text {
+    color: #1ED760 !important;
+    font-weight: bold !important;
+    font-family: monospace !important;
+}
+
+.review-text-box {
+    background-color: black;
+    padding: 12px;
+    border-radius: 6px;
+    border: 1px solid #444;
+}
+
+.review-body-text {
+    color: #1ED760 !important;
+    line-height: 1.4 !important;
+}
+
+.action-stack {
+    flex-shrink: 0;
+}
+
+.edit-btn-mui {
+    background-color: #1ED760 !important;
+    color: black !important;
+    font-weight: bold !important;
+}
+
+.edit-btn-mui:hover {
+    background-color: #17b350 !important;
+}
+
+.delete-btn-mui {
+    font-weight: bold !important;
+}

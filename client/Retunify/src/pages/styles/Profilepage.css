@@ -1,0 +1,39 @@
+.profile-mui-container {
+    margin-top: 32px !important; 
+}
+
+.profile-header-box {
+    display: flex !important;
+    align-items: center;
+    gap: 24px; 
+    margin-bottom: 24px; 
+}
+
+.profile-avatar-mui {
+    width: 90px !important;
+    height: 90px !important;
+    border: 2px solid #1ED760 !important;
+    background-color: #222 !important;
+}
+
+.profile-username-text {
+    color: white !important;
+    font-weight: bold !important;
+}
+
+.profile-divider-mui {
+    margin-bottom: 32px !important; 
+    background-color: #333 !important;
+}
+
+.reviews-title-text {
+    color: #888 !important;
+    margin-bottom: 16px !important; 
+    letter-spacing: 2px !important;
+}
+
+.reviews-list-container {
+    display: flex !important;
+    flex-direction: column;
+    gap: 24px; 
+}
