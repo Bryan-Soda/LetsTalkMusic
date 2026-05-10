@@ -371,7 +371,7 @@
                         "length": "3:34"
                     },
                     {
-                        "title": "On My Sholder",
+                        "title": "On My Shoulder",
                         "length": "2:49"
                     },
                     {
@@ -426,6 +426,69 @@
                         "title": "Mr.Incorrect",
                         "length": "2:50"
                     }
+                ]
+            },
+            {
+                "title": "Malcolm Todd" ,
+                "total_length": "37 min 33 secs",
+                "synopsis": "Malcolm Todd is the debut studio album by the American singer-songwriter and musician Malcolm Todd. The album is primarily an alternative R&B and indie pop album. The album is produced by Todd along with his bandmate Jonah Cochran and Charlie Ziman. It contains funky guitar riffs, drum beats, and electronic synthesizers",
+                "tracks": [
+                    {
+                        "title": "Harry Styles",
+                        "length": "1:31"
+                    },
+                    {
+                        "title": "Make Me a Better Man",
+                        "length": "3:30"
+                    },
+                    {
+                        "title": "Who's the Fool",
+                        "length": "1:56"
+                    },
+                    {
+                        "title": "Chest Pain (I Love)",
+                        "length": "3:20"
+                    },
+                    {
+                        "title": "Doll",
+                        "length": "1:59"
+                    },
+                    {
+                        "title": "Bleed (feat. Omar Apollo",
+                        "length": "2:59"
+                    },
+                    {
+                        "title": "Good Job Malcolm",
+                        "length": "1:00"
+                    },
+                    {
+                        "title": "Lying",
+                        "length": "2:03"
+                    },
+                    {
+                        "title": "Walk to Class",
+                        "length": "3:48"
+                    },
+                    {
+                        "title": "Florence",
+                        "length": "3:05"
+                    },
+                    {
+                        "title": "Concrete",
+                        "length": "2:53"
+                    },
+                    {
+                        "title": "I Do",
+                        "length": "1:00"
+                    },
+                    {
+                        "title": "Cheer Me On",
+                        "length": "4:17"
+                    },
+                    {
+                        "title": "I'll Come Back For You",
+                        "length": "4:07"
+                    }                   
                 ]
             }
         ]
@@ -501,7 +564,7 @@
         "albums": [
             {
                 "title": "Random Access Memories",
-                "total_length": "74 min 24 secs",
+                "total_length": "1 hr 14 min 24 secs",
                 "synopsis": "Daft Punk’s fourth and final studio album, Random Access Memories, comes eight years after Human After All. ",
                 "tracks": [
                     {
@@ -599,7 +662,7 @@
         "albums": [
             {
                 "title": "Good Kid, M.A.A.D City",
-                "total_length": "68 min 23 secs",
+                "total_length": "1 hr 8 min 23 secs",
                 "synopsis": "good kid, m.A.A.d city is Kendrick Lamar’s major label debut. This concept album depicts a day in the life of a 17-year-old Lamar as he rides around Compton in his mom’s minivan.",
                 "tracks": [
                     {
@@ -649,6 +712,77 @@
                     {
                         "title": "Compton",
                         "length": "4:08"
+                    }
+                ]
+            },
+            {
+                "title": "To Pimp A Butterfly",
+                "total_length": "1hr 8 min",
+                "synopsis": "To Pimp a Butterfly is the third studio album by the American rapper Kendrick Lamar. Primarily a hip-hop album, To Pimp a Butterfly incorporates numerous other musical styles spanning the history of African-American music, most prominently jazz, funk, and soul. Lyrically, it features political commentary and personal themes concerning African-American culture, racial inequality, depression, and institutional discrimination. ",
+                "tracks": [
+                    {
+                        "title": "Wesley's Theory",
+                        "length": "4:47"
+                    },
+                    {
+                        "title": "For Free? - Interlude",
+                        "length": "2:10"
+                    },
+                    {
+                        "title": "King Kunta",
+                        "length": "3:54"
+                    },
+                    {
+                        "title": "Institutionalized",
+                        "length": "4:31"
+                    },
+                    {
+                        "title": "These Walls",
+                        "length": "5:00"
+                    },
+                    {
+                        "title": "u",
+                        "length": "4:28"
+                    },
+                    {
+                        "title": "Alright",
+                        "length": "3:39"
+                    },
+                    {
+                        "title": "For Sale? - Interlude",
+                        "length": "4:51"
+                    },
+                    {
+                        "title": "Momma",
+                        "length": "4:43"
+                    },
+                    {
+                        "title": "Hood Politics", 
+                        "length": "4:52"
+                    }, 
+                    {
+                        "title": "How Much a Dollar Cost",
+                        "length": "4:21"
+                    },
+                    {
+                        "title": "Complexion (A Zulu Love)",
+                        "length": "4:23"
+                    },
+                    {
+                        "title": "The Blacker The Berry",
+                        "length": "5:28"
+                    },
+                    {
+                        "title": "You Ain't Gotta Lie (Momma Said)",
+                        "length": "4:01"
+                    },
+                    {
+                        "title": "i",
+                        "length": "5:36"
+                    },
+                    {
+                        "title": "Mortal Man",
+                        "length": "12:07"
                     }
                 ]
             }
@@ -702,6 +836,61 @@
                     {
                         "title": "Videotape",
                         "length": "4:39"
+                    }
+                ]
+            }, 
+            {
+                "title": "OK Computer",
+                "total_length": "53 min 41 secs",
+                "synopsis": "OK Computer is the third studio album by the English rock band Radiohead. The lyrics depict a dystopian world fraught with rampant consumerism, social alienation, technological anxiety and political corruption, while also exploring themes of transport, conformity, paranoia, death, modern British life and globalisation. In this capacity, OK Computer is said to have prescient insight into the mood of 21st-century life. Radiohead used unconventional production techniques, including natural reverberation, and no audio separation.",
+                "tracks": [
+                    {
+                        "title": "Airbag",
+                        "length": "4:47"
+                    },
+                    {
+                        "title": "Paranoid Android", 
+                        "length": "6:27"
+                    },
+                    {
+                        "title": "Subterranean Homesick Alien",
+                        "length": "4:27"
+                    },
+                    {
+                        "title": "Exit Music (For A Film)", 
+                        "length": "4:27"
+                    },
+                    {
+                        "title": "Let Down",
+                        "length": "4:59"
+                    },
+                    {
+                        "title": "Karma Police",
+                        "length": "4:24"
+                    },
+                    {
+                        "title": "Fitter Happier",
+                        "length": "1:57"
+                    },
+                    {
+                        "title": "Electioneering",
+                        "length": "3:50"
+                    },
+                    {
+                        "title": "Climbing Up the Walls",
+                        "length": "4:45"
+                    },
+                    {
+                        "title": "No Surprises",
+                        "length": "3:49"
+                    },
+                    {
+                        "title": "Lucky",
+                        "length": "4:18"
+                    },
+                    {
+                        "title": "The Tourist",
+                        "length": "5:26"
                     }
                 ]
             }
@@ -828,6 +1017,73 @@
                     {
                         "title": "Hope You Find Your Way Home",
                         "length": "4:29"
+                    }
+                ]
+            },
+            {
+                "title": "CALL ME IF YOU GET LOST",
+                "total_length": "52 min 50 secs",
+                "synopsis": "CALL ME IF YOU GET LOST is the seventh studio album by the American rapper and producer Tyler, the Creator. The album marks a departure from the lighter and more soulful aesthetics of Tyler's previous releases Igor and Flower Boy in favor of bold beats and raw rhymes reminiscent of his earlier work. Genres on the album span hip-hop, pop, jazz, soul and reggae.",
+                "tracks": [
+                    {
+                        "title": "SIR BAUDELAIRE",
+                        "length": "1:28"
+                    },
+                    {
+                        "title": "CORSO",
+                        "length": "2:26"
+                    },
+                    {
+                        "title": "LEMONHEAD",
+                        "length": "2:10"
+                    },
+                    {
+                        "title": "WUSYANAME",
+                        "length": "2:01"
+                    },
+                    {
+                        "title": "HOT WIND BLOWS",
+                        "length": "2:35"
+                    },
+                    {
+                        "title": "MASSA",
+                        "length": "3:43"
+                    },
+                    {
+                        "title": "RUNITUP",
+                        "length": "3:49"
+                    },
+                    {
+                        "title": "MANIFESTO",
+                        "length": "2:55"
+                    },
+                    {
+                        "title": "SWEET/I THOUGHT YOU WANTED TO DANCE",
+                        "length": "9:48"
+                    },
+                    {
+                        "title": "MOMMA TALK",
+                        "length": "1:10"
+                    },
+                    {
+                        "title": "RISE!",
+                        "length": "3:23"
+                    },
+                    {
+                        "title": "BLESSED",
+                        "length": "0:57"
+                    },
+                    {
+                        "title": "JUGGERNAUT",
+                        "length": "2:26"
+                    },
+                    {
+                        "title": "WILSHIRE",
+                        "length": "8:35"
+                    },
+                    {
+                        "title": "SAFARI",
+                        "length": "2:57"
                     }
                 ]
             }
@@ -1063,7 +1319,7 @@
         "albums": [
             {
                 "title": "The Great Impersonator",
-                "total_length": "66 min 07 secs",
+                "total_length": "1hr 6 min 7 secs",
                 "synopsis": "The Great Impersonator is the fifth studio album by American singer Halsey. The album focuses on exploring Halsey's authenticity and relationships and her interpretation of their resonance with various contexts.",
                 "tracks": [
                     {
@@ -1189,7 +1445,7 @@
         "albums": [
             {
                 "title": "Blonde",
-                "total_length": "60 min 8 secs",
+                "total_length": "1 hr 8 secs",
                 "synopsis": "Blonde is the second studio album by the American singer Frank Ocean. Blonde features an abstract, atmospheric sound in comparison to Ocean's previous work, and utilizes a variety of unconventional musical elements.",
                 "tracks": [
                     {
@@ -1259,6 +1515,81 @@
                     {
                         "title": "Futura Free",
                         "length": "9:24"
+                    }
+                ]
+            },
+            {
+                "title": "channel ORANGE",
+                "total_length": "55 min 47 secs",
+                "synopsis": "channel ORANGE is the debut studio album by the American R&B singer-songwriter Frank Ocean. channel ORANGE draws on electro-funk, pop-soul, jazz-funk, and psychedelic styles, as well as nonmusical sounds such as film dialogue and ambient noise that function as interludes. ",
+                "tracks": [
+                    {
+                        "title": "Start",
+                        "length": "0:45"
+                    },
+                    {
+                        "title": "Thinking Bout You",
+                        "length": "3:20"
+                    },
+                    {
+                        "title": "Fertilizer",
+                        "length": "0:39"
+                    },
+                    {
+                        "title": "Sierra Leone",
+                        "length": "2:28"
+                    },
+                    {
+                        "title": "Sweet Life",
+                        "length": "4:22"
+                    },
+                    {
+                        "title": "Not Just Money",
+                        "length": "0:59"
+                    },
+                    {
+                        "title": "Super Rich Kids",
+                        "length": "5:04"
+                    },
+                    {
+                        "title": "Pilot Jones",
+                        "length": "3:04"
+                    },
+                    {
+                        "title": "Crack Rock",
+                        "length": "3:44"
+                    },
+                    {
+                        "title": "Pyramids",
+                        "length": "9:52"
+                    },
+                    {
+                        "title": "Lost",
+                        "length": "3:54"
+                    },
+                    {
+                        "title": "White",
+                        "length": "1:16"
+                    },
+                    {
+                        "title": "Monks",
+                        "length": "3:20"
+                    },
+                    {
+                        "title": "Bad Religion",
+                        "length": "2:55"
+                    },
+                    {
+                        "title": "Pink Matter",
+                        "length": "4:28"
+                    },
+                    {
+                        "title": "Forrest Gump",
+                        "length": "3:14"
+                    },
+                    {
+                        "title": "End",
+                        "length": "2:14"
                     }
                 ]
             }
