@@ -163,7 +163,7 @@ const ProfilePage = () => {
                 })
             });
 
-            if (!response.ok) {
+            if (response.ok) {
                 setReviews(prevReviews => 
                     prevReviews.map(review =>
                         review.album_id === albumId
