@@ -85,7 +85,7 @@ const ReviewItem = ({ album_id, albumCover, albumName, rating, reviewText, onDel
                                 '& .MuiOutlinedInput-root': {
                                     backgroundColor: 'black',
                                     color: '#1ED760',
-                                    padding: 0,
+                                    padding: '10px',
                                     '& fieldset': {
                                         borderColor: '#444',
                             
@@ -161,7 +161,7 @@ const ReviewItem = ({ album_id, albumCover, albumName, rating, reviewText, onDel
                     Delete Review?
                 </DialogTitle>
                 <DialogContent>
-                    <DialogContentText sx={{ color: '#ccc' }}>
+                    <DialogContentText sx={{ color: '#000' }}>
                         Are you sure you want to delete your review for <strong>{albumName}</strong>? This action cannot be undone.
                     </DialogContentText>
                 </DialogContent>

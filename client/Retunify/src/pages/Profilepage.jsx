@@ -163,11 +163,11 @@ const ProfilePage = () => {
                 })
             });
 
-            if (!response.ok) {
+            if (response.ok) {
                 setReviews(prevReviews => 
                     prevReviews.map(review =>
                         review.album_id === albumId
-                        ? {...review, rating: parseFloat(newRating), reviewText }
+                        ? {...review, rating: parseFloat(newRating), newReviewText }
                         : review
                     )
                 );

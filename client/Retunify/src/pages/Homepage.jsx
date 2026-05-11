@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import './styles/Homepage.css';
 import { 
   Pagination, 
@@ -8,9 +8,10 @@ import {
   DialogContent, 
   DialogActions, 
   Button, 
-  Typography 
+  Typography,
+  TextField,
+  InputAdornment
 } from '@mui/material';
-import { Link } from 'react-router-dom';
 
 import AdrianneL from '../assets/ArtistImages/AdrianneL.jpg';
 import BigThief from '../assets/ArtistImages/BT.jpg'; 
@@ -113,6 +114,7 @@ export default function Homepage() {
   const navigate = useNavigate();
 
   const [artists, setArtists] = useState([]);
+  const [searchTerm, setSearchTerm] = useState("");
   const [currentPage, setCurrentPage] = useState(1);
   const PAGE_SIZE = 5;
   const [isPopupOpen, setPopupOpen] = useState(false);
@@ -131,6 +133,7 @@ export default function Homepage() {
 
   useEffect(() => {
     fetch(`${API}/artists`)
+    fetch(`${API}/artists`)
       .then(response => response.json())
       .then(data => {
         if (Array.isArray(data)) {
@@ -138,10 +141,15 @@ export default function Homepage() {
         }
       })
       .catch(error => console.error('Error fetching artists:', error));
-  }, []);
+  }, [API]);
 
-  const totalPages = Math.ceil(artists.length / PAGE_SIZE);
-  const paginatedArtists = artists.slice(
+  // Frontend local filtering logic
+  const filteredArtists = artists.filter((artist) =>
+    artist.artist_name.toLowerCase().includes(searchTerm.toLowerCase())
+  );
+
+  const totalPages = Math.ceil(filteredArtists.length / PAGE_SIZE);
+  const paginatedArtists = filteredArtists.slice(
     (currentPage - 1) * PAGE_SIZE,
     currentPage * PAGE_SIZE
   );
@@ -237,7 +245,6 @@ export default function Homepage() {
           </Button>
         </div>
         
-        {/* Avatar Box Logic */}
         <div 
           className="avatar" 
           style={{ 
@@ -254,9 +261,32 @@ export default function Homepage() {
       </div>
 
       <div className="main-content">
+        <div className="search-container" style={{ marginBottom: '20px', display: 'flex', justifyContent: 'center' }}>
+          <TextField
+            variant="outlined"
+            placeholder="Search for an artist..."
+            value={searchTerm}
+            onChange={(e) => {
+              setSearchTerm(e.target.value);
+              setCurrentPage(1); // Reset pagination on search
+            }}
+            sx={{
+              width: '100%',
+              maxWidth: '400px',
+              backgroundColor: '#1a1a1a',
+              borderRadius: '8px',
+              '& .MuiOutlinedInput-root': {
+                color: 'white',
+                '& fieldset': { borderColor: '#2a2a2a' },
+                '&:hover fieldset': { borderColor: '#00e544' },
+                '&.Mui-focused fieldset': { borderColor: '#00e544' },
+              },
+            }}
+          />
+        </div>
+
         <div className="section-header">
           <div className="section-title">Explore these Artists!</div>
-          {/* <button className="see-all-btn">See all</button> */}
         </div>
         
         <div className="grid" style={{
@@ -273,7 +303,9 @@ export default function Homepage() {
               </div>
             ))
           ) : (
-            <div style={{ color: '#8a8a8a', padding: '20px' }}>No artists found. Check backend connection...</div>
+            <div style={{ color: '#8a8a8a', padding: '20px' }}>
+              {searchTerm ? "No artists match your search." : "No artists found. Check backend connection..."}
+            </div>
           )}
         </div>
 
