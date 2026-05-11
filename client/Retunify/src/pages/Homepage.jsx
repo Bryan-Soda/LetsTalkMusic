@@ -128,7 +128,7 @@ export default function Homepage() {
   };
 
   const handleProfile = () => {
-    navigate("/profile/:userId");
+    navigate("/profile/");
   }
 
   useEffect(() => {
