@@ -161,7 +161,7 @@ const ReviewItem = ({ album_id, albumCover, albumName, rating, reviewText, onDel
                     Delete Review?
                 </DialogTitle>
                 <DialogContent>
-                    <DialogContentText sx={{ color: '#ccc' }}>
+                    <DialogContentText sx={{ color: 'black' }}>
                         Are you sure you want to delete your review for <strong>{albumName}</strong>? This action cannot be undone.
                     </DialogContentText>
                 </DialogContent>
