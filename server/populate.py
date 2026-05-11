@@ -97,7 +97,7 @@ def populate(data):
                 tracks = []
 
             for track_data in tracks:
-                exisitng = Tracks.query.filter_by(album_id=album.id, title=track_data['title']).first()
+                exisiting = Tracks.query.filter_by(album_id=album.id, title=track_data['title']).first()
 
                 if exisiting:
                     continue # skip for loop

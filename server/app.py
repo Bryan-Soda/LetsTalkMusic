@@ -21,7 +21,7 @@ app = Flask(__name__)
 # limiter = Limiter(get_remote_address, app=app)
 # limiter = Limiter(get_remote_address, app=app)
 
-cors = CORS(app, origins='*')
+cors = CORS(app, origins=[os.getenv("FRONTEND_URL", 'http://localhost:5173')])
 
 basedir = os.path.abspath(os.path.dirname(__file__))
 
