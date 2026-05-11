@@ -103,7 +103,7 @@ def add_new_member():
     data = request.get_json()
     if not data:
         return {'error': 'data required'}, 400
-    print("Raw data:", data) #testing purposes
+    # print("Raw data:", data) #testing purposes
 
     
     if 'username' not in data or 'password' not in data:
@@ -135,7 +135,7 @@ def add_new_member():
 def authenticate():
     # Types: Users and Admins and Mods
     data = request.get_json()
-    print("Raw data:", data)
+    # print("Raw data:", data)
     # body within jsx file must match var names
     name = data['username']
 
@@ -145,7 +145,7 @@ def authenticate():
         print("DNE")
         return {'error': 'user not found'}, 404
     submitted_password = data['password']
-    print("hashed password: ", submitted_password.encode('utf-8') )
+    # print("hashed password: ", submitted_password.encode('utf-8') )
     submitted_password = submitted_password[:72]
     if bcrypt.checkpw(submitted_password.encode('utf-8'), user.password):
         print("Password Matches!")
