@@ -20,7 +20,7 @@ const App = () => {
       <Route path="/home" element={<Homepage />} />
 
       {/* Main landing page after login */}
-      <Route path="/profile/:userId" element={<ProfilePage />} />
+      <Route path="/profile/" element={<ProfilePage />} />
 
       {/* Dynamic route for artist's discography */}
       <Route path="/artists/:artistId" element={<ArtistAlbums />} />
