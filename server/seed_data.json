@@ -1538,10 +1538,10 @@
             {
                 "title": "Bright Future",
                 "total_length": "43 min 37 secs",
-                "synopsis": "Bright Future is the sixth solo studio album by Adrianne Lenker. Recorded straight to tape with a small group of close confidants, the Big Thief singer’s latest solo album is free-flowing and intuitive, reveling in the space between spontaneity and impermanence.",
+                "synopsis": "Bright Future is the sixth solo studio album by Adrianne Lenker. Recorded straight to tape with a small group of close confidants, the Big Thief singer's latest solo album is free-flowing and intuitive, reveling in the space between spontaneity and impermanence.",
                 "tracks": [
                     {
-                        "title": "Real House", 
+                        "title": "Real House",
                         "length": "5:58"
                     },
                     {
@@ -1587,6 +1587,53 @@
                     {
                         "title": "Ruined",
                         "length": "4:34"
+                    }
+                ]
+            },
+            {
+                "title": "abysskiss",
+                "total_length": "33 min 42 secs",
+                "synopsis": "abysskiss is the third solo studio album by Adrianne Lenker, released on October 5, 2018 through Saddle Creek Records. Recorded in a week at Panoramic House in West Marin, California with producer Luke Temple, the album consists of ten intimate folk songs conceived while touring with Big Thief, exploring themes of mortality, love, birth, and nature through strikingly vivid imagery.",
+                "tracks": [
+                    {
+                        "title": "terminal paradise",
+                        "length": "3:59"
+                    },
+                    {
+                        "title": "from",
+                        "length": "3:38"
+                    },
+                    {
+                        "title": "womb",
+                        "length": "2:15"
+                    },
+                    {
+                        "title": "out of your mind",
+                        "length": "3:51"
+                    },
+                    {
+                        "title": "cradle",
+                        "length": "3:17"
+                    },
+                    {
+                        "title": "symbol",
+                        "length": "3:49"
+                    },
+                    {
+                        "title": "blue and red horses",
+                        "length": "3:17"
+                    },
+                    {
+                        "title": "abyss kiss",
+                        "length": "3:03"
+                    },
+                    {
+                        "title": "what can you say",
+                        "length": "2:28"
+                    },
+                    {
+                        "title": "10 miles",
+                        "length": "4:01"
                     }
                 ]
             }
@@ -1658,6 +1705,65 @@
                         "length": "3:22"
                     }
                 ]
+            },
+            {
+                "title": "If I Can't Have Love, I Want Power",
+                "total_length": "42 min 53 secs",
+                "synopsis": "If I Can't Have Love, I Want Power is the fourth studio album by American singer Halsey, released on August 27, 2021. Produced by Trent Reznor and Atticus Ross, the album is a bold concept record inspired by Halsey's experience of pregnancy and motherhood. It pushes creative boundaries by blending alternative and industrial pop with themes of feminine power, identity, and autonomy.",
+                "tracks": [
+                    {
+                        "title": "The Tradition",
+                        "length": "3:46"
+                    },
+                    {
+                        "title": "Bells in Santa Fe",
+                        "length": "3:37"
+                    },
+                    {
+                        "title": "Easier Than Lying",
+                        "length": "3:26"
+                    },
+                    {
+                        "title": "Lilith",
+                        "length": "2:47"
+                    },
+                    {
+                        "title": "Girl is a Gun",
+                        "length": "2:26"
+                    },
+                    {
+                        "title": "You Asked for This",
+                        "length": "4:25"
+                    },
+                    {
+                        "title": "Darling",
+                        "length": "3:02"
+                    },
+                    {
+                        "title": "1121",
+                        "length": "2:42"
+                    },
+                    {
+                        "title": "honey",
+                        "length": "2:54"
+                    },
+                    {
+                        "title": "Whispers",
+                        "length": "3:11"
+                    },
+                    {
+                        "title": "I Am Not a Woman, I'm a God",
+                        "length": "2:56"
+                    },
+                    {
+                        "title": "The Lighthouse",
+                        "length": "4:33"
+                    },
+                    {
+                        "title": "Ya'aburnee",
+                        "length": "3:08"
+                    }
+                ]
             }
         ]
     },
@@ -1713,6 +1819,53 @@
                     {
                         "title": "Perfect Places",
                         "length": "3:41"
+                    }
+                ]
+            },
+            {
+                "title": "Pure Heroine",
+                "total_length": "37 min 11 secs",
+                "synopsis": "Pure Heroine is the debut studio album by New Zealand singer-songwriter Lorde, released on September 27, 2013. An electronica, electropop, and dream pop album with minimalist production, deep bass and programmed beats, it explores themes of youth and critiques mainstream culture. The album received widespread critical acclaim and earned Lorde two Grammy Awards, including Song of the Year for its lead single 'Royals'.",
+                "tracks": [
+                    {
+                        "title": "Tennis Court",
+                        "length": "3:22"
+                    },
+                    {
+                        "title": "400 Lux",
+                        "length": "3:38"
+                    },
+                    {
+                        "title": "Royals",
+                        "length": "3:16"
+                    },
+                    {
+                        "title": "Ribs",
+                        "length": "4:19"
+                    },
+                    {
+                        "title": "Buzzcut Season",
+                        "length": "3:38"
+                    },
+                    {
+                        "title": "Team",
+                        "length": "3:13"
+                    },
+                    {
+                        "title": "Glory and Gore",
+                        "length": "3:31"
+                    },
+                    {
+                        "title": "Still Sane",
+                        "length": "2:58"
+                    },
+                    {
+                        "title": "White Teeth Teens",
+                        "length": "3:17"
+                    },
+                    {
+                        "title": "A World Alone",
+                        "length": "4:17"
                     }
                 ]
             }
@@ -1928,13 +2081,128 @@
                         "length": "4:56"
                     }
                 ]
+            },
+            {
+                "title": "Tango in the Night",
+                "total_length": "44 min 12 secs",
+                "synopsis": "Tango in the Night is the fourteenth studio album by Fleetwood Mac, released on April 13, 1987. The final studio album to feature the classic Rumours lineup, it blends pop rock and soft rock with synthesizers, drum machines, and Lindsey Buckingham's intricate studio production. The album was a major commercial success, reaching number one in the UK and spawning four US top 20 singles.",
+                "tracks": [
+                    {
+                        "title": "Big Love",
+                        "length": "3:38"
+                    },
+                    {
+                        "title": "Seven Wonders",
+                        "length": "3:38"
+                    },
+                    {
+                        "title": "Everywhere",
+                        "length": "3:41"
+                    },
+                    {
+                        "title": "Caroline",
+                        "length": "3:54"
+                    },
+                    {
+                        "title": "Tango in the Night",
+                        "length": "4:03"
+                    },
+                    {
+                        "title": "Mystified",
+                        "length": "3:10"
+                    },
+                    {
+                        "title": "Little Lies",
+                        "length": "3:40"
+                    },
+                    {
+                        "title": "Family Man",
+                        "length": "4:08"
+                    },
+                    {
+                        "title": "Welcome to the Room...Sara",
+                        "length": "3:42"
+                    },
+                    {
+                        "title": "Isn't It Midnight",
+                        "length": "4:14"
+                    },
+                    {
+                        "title": "When I See You Again",
+                        "length": "3:50"
+                    },
+                    {
+                        "title": "You and I, Part II",
+                        "length": "2:40"
+                    }
+                ]
+            },
+            {
+                "title": "Behind the Mask",
+                "total_length": "54 min 26 secs",
+                "synopsis": "Behind the Mask is the fifteenth studio album by Fleetwood Mac, released on April 9, 1990. The first album without guitarist Lindsey Buckingham, it introduced new members Billy Burnette and Rick Vito, bringing blues and rockabilly influences to the band's sound. Though not as commercially successful as its predecessor, the album debuted at number one in the UK and was certified Gold in the United States.",
+                "tracks": [
+                    {
+                        "title": "Skies the Limit",
+                        "length": "3:45"
+                    },
+                    {
+                        "title": "Love Is Dangerous",
+                        "length": "3:16"
+                    },
+                    {
+                        "title": "In the Back of My Mind",
+                        "length": "7:01"
+                    },
+                    {
+                        "title": "Do You Know",
+                        "length": "4:18"
+                    },
+                    {
+                        "title": "Save Me",
+                        "length": "4:13"
+                    },
+                    {
+                        "title": "Affairs of the Heart",
+                        "length": "4:20"
+                    },
+                    {
+                        "title": "When the Sun Goes Down",
+                        "length": "3:17"
+                    },
+                    {
+                        "title": "Behind the Mask",
+                        "length": "4:17"
+                    },
+                    {
+                        "title": "Stand on the Rock",
+                        "length": "4:01"
+                    },
+                    {
+                        "title": "Hard Feelings",
+                        "length": "4:51"
+                    },
+                    {
+                        "title": "Freedom",
+                        "length": "4:10"
+                    },
+                    {
+                        "title": "When It Comes to Love",
+                        "length": "4:05"
+                    },
+                    {
+                        "title": "The Second Time",
+                        "length": "2:31"
+                    }
+                ]
             }
-        ]
+        ]    
     },
     {
         "artist_name": "SZA",
         "genre": "R&B/Neo Soul",
         "albums": [
+<<<<<<< HEAD
           {
             "title": "CTRL",
             "total_length": "49 min 1 secs",
@@ -1986,6 +2254,170 @@
               { "title": "Forgiveless (feat. Ol' Dirty Bastard)", "length": "3:00" }
             ]
           }
+=======
+            {
+                "title": "CTRL",
+                "total_length": "49 min 1 secs",
+                "synopsis": "Ctrl is the debut studio album by American singer-songwriter SZA. The album tests the borders of traditional R&B, drawing influences from trap and indie rock. The album contains a precise sonic methodology, with a fluent production, containing influences from pop, hip-hop and electronic genres.",
+                "tracks": [
+                    {
+                        "title": "Supermodel",
+                        "length": "3:01"
+                    },
+                    {
+                        "title": "Love Galore",
+                        "length": "4:35"
+                    },
+                    {
+                        "title": "Doves In The Wind",
+                        "length": "4:26"
+                    },
+                    {
+                        "title": "Drew Barrymore",
+                        "length": "3:51"
+                    },
+                    {
+                        "title": "Prom",
+                        "length": "3:16"
+                    },
+                    {
+                        "title": "The Weekend",
+                        "length": "4:32"
+                    },
+                    {
+                        "title": "Go Gina",
+                        "length": "2:41"
+                    },
+                    {
+                        "title": "Garden (Say It Like Dat)",
+                        "length": "3:28"
+                    },
+                    {
+                        "title": "Broken Clocks",
+                        "length": "3:51"
+                    },
+                    {
+                        "title": "Anything",
+                        "length": "2:29"
+                    },
+                    {
+                        "title": "Wavy (Interlude)",
+                        "length": "1:15"
+                    },
+                    {
+                        "title": "Normal Girl",
+                        "length": "4:13"
+                    },
+                    {
+                        "title": "Pretty Little Birds",
+                        "length": "4:05"
+                    },
+                    {
+                        "title": "20 Something",
+                        "length": "3:18"
+                    }
+                ]
+            },
+            {
+                "title": "SOS",
+                "total_length": "1 hr 7 min 50 secs",
+                "synopsis": "SOS is the second studio album by American singer-songwriter SZA, released on December 9, 2022. Primarily an R&B album with influences from hip-hop and pop, it samples soul, gospel, jazz and melodic rap while blending surf rock, grunge, and lo-fi beats. The album received widespread critical acclaim and won Best Progressive R&B Album at the 66th Grammy Awards.",
+                "tracks": [
+                    {
+                        "title": "SOS",
+                        "length": "1:57"
+                    },
+                    {
+                        "title": "Kill Bill",
+                        "length": "2:33"
+                    },
+                    {
+                        "title": "Seek & Destroy",
+                        "length": "3:23"
+                    },
+                    {
+                        "title": "Low",
+                        "length": "3:01"
+                    },
+                    {
+                        "title": "Love Language",
+                        "length": "3:03"
+                    },
+                    {
+                        "title": "Blind",
+                        "length": "2:30"
+                    },
+                    {
+                        "title": "Used (feat. Don Toliver)",
+                        "length": "2:26"
+                    },
+                    {
+                        "title": "Snooze",
+                        "length": "3:21"
+                    },
+                    {
+                        "title": "Notice Me",
+                        "length": "2:40"
+                    },
+                    {
+                        "title": "Gone Girl",
+                        "length": "4:04"
+                    },
+                    {
+                        "title": "Smoking on my Ex Pack",
+                        "length": "1:23"
+                    },
+                    {
+                        "title": "Ghost in the Machine (feat. Phoebe Bridgers)",
+                        "length": "3:38"
+                    },
+                    {
+                        "title": "F2F",
+                        "length": "3:05"
+                    },
+                    {
+                        "title": "Nobody Gets Me",
+                        "length": "3:00"
+                    },
+                    {
+                        "title": "Conceited",
+                        "length": "2:31"
+                    },
+                    {
+                        "title": "Special",
+                        "length": "2:38"
+                    },
+                    {
+                        "title": "Too Late",
+                        "length": "2:44"
+                    },
+                    {
+                        "title": "Far",
+                        "length": "3:00"
+                    },
+                    {
+                        "title": "Shirt",
+                        "length": "3:01"
+                    },
+                    {
+                        "title": "Open Arms (feat. Travis Scott)",
+                        "length": "3:59"
+                    },
+                    {
+                        "title": "I Hate U",
+                        "length": "2:54"
+                    },
+                    {
+                        "title": "Good Days",
+                        "length": "4:39"
+                    },
+                    {
+                        "title": "Forgiveless (feat. Ol' Dirty Bastard)",
+                        "length": "3:00"
+                    }
+                ]
+            }
+>>>>>>> homepage-new
         ]
       }
 ]
