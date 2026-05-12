@@ -65,7 +65,7 @@
             },
             {
                 "title": "Submarine",
-                "total_length": "45 min 13 sec",
+                "total_length": "45 min 13 secs",
                 "synopsis": "Submarine is an album that represents solitude and exploration. we wrote it in the throws of heartbreak, my mind spiraling at each turn, my vision a blur. no one noticed, but there were moments during the writing process where i felt like my mind was underwater and where i couldn’t hear anything except for the echo of my own thoughts. i’ve come out on the other side of that headspace with more clarity than ever and with a project that i’ve never been more proud of.",
                 "tracks":[
                     {
@@ -304,7 +304,7 @@
             },
             {
                 "title": "to hell with it",
-                "total_length": "18 min 36 sec",
+                "total_length": "18 min 36 secs",
                 "synopsis": "to hell with it is the debut mixtape from English singer, songwriter and record producer PinkPantheress, following her introduction into the music scene with a string of viral singles on the video-sharing social media platform TikTok. ",
                 "tracks":[
                     {
@@ -347,6 +347,66 @@
                     {
                         "title": "Break It Off - Bonus",
                         "length": "1:36"
+                    }
+                ]
+            },
+            {
+                "title": "Heaven knows",
+                "total_length": "34 min 14 secs",
+                "synopsis": "'Heaven knows' is the debut studio album by the British singer-songwriter and record producer PinkPantheress. She stated that the album is an 'accumulation of music made over the last two years', and is thematically about 'being at peace with yourself in your aloneness' as well as 'journeying from hell into purgatory, but I'm OK with being there'. ",
+                "tracks":[
+                    {
+                        "title": "Another life",
+                        "length": "2:52"
+                    },
+                    {
+                        "title": "True romance",
+                        "length": "2:16"
+                    },
+                    {
+                        "title": "Mosquito",
+                        "length": "2:27"
+                    },
+                    {
+                        "title": "The aisle",
+                        "length": "2:45"
+                    },
+
+                    {
+                        "title": "Nice to meet you",
+                        "length": "2:42"
+                    },
+                    {
+                        "title": "Bury me",
+                        "length": "2:04"
+                    },
+                    {
+                        "title": "Internet baby",
+                        "length": "2:11"
+                    },
+                    {
+                        "title": "Ophelia",
+                        "length": "2:36"
+                    },
+                    {
+                        "title": "Feel complete",
+                        "length": "2:43"
+                    },
+                    {
+                        "title": "Blue",
+                        "length": "3:01"
+                    },
+                    {
+                        "title": "Feelings",
+                        "length": "2:40"
+                    },
+                    {
+                        "title": "Capable of Love",
+                        "length": "3:43"
+                    },
+                    {
+                        "title": "Boy's a liar Pt. 2",
+                        "length": "2:11"
                     }
                 ]
             }
@@ -1259,10 +1319,10 @@
             {
                 "title": "Bright Future",
                 "total_length": "43 min 37 secs",
-                "synopsis": "Bright Future is the sixth solo studio album by Adrianne Lenker. Recorded straight to tape with a small group of close confidants, the Big Thief singer’s latest solo album is free-flowing and intuitive, reveling in the space between spontaneity and impermanence.",
+                "synopsis": "Bright Future is the sixth solo studio album by Adrianne Lenker. Recorded straight to tape with a small group of close confidants, the Big Thief singer's latest solo album is free-flowing and intuitive, reveling in the space between spontaneity and impermanence.",
                 "tracks": [
                     {
-                        "title": "Real House", 
+                        "title": "Real House",
                         "length": "5:58"
                     },
                     {
@@ -1308,6 +1368,53 @@
                     {
                         "title": "Ruined",
                         "length": "4:34"
+                    }
+                ]
+            },
+            {
+                "title": "abysskiss",
+                "total_length": "33 min 42 secs",
+                "synopsis": "abysskiss is the third solo studio album by Adrianne Lenker, released on October 5, 2018 through Saddle Creek Records. Recorded in a week at Panoramic House in West Marin, California with producer Luke Temple, the album consists of ten intimate folk songs conceived while touring with Big Thief, exploring themes of mortality, love, birth, and nature through strikingly vivid imagery.",
+                "tracks": [
+                    {
+                        "title": "terminal paradise",
+                        "length": "3:59"
+                    },
+                    {
+                        "title": "from",
+                        "length": "3:38"
+                    },
+                    {
+                        "title": "womb",
+                        "length": "2:15"
+                    },
+                    {
+                        "title": "out of your mind",
+                        "length": "3:51"
+                    },
+                    {
+                        "title": "cradle",
+                        "length": "3:17"
+                    },
+                    {
+                        "title": "symbol",
+                        "length": "3:49"
+                    },
+                    {
+                        "title": "blue and red horses",
+                        "length": "3:17"
+                    },
+                    {
+                        "title": "abyss kiss",
+                        "length": "3:03"
+                    },
+                    {
+                        "title": "what can you say",
+                        "length": "2:28"
+                    },
+                    {
+                        "title": "10 miles",
+                        "length": "4:01"
                     }
                 ]
             }
@@ -1379,6 +1486,65 @@
                         "length": "3:22"
                     }
                 ]
+            },
+            {
+                "title": "If I Can't Have Love, I Want Power",
+                "total_length": "42 min 53 secs",
+                "synopsis": "If I Can't Have Love, I Want Power is the fourth studio album by American singer Halsey, released on August 27, 2021. Produced by Trent Reznor and Atticus Ross, the album is a bold concept record inspired by Halsey's experience of pregnancy and motherhood. It pushes creative boundaries by blending alternative and industrial pop with themes of feminine power, identity, and autonomy.",
+                "tracks": [
+                    {
+                        "title": "The Tradition",
+                        "length": "3:46"
+                    },
+                    {
+                        "title": "Bells in Santa Fe",
+                        "length": "3:37"
+                    },
+                    {
+                        "title": "Easier Than Lying",
+                        "length": "3:26"
+                    },
+                    {
+                        "title": "Lilith",
+                        "length": "2:47"
+                    },
+                    {
+                        "title": "Girl is a Gun",
+                        "length": "2:26"
+                    },
+                    {
+                        "title": "You Asked for This",
+                        "length": "4:25"
+                    },
+                    {
+                        "title": "Darling",
+                        "length": "3:02"
+                    },
+                    {
+                        "title": "1121",
+                        "length": "2:42"
+                    },
+                    {
+                        "title": "honey",
+                        "length": "2:54"
+                    },
+                    {
+                        "title": "Whispers",
+                        "length": "3:11"
+                    },
+                    {
+                        "title": "I Am Not a Woman, I'm a God",
+                        "length": "2:56"
+                    },
+                    {
+                        "title": "The Lighthouse",
+                        "length": "4:33"
+                    },
+                    {
+                        "title": "Ya'aburnee",
+                        "length": "3:08"
+                    }
+                ]
             }
         ]
     },
@@ -1434,6 +1600,53 @@
                     {
                         "title": "Perfect Places",
                         "length": "3:41"
+                    }
+                ]
+            },
+            {
+                "title": "Pure Heroine",
+                "total_length": "37 min 11 secs",
+                "synopsis": "Pure Heroine is the debut studio album by New Zealand singer-songwriter Lorde, released on September 27, 2013. An electronica, electropop, and dream pop album with minimalist production, deep bass and programmed beats, it explores themes of youth and critiques mainstream culture. The album received widespread critical acclaim and earned Lorde two Grammy Awards, including Song of the Year for its lead single 'Royals'.",
+                "tracks": [
+                    {
+                        "title": "Tennis Court",
+                        "length": "3:22"
+                    },
+                    {
+                        "title": "400 Lux",
+                        "length": "3:38"
+                    },
+                    {
+                        "title": "Royals",
+                        "length": "3:16"
+                    },
+                    {
+                        "title": "Ribs",
+                        "length": "4:19"
+                    },
+                    {
+                        "title": "Buzzcut Season",
+                        "length": "3:38"
+                    },
+                    {
+                        "title": "Team",
+                        "length": "3:13"
+                    },
+                    {
+                        "title": "Glory and Gore",
+                        "length": "3:31"
+                    },
+                    {
+                        "title": "Still Sane",
+                        "length": "2:58"
+                    },
+                    {
+                        "title": "White Teeth Teens",
+                        "length": "3:17"
+                    },
+                    {
+                        "title": "A World Alone",
+                        "length": "4:17"
                     }
                 ]
             }
@@ -1649,8 +1862,122 @@
                         "length": "4:56"
                     }
                 ]
+            },
+            {
+                "title": "Tango in the Night",
+                "total_length": "44 min 12 secs",
+                "synopsis": "Tango in the Night is the fourteenth studio album by Fleetwood Mac, released on April 13, 1987. The final studio album to feature the classic Rumours lineup, it blends pop rock and soft rock with synthesizers, drum machines, and Lindsey Buckingham's intricate studio production. The album was a major commercial success, reaching number one in the UK and spawning four US top 20 singles.",
+                "tracks": [
+                    {
+                        "title": "Big Love",
+                        "length": "3:38"
+                    },
+                    {
+                        "title": "Seven Wonders",
+                        "length": "3:38"
+                    },
+                    {
+                        "title": "Everywhere",
+                        "length": "3:41"
+                    },
+                    {
+                        "title": "Caroline",
+                        "length": "3:54"
+                    },
+                    {
+                        "title": "Tango in the Night",
+                        "length": "4:03"
+                    },
+                    {
+                        "title": "Mystified",
+                        "length": "3:10"
+                    },
+                    {
+                        "title": "Little Lies",
+                        "length": "3:40"
+                    },
+                    {
+                        "title": "Family Man",
+                        "length": "4:08"
+                    },
+                    {
+                        "title": "Welcome to the Room...Sara",
+                        "length": "3:42"
+                    },
+                    {
+                        "title": "Isn't It Midnight",
+                        "length": "4:14"
+                    },
+                    {
+                        "title": "When I See You Again",
+                        "length": "3:50"
+                    },
+                    {
+                        "title": "You and I, Part II",
+                        "length": "2:40"
+                    }
+                ]
+            },
+            {
+                "title": "Behind the Mask",
+                "total_length": "54 min 26 secs",
+                "synopsis": "Behind the Mask is the fifteenth studio album by Fleetwood Mac, released on April 9, 1990. The first album without guitarist Lindsey Buckingham, it introduced new members Billy Burnette and Rick Vito, bringing blues and rockabilly influences to the band's sound. Though not as commercially successful as its predecessor, the album debuted at number one in the UK and was certified Gold in the United States.",
+                "tracks": [
+                    {
+                        "title": "Skies the Limit",
+                        "length": "3:45"
+                    },
+                    {
+                        "title": "Love Is Dangerous",
+                        "length": "3:16"
+                    },
+                    {
+                        "title": "In the Back of My Mind",
+                        "length": "7:01"
+                    },
+                    {
+                        "title": "Do You Know",
+                        "length": "4:18"
+                    },
+                    {
+                        "title": "Save Me",
+                        "length": "4:13"
+                    },
+                    {
+                        "title": "Affairs of the Heart",
+                        "length": "4:20"
+                    },
+                    {
+                        "title": "When the Sun Goes Down",
+                        "length": "3:17"
+                    },
+                    {
+                        "title": "Behind the Mask",
+                        "length": "4:17"
+                    },
+                    {
+                        "title": "Stand on the Rock",
+                        "length": "4:01"
+                    },
+                    {
+                        "title": "Hard Feelings",
+                        "length": "4:51"
+                    },
+                    {
+                        "title": "Freedom",
+                        "length": "4:10"
+                    },
+                    {
+                        "title": "When It Comes to Love",
+                        "length": "4:05"
+                    },
+                    {
+                        "title": "The Second Time",
+                        "length": "2:31"
+                    }
+                ]
             }
-        ]
+        ]    
     },
     {
         "artist_name": "SZA",
@@ -1716,6 +2043,411 @@
                     {
                         "title": "20 Something",
                         "length": "3:18"
+                    }
+                ]
+            },
+            {
+                "title": "SOS",
+                "total_length": "1 hr 7 min 50 secs",
+                "synopsis": "SOS is the second studio album by American singer-songwriter SZA, released on December 9, 2022. Primarily an R&B album with influences from hip-hop and pop, it samples soul, gospel, jazz and melodic rap while blending surf rock, grunge, and lo-fi beats. The album received widespread critical acclaim and won Best Progressive R&B Album at the 66th Grammy Awards.",
+                "tracks": [
+                    {
+                        "title": "SOS",
+                        "length": "1:57"
+                    },
+                    {
+                        "title": "Kill Bill",
+                        "length": "2:33"
+                    },
+                    {
+                        "title": "Seek & Destroy",
+                        "length": "3:23"
+                    },
+                    {
+                        "title": "Low",
+                        "length": "3:01"
+                    },
+                    {
+                        "title": "Love Language",
+                        "length": "3:03"
+                    },
+                    {
+                        "title": "Blind",
+                        "length": "2:30"
+                    },
+                    {
+                        "title": "Used (feat. Don Toliver)",
+                        "length": "2:26"
+                    },
+                    {
+                        "title": "Snooze",
+                        "length": "3:21"
+                    },
+                    {
+                        "title": "Notice Me",
+                        "length": "2:40"
+                    },
+                    {
+                        "title": "Gone Girl",
+                        "length": "4:04"
+                    },
+                    {
+                        "title": "Smoking on my Ex Pack",
+                        "length": "1:23"
+                    },
+                    {
+                        "title": "Ghost in the Machine (feat. Phoebe Bridgers)",
+                        "length": "3:38"
+                    },
+                    {
+                        "title": "F2F",
+                        "length": "3:05"
+                    },
+                    {
+                        "title": "Nobody Gets Me",
+                        "length": "3:00"
+                    },
+                    {
+                        "title": "Conceited",
+                        "length": "2:31"
+                    },
+                    {
+                        "title": "Special",
+                        "length": "2:38"
+                    },
+                    {
+                        "title": "Too Late",
+                        "length": "2:44"
+                    },
+                    {
+                        "title": "Far",
+                        "length": "3:00"
+                    },
+                    {
+                        "title": "Shirt",
+                        "length": "3:01"
+                    },
+                    {
+                        "title": "Open Arms (feat. Travis Scott)",
+                        "length": "3:59"
+                    },
+                    {
+                        "title": "I Hate U",
+                        "length": "2:54"
+                    },
+                    {
+                        "title": "Good Days",
+                        "length": "4:39"
+                    },
+                    {
+                        "title": "Forgiveless (feat. Ol' Dirty Bastard)",
+                        "length": "3:00"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "artist_name": "2hollis",
+        "genre": "EDM/Expiremental Hiphop",
+        "albums": [
+            {
+                "title": "2",
+                "total_length": "33 min 53 secs",
+                "synopsis": "2 is the second album by 2hollis. It is entirely written and produced by the Chicago-based artist, showcasing a shift towards a more polished, electronic-punk, and EDM-influenced sound.",
+                "tracks": [
+                    {
+                        "title": "all 2s",
+                        "length": "2:47"
+                    },
+                    {
+                        "title": "poster boy",
+                        "length": "2:01"
+                    },
+                    {
+                        "title": "GOD",
+                        "length": "3:06"
+                    },
+                    {
+                        "title": "trust",
+                        "length": "2:51"
+                    },
+                    {
+                        "title": "FORFEIT",
+                        "length": "2:50"
+                    },
+                    {
+                        "title": "nothing2 lose",
+                        "length": "2:22"
+                    },
+                    {
+                        "title": "blackbirds",
+                        "length": "2:43"
+                    },
+                    {
+                        "title": "fame runner",
+                        "length": "3:37"
+                    },
+                    {
+                        "title": "2 u",
+                        "length": "2:29"
+                    },
+                    {
+                        "title": "PLASTER",
+                        "length": "4:20"
+                    },
+                    {
+                        "title": "it will never be the same",
+                        "length": "4:44"
+                    }
+                ]
+            },
+            {
+                "title": "star",
+                "total_length": "38 min 5 secs",
+                "synopsis": "2 is the second album by 2hollis. It is entirely written and produced by the Chicago-based artist, showcasing a shift towards a more polished, electronic-punk, and EDM-influenced sound.",
+                "tracks": [
+                    {
+                        "title": "beginning",
+                        "length": "1:28"
+                    },
+                    {
+                        "title": "flash",
+                        "length": "2:44"
+                    },
+                    {
+                        "title": "cope",
+                        "length": "2:45"
+                    },
+                    {
+                        "title": "you",
+                        "length": "2:23"
+                    },
+                    {
+                        "title": "tell me",
+                        "length": "3:56"
+                    },
+                    {
+                        "title": "destroy me",
+                        "length": "2:43"
+                    },
+                    {
+                        "title": "burn",
+                        "length": "3:37"
+                    },
+                    {
+                        "title": "girl",
+                        "length": "3:06"
+                    },
+                    {
+                        "title": "dream rain sports",
+                        "length": "2:08"
+                    },
+                    {
+                        "title": "nice",
+                        "length": "2:22"
+                    },
+                    {
+                        "title": "nerve",
+                        "length": "2:55"
+                    },
+                    {
+                        "title": "ego",
+                        "length": "1:04"
+                    },
+                    {
+                        "title": "sidekick",
+                        "length": "1:18"
+                    },
+                    {
+                        "title": "eldest child",
+                        "length": "2:38"
+                    },
+                    {
+                        "title": "safe",
+                        "length": "2:52"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "artist_name": "Bad Bunny",
+        "genre": "Reggaeton/Latin trap",
+        "albums": [
+            {
+                "title": "DeBÍ TiRAR MáS FOToS",
+                "total_length": "1 hr 2 min",
+                "synopsis": "Debí Tirar Más Fotos is the sixth solo studio album by Puerto Rican rapper and singer Bad Bunny. An alternative reggaeton record, the album heavily blends together diverse elements of traditional Puerto Rican music that Bad Bunny listened to when growing up, including plena, jíbaro, salsa, and bomba, as well as influences of other musical styles ",
+                "tracks": [
+                    {
+                        "title": "NUEVAYoL",
+                        "length": "3:03"
+                    },
+                    {
+                        "title": "VOY A LLeVARTE PA PR",
+                        "length": "2:36"
+                    },
+                    {
+                        "title": "BAILE INoLVIDABLE",
+                        "length": "6:07"
+                    },
+                    {
+                        "title": "PERFuMITO NUEVO",
+                        "length": "3:20"
+                    },
+                    {
+                        "title": "WELTiTA",
+                        "length": "3:07"
+                    },
+                    {
+                        "title": "VelDA",
+                        "length": "3:55"
+                    },
+                    {
+                        "title": "EL CLuB",
+                        "length": "3:42"
+                    },
+                    {
+                        "title": "KETU TeCRE",
+                        "length": "4:10"
+                    },
+                    {
+                        "title": "BOKeTE",
+                        "length": "3:35"
+                    },
+                    {
+                        "title": "KLOuFRENS",
+                        "length": "3:19"
+                    },
+                    {
+                        "title": "TURiSTA",
+                        "length": "3:10"
+                    },
+                    {
+                        "title": "CAFe CON RON",
+                        "length": "3:48"
+                    },
+                    {
+                        "title": "PIToRRO DE COCO",
+                        "length": "3:26"
+                    },
+                    {
+                        "title": "LO QUE LE PASO A HAWAii",
+                        "length": "3:49"
+                    },
+                    {
+                        "title": "Eoo",
+                        "length": "3:24"
+                    },
+                    {
+                        "title": "DtMF",
+                        "length": "3:57"
+                    },
+                    {
+                        "title": "LA MuDANZA",
+                        "length": "3:33"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "artist_name": "Madvillain",
+        "genre": "Hip-Hop/Rap",
+        "albums": [
+            {
+                "title": "Madvillainy",
+                "total_length": "46 min 19 secs",
+                "synopsis": "Madvillainy is the only studio album by American hip-hop duo Madvillain, consisting of British-American rapper MF Doom and American record producer Madlib. The album was recorded between 2002 and 2004. Madlib created most of the instrumentals during a trip to Brazil in his hotel room using minimal amounts of equipment: a Boss SP-303 sampler, a turntable, and a tape deck.",
+                "tracks": [
+                    {
+                        "title": "The Illest Villains",
+                        "length": "1:55"
+                    },
+                    {
+                        "title": "Accordion",
+                        "length": "1:58"
+                    },
+                    {
+                        "title": "Meat Grinder",
+                        "length": "2:11"
+                    },
+                    {
+                        "title": "Bistro",
+                        "length": "1:07"
+                    },
+                    {
+                        "title": "Raid",
+                        "length": "2:30"
+                    },
+                    {
+                        "title": "America's Most Blunted",
+                        "length": "3:54"
+                    },
+                    {
+                        "title": "Sickfit",
+                        "length": "1:21"
+                    },
+                    {
+                        "title": "Rainbows",
+                        "length": "2:51"
+                    },
+                    {
+                        "title": "Curls",
+                        "length": "1:35"
+                    },
+                    {
+                        "title": "Do Not Fire!",
+                        "length": "0:52"
+                    },
+                    {
+                        "title": "Money Folder",
+                        "length": "3:02"
+                    },
+                    {
+                        "title": "Shadows of Tomorrow",
+                        "length": "2:36"
+                    },
+                    {
+                        "title": "Operation Lifesaver aka Mint Test ",
+                        "length": "1:30"
+                    },
+                    {
+                        "title": "Figaro",
+                        "length": "2:25"
+                    },
+                    {
+                        "title": "Hardcore Hustle",
+                        "length": "1:21"
+                    },
+                    {
+                        "title": "Strange Ways",
+                        "length": "1:51"
+                    },
+                    {
+                        "title": "Fancy Clown",
+                        "length": "1:55"
+                    },
+                    {
+                        "title": "Eye",
+                        "length": "1:57"
+                    },
+                    {
+                        "title": "Supervillain Theme",
+                        "length": "0:50"
+                    },
+                    {
+                        "title": "All Caps",
+                        "length": "2:10"
+                    },
+                    {
+                        "title": "Great Day",
+                        "length": "2:16"
+                    },
+                    {
+                        "title": "Rhinestone Cowboy",
+                        "length": "3:59"
                     }
                 ]
             }

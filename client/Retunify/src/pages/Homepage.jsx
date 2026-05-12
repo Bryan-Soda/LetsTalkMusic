@@ -33,6 +33,9 @@ import TameImpala from '../assets/ArtistImages/TameImpala.jpg';
 import TheMarias from '../assets/ArtistImages/TheMarias.jpg';
 import TylerTheCreator from '../assets/ArtistImages/TylerTheCreator.jpg';
 import YumiZouma from '../assets/ArtistImages/YZ.jpg'; 
+import hollis from '../assets/ArtistImages/2hollis.png'
+import badbunny from '../assets/ArtistImages/badbunny.png'
+import madvill from '../assets/ArtistImages/madvillain.png'
 
 const artistImageMap = {
   "Adrianne Lenker": AdrianneL,
@@ -54,7 +57,10 @@ const artistImageMap = {
   "Tame Impala": TameImpala,
   "The Marias": TheMarias,
   "Tyler, The Creator": TylerTheCreator,
-  "Yumi Zouma": YumiZouma
+  "Yumi Zouma": YumiZouma,
+  "2hollis": hollis,
+  "Bad Bunny": badbunny,
+  "Madvillain": madvill,
 };
 
 const stringToColor = (string) => {
