@@ -1436,6 +1436,53 @@
                         "length": "3:41"
                     }
                 ]
+            },
+            {
+                "title": "Pure Heroine",
+                "total_length": "37 min 11 secs",
+                "synopsis": "Pure Heroine is the debut studio album by New Zealand singer-songwriter Lorde, released on September 27, 2013. An electronica, electropop, and dream pop album with minimalist production, deep bass and programmed beats, it explores themes of youth and critiques mainstream culture. The album received widespread critical acclaim and earned Lorde two Grammy Awards, including Song of the Year for its lead single 'Royals'.",
+                "tracks": [
+                    {
+                        "title": "Tennis Court",
+                        "length": "3:22"
+                    },
+                    {
+                        "title": "400 Lux",
+                        "length": "3:38"
+                    },
+                    {
+                        "title": "Royals",
+                        "length": "3:16"
+                    },
+                    {
+                        "title": "Ribs",
+                        "length": "4:19"
+                    },
+                    {
+                        "title": "Buzzcut Season",
+                        "length": "3:38"
+                    },
+                    {
+                        "title": "Team",
+                        "length": "3:13"
+                    },
+                    {
+                        "title": "Glory and Gore",
+                        "length": "3:31"
+                    },
+                    {
+                        "title": "Still Sane",
+                        "length": "2:58"
+                    },
+                    {
+                        "title": "White Teeth Teens",
+                        "length": "3:17"
+                    },
+                    {
+                        "title": "A World Alone",
+                        "length": "4:17"
+                    }
+                ]
             }
         ]
     },
@@ -1649,8 +1696,122 @@
                         "length": "4:56"
                     }
                 ]
+            },
+            {
+                "title": "Tango in the Night",
+                "total_length": "44 min 12 secs",
+                "synopsis": "Tango in the Night is the fourteenth studio album by Fleetwood Mac, released on April 13, 1987. The final studio album to feature the classic Rumours lineup, it blends pop rock and soft rock with synthesizers, drum machines, and Lindsey Buckingham's intricate studio production. The album was a major commercial success, reaching number one in the UK and spawning four US top 20 singles.",
+                "tracks": [
+                    {
+                        "title": "Big Love",
+                        "length": "3:38"
+                    },
+                    {
+                        "title": "Seven Wonders",
+                        "length": "3:38"
+                    },
+                    {
+                        "title": "Everywhere",
+                        "length": "3:41"
+                    },
+                    {
+                        "title": "Caroline",
+                        "length": "3:54"
+                    },
+                    {
+                        "title": "Tango in the Night",
+                        "length": "4:03"
+                    },
+                    {
+                        "title": "Mystified",
+                        "length": "3:10"
+                    },
+                    {
+                        "title": "Little Lies",
+                        "length": "3:40"
+                    },
+                    {
+                        "title": "Family Man",
+                        "length": "4:08"
+                    },
+                    {
+                        "title": "Welcome to the Room...Sara",
+                        "length": "3:42"
+                    },
+                    {
+                        "title": "Isn't It Midnight",
+                        "length": "4:14"
+                    },
+                    {
+                        "title": "When I See You Again",
+                        "length": "3:50"
+                    },
+                    {
+                        "title": "You and I, Part II",
+                        "length": "2:40"
+                    }
+                ]
+            },
+            {
+                "title": "Behind the Mask",
+                "total_length": "54 min 26 secs",
+                "synopsis": "Behind the Mask is the fifteenth studio album by Fleetwood Mac, released on April 9, 1990. The first album without guitarist Lindsey Buckingham, it introduced new members Billy Burnette and Rick Vito, bringing blues and rockabilly influences to the band's sound. Though not as commercially successful as its predecessor, the album debuted at number one in the UK and was certified Gold in the United States.",
+                "tracks": [
+                    {
+                        "title": "Skies the Limit",
+                        "length": "3:45"
+                    },
+                    {
+                        "title": "Love Is Dangerous",
+                        "length": "3:16"
+                    },
+                    {
+                        "title": "In the Back of My Mind",
+                        "length": "7:01"
+                    },
+                    {
+                        "title": "Do You Know",
+                        "length": "4:18"
+                    },
+                    {
+                        "title": "Save Me",
+                        "length": "4:13"
+                    },
+                    {
+                        "title": "Affairs of the Heart",
+                        "length": "4:20"
+                    },
+                    {
+                        "title": "When the Sun Goes Down",
+                        "length": "3:17"
+                    },
+                    {
+                        "title": "Behind the Mask",
+                        "length": "4:17"
+                    },
+                    {
+                        "title": "Stand on the Rock",
+                        "length": "4:01"
+                    },
+                    {
+                        "title": "Hard Feelings",
+                        "length": "4:51"
+                    },
+                    {
+                        "title": "Freedom",
+                        "length": "4:10"
+                    },
+                    {
+                        "title": "When It Comes to Love",
+                        "length": "4:05"
+                    },
+                    {
+                        "title": "The Second Time",
+                        "length": "2:31"
+                    }
+                ]
             }
-        ]
+        ]    
     },
     {
         "artist_name": "SZA",
@@ -1716,6 +1877,105 @@
                     {
                         "title": "20 Something",
                         "length": "3:18"
+                    }
+                ]
+            },
+            {
+                "title": "SOS",
+                "total_length": "1 hr 7 min 50 secs",
+                "synopsis": "SOS is the second studio album by American singer-songwriter SZA, released on December 9, 2022. Primarily an R&B album with influences from hip-hop and pop, it samples soul, gospel, jazz and melodic rap while blending surf rock, grunge, and lo-fi beats. The album received widespread critical acclaim and won Best Progressive R&B Album at the 66th Grammy Awards.",
+                "tracks": [
+                    {
+                        "title": "SOS",
+                        "length": "1:57"
+                    },
+                    {
+                        "title": "Kill Bill",
+                        "length": "2:33"
+                    },
+                    {
+                        "title": "Seek & Destroy",
+                        "length": "3:23"
+                    },
+                    {
+                        "title": "Low",
+                        "length": "3:01"
+                    },
+                    {
+                        "title": "Love Language",
+                        "length": "3:03"
+                    },
+                    {
+                        "title": "Blind",
+                        "length": "2:30"
+                    },
+                    {
+                        "title": "Used (feat. Don Toliver)",
+                        "length": "2:26"
+                    },
+                    {
+                        "title": "Snooze",
+                        "length": "3:21"
+                    },
+                    {
+                        "title": "Notice Me",
+                        "length": "2:40"
+                    },
+                    {
+                        "title": "Gone Girl",
+                        "length": "4:04"
+                    },
+                    {
+                        "title": "Smoking on my Ex Pack",
+                        "length": "1:23"
+                    },
+                    {
+                        "title": "Ghost in the Machine (feat. Phoebe Bridgers)",
+                        "length": "3:38"
+                    },
+                    {
+                        "title": "F2F",
+                        "length": "3:05"
+                    },
+                    {
+                        "title": "Nobody Gets Me",
+                        "length": "3:00"
+                    },
+                    {
+                        "title": "Conceited",
+                        "length": "2:31"
+                    },
+                    {
+                        "title": "Special",
+                        "length": "2:38"
+                    },
+                    {
+                        "title": "Too Late",
+                        "length": "2:44"
+                    },
+                    {
+                        "title": "Far",
+                        "length": "3:00"
+                    },
+                    {
+                        "title": "Shirt",
+                        "length": "3:01"
+                    },
+                    {
+                        "title": "Open Arms (feat. Travis Scott)",
+                        "length": "3:59"
+                    },
+                    {
+                        "title": "I Hate U",
+                        "length": "2:54"
+                    },
+                    {
+                        "title": "Good Days",
+                        "length": "4:39"
+                    },
+                    {
+                        "title": "Forgiveless (feat. Ol' Dirty Bastard)",
+                        "length": "3:00"
                     }
                 ]
             }
