@@ -43,6 +43,11 @@ import PH from '../assets/AlbumCovers/PureHeroine.jpg';
 import SOS from '../assets/AlbumCovers/SOS.jpg';
 import TangoInTheNight from '../assets/AlbumCovers/TangoInTheNight.jpg';
 import NoLoveLost from '../assets/AlbumCovers/NoLoveLost.jpg';
+import two from '../assets/AlbumCovers/2.png';
+import Madvillainy from '../assets/AlbumCovers/Madvillainy.png';
+import star from '../assets/AlbumCovers/star.png';
+import DBTMF from '../assets/AlbumCovers/DBTMF.png';
+import Heaven from '../assets/AlbumCovers/Heaven_knows.png';
 
 // Keys must be EXACT name as in seed_data!!
 const albumCoverMap = {
@@ -86,8 +91,12 @@ const albumCoverMap = {
   "OK Computer": OKCPU,
   "channel ORANGE": ChannelO,
   "To Pimp A Butterfly": TPAB,
+  "2": two,
+  "star": star,
+  "DeBÍ TiRAR MáS FOToS": DBTMF,
+  "Madvillainy": Madvillainy,
+  "Heaven knows": Heaven,
 };
-
 export default function TracksAndReviews() {
 
   const API = import.meta.env.VITE_API_URL;
