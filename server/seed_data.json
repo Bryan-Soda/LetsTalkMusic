@@ -500,7 +500,7 @@
             {
                 "title": "Currents",
                 "total_length": "51 min 06 secs",
-                "synopsis": "Aptly titled, Tame Impala’s third studio record Currents is a warm sonic wave straight from Australian waters, combining neo-psychedelia and alternative dance. Sometimes the wave washes over you, and sometimes you find yourself surfing atop it. The album marks Tame Impala’s venture deeper into the ever-growing world of electronic music, but doesn’t stray too far from their rock roots.",
+                "synopsis": "Aptly titled, Tame Impala's third studio record Currents is a warm sonic wave straight from Australian waters, combining neo-psychedelia and alternative dance. Sometimes the wave washes over you, and sometimes you find yourself surfing atop it. The album marks Tame Impala’s venture deeper into the ever-growing world of electronic music, but doesn’t stray too far from their rock roots.",
                 "tracks": [
                     {
                         "title": "Let It Happen",
@@ -554,6 +554,61 @@
                         "title": "New Person, Same Old Mistake",
                         "length": "6:02"
                     }
+                ]
+            },
+            {
+                "title": "Deadbeat",
+                "total_length": "56 min 05 secs",
+                "synopsis": "Deadbeat is Kevin Parker’s most introspective and darkest work to date, masking heavy themes of depression and withdrawal behind some of the most infectious, club-leaning production of his career.",
+                "tracks": [
+                    {
+                        "title": "My Old Ways",
+                        "length": "4:58"
+                    },
+                    {
+                        "title": "No Reply",
+                        "length": "3:35"
+                    },
+                    {
+                        "title": "Dracula",
+                        "length": "3:25"
+                    },
+                    {
+                        "title":"Loser",
+                        "length": "3:43"
+                    },
+                    {
+                        "title": "Oblivion",
+                        "length": "4:28"
+                    },
+                    {
+                        "title": "Not My World",
+                        "length": "4:14"
+                    },
+                    {
+                        "title": "Piece of Heaven",
+                        "length": "4:44"
+                    },
+                    {
+                        "title": "Obsolete",
+                        "length": "4:23"
+                    },
+                    {
+                        "title": "Ethereal Connection",
+                        "length": "7:42"
+                    },
+                    {
+                        "title": "See You On Monday (You're Lost)",
+                        "length": "3:34"
+                    },
+                    {
+                        "title": "Afterthought",
+                        "length": "4:01"
+                    }, 
+                    {
+                        "title": "End of Summer",
+                        "length": "7:12"
+                    }    
                 ]
             }
         ]
@@ -620,6 +675,69 @@
                         "length": "6:21"
                     }
                 ]
+            },
+            {
+                "title": "Discovery",
+                "total_length": "1 hr 01 min 00 secs",
+                "synopsis": "Daft Punk’s second studio album, Discovery, was released in 2001 and marked a shift in the duo’s sound from the house and techno of their debut album Homework to a more disco and funk-inspired sound. The album features a mix of electronic and live instrumentation, with heavy use of samples from 70s and 80s music. Discovery is widely regarded as one of the greatest electronic albums of all time and has been influential in shaping the sound of modern electronic music.",
+                "tracks": [
+                    {
+                        "title": "One More Time",
+                        "length": "5:20"
+                    },
+                    {
+                        "title": "Aerodynamic",
+                        "length": "3:32"
+                    },
+                    {
+                        "title": "Digital Love",
+                        "length": "5:01"
+                    },
+                    {
+                        "title": "Harder, Better, Faster, Stronger",
+                        "length": "3:46"
+                    },
+                    {
+                        "title": "Crescendolls",
+                        "length": "3:31"
+                    },
+                    {
+                        "title": "Nightvision",
+                        "length": "1:44"
+                    },
+                    {
+                        "title": "Superheroes",
+                        "length": "3:57"
+                    },
+                    {
+                        "title": "High Life",
+                        "length": "3:21"
+                    },
+                    {
+                        "title": "Something About Us",
+                        "length": "3:52"
+                    },
+                    {
+                        "title": "Voyager",
+                        "length": "3:47"
+                    },
+                    {
+                        "title": "Veridis Quo",
+                        "length": "5:45"
+                    },
+                    {
+                        "title": "Short Circuit",
+                        "length": "3:26"
+                    },
+                    {
+                        "title": "Face to Face",
+                        "length": "4:00"
+                    }
+                    {
+                        "title": "Too Long",
+                        "length": "10:00"
+                    }
+                ]
             }
         ]
     },
@@ -651,6 +769,61 @@
                     {
                         "title": "Grands Boulevards",
                         "length": "3:34"
+                    }
+                ]
+            },
+            {
+                "title": "No Love Lost to Kindness",
+                "total_length": "44 min 48 secs",
+                "synopsis": "No Love Lost to Kindness is the fourth studio album by New Zealand indie pop band Yumi Zouma. The album was released on 17 September 2021 through Polyvinyl Record Co. No Love Lost to Kindness is the follow-up to their 2018 album EP III, and was produced by the band’s lead vocalist Christie Simpson and guitarist Josh Burgess. The album features a more polished and refined sound compared to their previous work, with a focus on lush instrumentation and introspective lyrics.",
+                "tracks": [
+                    {
+                        "title": "Cross my Heart and Hope to Die",
+                        "length": "3:14"
+                    },
+                    {
+                        "title": "Bashville on the Sugar",
+                        "length": "4:05"
+                    },
+                    {
+                        "title": "Drag",
+                        "length": "2:49"
+                    },
+                    {
+                        "title": "Blister",
+                        "length": "2:59"
+                    },
+                    {
+                        "title": "Phoebe's Song",
+                        "length": "3:59"
+                    },
+                    {
+                        "title": "Cowboy Without a Clue",
+                        "length": "3:57"
+                    },
+                    {
+                        "title": "Chicago 2am",
+                        "length": "4:23"
+                    },
+                    {
+                        "title": "Judgement Day",
+                        "length": "4:01"
+                    },
+                    {
+                        "title": "Did See You Her?",
+                        "length": "4:16"
+                    },
+                    {
+                        "title": "Every False Embrace",
+                        "length": "4:11"
+                    },
+                    {
+                        "title": "95",
+                        "length": "3:23"
+                    },
+                    {
+                        "title": "Waiting for the Cards to Fall",
+                        "length": "3:59"
                     }
                 ]
             }
@@ -950,6 +1123,57 @@
                         "length": "6:56"
                     }
                 ]
+            },
+            {
+                "title": "Charm",
+                "total_length": "38 min 07 secs",
+                "synopsis": "Charm is the second studio album by American singer-songwriter Clairo. The album was released on February 17, 2023, through Fader Label. The album was produced by Jack Antonoff and Clairo. The album is a departure from the lo-fi and bedroom pop sound of her previous work, and instead features a more polished and refined sound that incorporates elements of indie rock, pop, and electronic music.",
+                "tracks": [
+                    {
+                        "title": "Nomad",
+                        "length": "3:45"
+                    },
+                    {
+                        "title": "Sexy to Someone",
+                        "length": "3:27"
+                    },
+                    {
+                        "title": "Second Nature",
+                        "length": "3:47"
+                    },
+                    {
+                        "title": "Slow Dance",
+                        "length": "3:54"
+                    },
+                    {
+                        "title": "Thank You",
+                        "length": "3:25"
+                    },
+                    {
+                        "title": "Terrapin",
+                        "length": "3:00"
+                    },
+                    {
+                        "title": "Juna",
+                        "length": "3:15"
+                    },
+                    {
+                        "title": "Add Up My Love",
+                        "length": "3:25"
+                    },
+                    {
+                        "title": "Echo",
+                        "length": "3:49"
+                    },
+                    {
+                        "title": "Glory of the Snow",
+                        "length": "2:50"
+                    },
+                    {
+                        "title": "Pier 4",
+                        "length": "3:25"
+                    }
+                ]
             }
         ]
     },
@@ -1096,6 +1320,61 @@
             {
                 "title": "Short n' Sweet",
                 "total_length": "36 min 15 secs",
+                "synopsis": "Short n' Sweet is Sabrina Carpenter’s sixth album. The album explores Carpenter's love life and her perspectives on 2020s dating. Its title is a reference to the emotional impact of her shortest romantic relationships, as well as her short stature and the album's brief runtime.",
+                "tracks": [
+                    {
+                        "title": "Taste",
+                        "length": "2:37"
+                    },
+                    {
+                        "title": "Please Please Please",
+                        "length": "3:06"
+                    },
+                    {
+                        "title": "Good Graces",
+                        "length": "3:05"
+                    },
+                    {
+                        "title": "Sharpest Tool",
+                        "length": "3:38"
+                    },
+                    {
+                        "title": "Coincidence",
+                        "length": "2:44"
+                    },
+                    {
+                        "title": "Bed Chem",
+                        "length": "2:51"
+                    },
+                    {
+                        "title": "Espresso",
+                        "length": "2:55"
+                    },
+                    {
+                        "title": "Dumb & Poetic", 
+                        "length": "2:13"
+                    },
+                    {
+                        "title": "Slim Pickins",
+                        "length": "2:32"
+                    },
+                    {
+                        "title": "Juno",
+                        "length": "3:43"
+                    },
+                    {
+                        "title": "Lie to Girls",
+                        "length": "3:22"
+                    },
+                    {
+                        "title": "Don't Smile",
+                        "length": "3:26"
+                    }
+                ]
+            },
+            {
+                "title": "Short n' Sweet",
+                "total_length": "38 min 07 secs",
                 "synopsis": "Short n' Sweet is Sabrina Carpenter’s sixth album. The album explores Carpenter's love life and her perspectives on 2020s dating. Its title is a reference to the emotional impact of her shortest romantic relationships, as well as her short stature and the album's brief runtime.",
                 "tracks": [
                     {
