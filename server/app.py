@@ -1,4 +1,4 @@
-from flask import Flask, jsonify, request, render_template
+from flask import Flask, jsonify, request, render_template, abort
 from flask_sqlalchemy import SQLAlchemy
 from flask_admin import Admin
 from flask_admin.contrib.sqla import ModelView
@@ -32,6 +32,13 @@ admin = Admin(app, name="MusicApp Admin")
 db = SQLAlchemy(app)
 
 #DB models:
+
+class AdminView(ModelView):
+    def is_accessible(self):
+        key = request.args.get('admin_key')
+        return key ==admin_key
+    def inaccessible_callback(self, name, **kwargs):
+        abort(403)
 
 class Users(db.Model):
     id = db.Column(db.Integer, primary_key=True)
@@ -399,11 +406,11 @@ def delete_review(user_id, album_id):
 
 
 # tabs for flask-admin
-admin.add_view(ModelView(Users,db.session))
-admin.add_view(ModelView(Artists,db.session))
-admin.add_view(ModelView(Albums,db.session))
-admin.add_view(ModelView(Tracks,db.session))
-admin.add_view(ModelView(Reviews,db.session))
+admin.add_view(AdminView(Users,db.session))
+admin.add_view(AdminView(Artists,db.session))
+admin.add_view(AdminView(Albums,db.session))
+admin.add_view(AdminView(Tracks,db.session))
+admin.add_view(AdminView(Reviews,db.session))
 
 with app.app_context():
     db.create_all()
