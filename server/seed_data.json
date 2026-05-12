@@ -732,7 +732,7 @@
                     {
                         "title": "Face to Face",
                         "length": "4:00"
-                    }
+                    },
                     {
                         "title": "Too Long",
                         "length": "10:00"
@@ -2202,59 +2202,6 @@
         "artist_name": "SZA",
         "genre": "R&B/Neo Soul",
         "albums": [
-<<<<<<< HEAD
-          {
-            "title": "CTRL",
-            "total_length": "49 min 1 secs",
-            "synopsis": "Ctrl is the debut studio album by American singer-songwriter SZA. The album tests the borders of traditional R&B, drawing influences from trap and indie rock. The album contains a precise sonic methodology, with a fluent production, containing influences from pop, hip-hop and electronic genres.",
-            "tracks": [
-              { "title": "Supermodel", "length": "3:01" },
-              { "title": "Love Galore", "length": "4:35" },
-              { "title": "Doves In The Wind", "length": "4:26" },
-              { "title": "Drew Barrymore", "length": "3:51" },
-              { "title": "Prom", "length": "3:16" },
-              { "title": "The Weekend", "length": "4:32" },
-              { "title": "Go Gina", "length": "2:41" },
-              { "title": "Garden (Say It Like Dat)", "length": "3:28" },
-              { "title": "Broken Clocks", "length": "3:51" },
-              { "title": "Anything", "length": "2:29" },
-              { "title": "Wavy (Interlude)", "length": "1:15" },
-              { "title": "Normal Girl", "length": "4:13" },
-              { "title": "Pretty Little Birds", "length": "4:05" },
-              { "title": "20 Something", "length": "3:18" }
-            ]
-          },
-          {
-            "title": "SOS",
-            "total_length": "1 hr 7 min 50 secs",
-            "synopsis": "SOS is the second studio album by American singer-songwriter SZA, released on December 9, 2022. Primarily an R&B album with influences from hip-hop and pop, it samples soul, gospel, jazz and melodic rap while blending surf rock, grunge, and lo-fi beats. The album received widespread critical acclaim and won Best Progressive R&B Album at the 66th Grammy Awards.",
-            "tracks": [
-              { "title": "SOS", "length": "1:57" },
-              { "title": "Kill Bill", "length": "2:33" },
-              { "title": "Seek & Destroy", "length": "3:23" },
-              { "title": "Low", "length": "3:01" },
-              { "title": "Love Language", "length": "3:03" },
-              { "title": "Blind", "length": "2:30" },
-              { "title": "Used (feat. Don Toliver)", "length": "2:26" },
-              { "title": "Snooze", "length": "3:21" },
-              { "title": "Notice Me", "length": "2:40" },
-              { "title": "Gone Girl", "length": "4:04" },
-              { "title": "Smoking on my Ex Pack", "length": "1:23" },
-              { "title": "Ghost in the Machine (feat. Phoebe Bridgers)", "length": "3:38" },
-              { "title": "F2F", "length": "3:05" },
-              { "title": "Nobody Gets Me", "length": "3:00" },
-              { "title": "Conceited", "length": "2:31" },
-              { "title": "Special", "length": "2:38" },
-              { "title": "Too Late", "length": "2:44" },
-              { "title": "Far", "length": "3:00" },
-              { "title": "Shirt", "length": "3:01" },
-              { "title": "Open Arms (feat. Travis Scott)", "length": "3:59" },
-              { "title": "I Hate U", "length": "2:54" },
-              { "title": "Good Days", "length": "4:39" },
-              { "title": "Forgiveless (feat. Ol' Dirty Bastard)", "length": "3:00" }
-            ]
-          }
-=======
             {
                 "title": "CTRL",
                 "total_length": "49 min 1 secs",
@@ -2417,7 +2364,6 @@
                     }
                 ]
             }
->>>>>>> homepage-new
         ]
-      }
+    }
 ]
