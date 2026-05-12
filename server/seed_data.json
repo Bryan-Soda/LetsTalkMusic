@@ -1259,10 +1259,10 @@
             {
                 "title": "Bright Future",
                 "total_length": "43 min 37 secs",
-                "synopsis": "Bright Future is the sixth solo studio album by Adrianne Lenker. Recorded straight to tape with a small group of close confidants, the Big Thief singer’s latest solo album is free-flowing and intuitive, reveling in the space between spontaneity and impermanence.",
+                "synopsis": "Bright Future is the sixth solo studio album by Adrianne Lenker. Recorded straight to tape with a small group of close confidants, the Big Thief singer's latest solo album is free-flowing and intuitive, reveling in the space between spontaneity and impermanence.",
                 "tracks": [
                     {
-                        "title": "Real House", 
+                        "title": "Real House",
                         "length": "5:58"
                     },
                     {
@@ -1308,6 +1308,53 @@
                     {
                         "title": "Ruined",
                         "length": "4:34"
+                    }
+                ]
+            },
+            {
+                "title": "abysskiss",
+                "total_length": "33 min 42 secs",
+                "synopsis": "abysskiss is the third solo studio album by Adrianne Lenker, released on October 5, 2018 through Saddle Creek Records. Recorded in a week at Panoramic House in West Marin, California with producer Luke Temple, the album consists of ten intimate folk songs conceived while touring with Big Thief, exploring themes of mortality, love, birth, and nature through strikingly vivid imagery.",
+                "tracks": [
+                    {
+                        "title": "terminal paradise",
+                        "length": "3:59"
+                    },
+                    {
+                        "title": "from",
+                        "length": "3:38"
+                    },
+                    {
+                        "title": "womb",
+                        "length": "2:15"
+                    },
+                    {
+                        "title": "out of your mind",
+                        "length": "3:51"
+                    },
+                    {
+                        "title": "cradle",
+                        "length": "3:17"
+                    },
+                    {
+                        "title": "symbol",
+                        "length": "3:49"
+                    },
+                    {
+                        "title": "blue and red horses",
+                        "length": "3:17"
+                    },
+                    {
+                        "title": "abyss kiss",
+                        "length": "3:03"
+                    },
+                    {
+                        "title": "what can you say",
+                        "length": "2:28"
+                    },
+                    {
+                        "title": "10 miles",
+                        "length": "4:01"
                     }
                 ]
             }
@@ -1377,6 +1424,65 @@
                     {
                         "title": "The Great Impersonator",
                         "length": "3:22"
+                    }
+                ]
+            },
+            {
+                "title": "If I Can't Have Love, I Want Power",
+                "total_length": "42 min 53 secs",
+                "synopsis": "If I Can't Have Love, I Want Power is the fourth studio album by American singer Halsey, released on August 27, 2021. Produced by Trent Reznor and Atticus Ross, the album is a bold concept record inspired by Halsey's experience of pregnancy and motherhood. It pushes creative boundaries by blending alternative and industrial pop with themes of feminine power, identity, and autonomy.",
+                "tracks": [
+                    {
+                        "title": "The Tradition",
+                        "length": "3:46"
+                    },
+                    {
+                        "title": "Bells in Santa Fe",
+                        "length": "3:37"
+                    },
+                    {
+                        "title": "Easier Than Lying",
+                        "length": "3:26"
+                    },
+                    {
+                        "title": "Lilith",
+                        "length": "2:47"
+                    },
+                    {
+                        "title": "Girl is a Gun",
+                        "length": "2:26"
+                    },
+                    {
+                        "title": "You Asked for This",
+                        "length": "4:25"
+                    },
+                    {
+                        "title": "Darling",
+                        "length": "3:02"
+                    },
+                    {
+                        "title": "1121",
+                        "length": "2:42"
+                    },
+                    {
+                        "title": "honey",
+                        "length": "2:54"
+                    },
+                    {
+                        "title": "Whispers",
+                        "length": "3:11"
+                    },
+                    {
+                        "title": "I Am Not a Woman, I'm a God",
+                        "length": "2:56"
+                    },
+                    {
+                        "title": "The Lighthouse",
+                        "length": "4:33"
+                    },
+                    {
+                        "title": "Ya'aburnee",
+                        "length": "3:08"
                     }
                 ]
             }
