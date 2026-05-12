@@ -2087,7 +2087,7 @@
             }
         ]
     },
-        {
+    {
         "artist_name": "2hollis",
         "genre": "EDM/Expiremental Hiphop",
         "albums": [
@@ -2139,6 +2139,154 @@
                     {
                         "title": "it will never be the same",
                         "length": "4:44"
+                    }
+                ]
+            },
+            {
+                "title": "star",
+                "total_length": "38 min 5 secs",
+                "synopsis": "2 is the second album by 2hollis. It is entirely written and produced by the Chicago-based artist, showcasing a shift towards a more polished, electronic-punk, and EDM-influenced sound.",
+                "tracks": [
+                    {
+                        "title": "beginning",
+                        "length": "1:28"
+                    },
+                    {
+                        "title": "flash",
+                        "length": "2:44"
+                    },
+                    {
+                        "title": "cope",
+                        "length": "2:45"
+                    },
+                    {
+                        "title": "you",
+                        "length": "2:23"
+                    },
+                    {
+                        "title": "tell me",
+                        "length": "3:56"
+                    },
+                    {
+                        "title": "destroy me",
+                        "length": "2:43"
+                    },
+                    {
+                        "title": "burn",
+                        "length": "3:37"
+                    },
+                    {
+                        "title": "girl",
+                        "length": "3:06"
+                    },
+                    {
+                        "title": "dream rain sports",
+                        "length": "2:08"
+                    },
+                    {
+                        "title": "nice",
+                        "length": "2:22"
+                    },
+                    {
+                        "title": "nerve",
+                        "length": "2:55"
+                    },
+                    {
+                        "title": "ego",
+                        "length": "1:04"
+                    },
+                    {
+                        "title": "sidekick",
+                        "length": "1:18"
+                    },
+                    {
+                        "title": "eldest child",
+                        "length": "2:38"
+                    },
+                    {
+                        "title": "safe",
+                        "length": "2:52"
+                    }
+                ]
+            }
+        ]
+    },
+        {
+        "artist_name": "Bad Bunny",
+        "genre": "Reggaeton/Latin trap",
+        "albums": [
+            {
+                "title": "DeBÍ TiRAR MáS FOToS ",
+                "total_length": "1 hr 2 min",
+                "synopsis": "2 is the second album by 2hollis. It is entirely written and produced by the Chicago-based artist, showcasing a shift towards a more polished, electronic-punk, and EDM-influenced sound.",
+                "tracks": [
+                    {
+                        "title": "NUEVAYoL",
+                        "length": "3:03"
+                    },
+                    {
+                        "title": "VOY A LLeVARTE PA PR",
+                        "length": "2:36"
+                    },
+                    {
+                        "title": "BAILE INoLVIDABLE",
+                        "length": "6:07"
+                    },
+                    {
+                        "title": "PERFuMITO NUEVO",
+                        "length": "3:20"
+                    },
+                    {
+                        "title": "WELTiTA",
+                        "length": "3:07"
+                    },
+                    {
+                        "title": "VelDA",
+                        "length": "3:55"
+                    },
+                    {
+                        "title": "EL CLuB",
+                        "length": "3:42"
+                    },
+                    {
+                        "title": "KETU TeCRE",
+                        "length": "4:10"
+                    },
+                    {
+                        "title": "BOKeTE",
+                        "length": "3:35"
+                    },
+                    {
+                        "title": "KLOuFRENS",
+                        "length": "3:19"
+                    },
+                    {
+                        "title": "TURiSTA",
+                        "length": "3:10"
+                    },
+                    {
+                        "title": "CAFe CON RON",
+                        "length": "3:48"
+                    },
+                    {
+                        "title": "PIToRRO DE COCO",
+                        "length": "3:26"
+                    },
+                    {
+                        "title": "LO QUE LE PASO A HAWAii",
+                        "length": "3:49"
+                    },
+                    {
+                        "title": "Eoo",
+                        "length": "3:24"
+                    },
+                    {
+                        "title": "DtMF",
+                        "length": "3:57"
+                    },
+                    {
+                        "title": "LA MuDANZA",
+                        "length": "3:33"
                     }
                 ]
             },
