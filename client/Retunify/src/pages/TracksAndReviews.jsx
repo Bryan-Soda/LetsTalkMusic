@@ -33,10 +33,30 @@ import Malcolm from '../assets/AlbumCovers/Malcolm_todd.png';
 import OKCPU from '../assets/AlbumCovers/OkComp.png';
 import ChannelO from '../assets/AlbumCovers/ChannelO.png';
 import TPAB from '../assets/AlbumCovers/TPAB.png';
-
+import abysskiss from '../assets/AlbumCovers/abysskiss.jpg';
+import BehindTheMask from '../assets/AlbumCovers/BehindTheMask.jpg';
+import Charm from '../assets/AlbumCovers/Charm.jpg';
+import Deadbeat from '../assets/AlbumCovers/Deadbeat.jpg';
+import Discovery from '../assets/AlbumCovers/Discovery.jpg';
+import IICHL from '../assets/AlbumCovers/IfICantHaveLove.jpeg';
+import PH from '../assets/AlbumCovers/PureHeroine.jpg';
+import SOS from '../assets/AlbumCovers/SOS.jpg';
+import TangoInTheNight from '../assets/AlbumCovers/TangoInTheNight.jpg';
+import NoLoveLost from '../assets/AlbumCovers/NoLoveLost.jpg';
 
 // Keys must be EXACT name as in seed_data!!
 const albumCoverMap = {
+  "abysskiss": abysskiss,
+  "Behind The Mask": BehindTheMask,
+  "Charm": Charm,
+  "Deadbeat": Deadbeat,
+  "Discovery": Discovery,
+  "If I Can't Have Love, I Want Power": IICHL,
+  "Pure Heroine": PH,
+  "SOS": SOS,
+  "Tango in the Night": TangoInTheNight,
+  "Behind the Mask": BehindTheMask,
+  "No Love Lost to Kindness": NoLoveLost,
   "Blonde": Blonde,
   "Bright Future": BrightFuture,
   "CHROMAKOPIA": Chromakopia,
