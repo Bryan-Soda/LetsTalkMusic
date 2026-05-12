@@ -2211,14 +2211,14 @@
             }
         ]
     },
-        {
+    {
         "artist_name": "Bad Bunny",
         "genre": "Reggaeton/Latin trap",
         "albums": [
             {
                 "title": "DeBÍ TiRAR MáS FOToS ",
                 "total_length": "1 hr 2 min",
-                "synopsis": "2 is the second album by 2hollis. It is entirely written and produced by the Chicago-based artist, showcasing a shift towards a more polished, electronic-punk, and EDM-influenced sound.",
+                "synopsis": "Debí Tirar Más Fotos is the sixth solo studio album by Puerto Rican rapper and singer Bad Bunny. An alternative reggaeton record, the album heavily blends together diverse elements of traditional Puerto Rican music that Bad Bunny listened to when growing up, including plena, jíbaro, salsa, and bomba, as well as influences of other musical styles ",
                 "tracks": [
                     {
                         "title": "NUEVAYoL",
@@ -2289,71 +2289,105 @@
                         "length": "3:33"
                     }
                 ]
-            },
+            }
+        ]
+    },
+    {
+        "artist_name": "Madvillain",
+        "genre": "Hip-Hop/Rap",
+        "albums": [
             {
-                "title": "star",
-                "total_length": "38 min 5 secs",
-                "synopsis": "2 is the second album by 2hollis. It is entirely written and produced by the Chicago-based artist, showcasing a shift towards a more polished, electronic-punk, and EDM-influenced sound.",
+                "title": "Madvillainy",
+                "total_length": "46 min 19 secs",
+                "synopsis": "Madvillainy is the only studio album by American hip-hop duo Madvillain, consisting of British-American rapper MF Doom and American record producer Madlib. The album was recorded between 2002 and 2004. Madlib created most of the instrumentals during a trip to Brazil in his hotel room using minimal amounts of equipment: a Boss SP-303 sampler, a turntable, and a tape deck.",
                 "tracks": [
                     {
-                        "title": "beginning",
-                        "length": "1:28"
+                        "title": "The Illest Villains",
+                        "length": "1:55"
                     },
                     {
-                        "title": "flash",
-                        "length": "2:44"
+                        "title": "Accordion",
+                        "length": "1:58"
                     },
                     {
-                        "title": "cope",
-                        "length": "2:45"
+                        "title": "Meat Grinder",
+                        "length": "2:11"
                     },
                     {
-                        "title": "you",
-                        "length": "2:23"
+                        "title": "Bistro",
+                        "length": "1:07"
                     },
                     {
-                        "title": "tell me",
-                        "length": "3:56"
+                        "title": "Raid",
+                        "length": "2:30"
                     },
                     {
-                        "title": "destroy me",
-                        "length": "2:43"
+                        "title": "America's Most Blunted",
+                        "length": "3:54"
                     },
                     {
-                        "title": "burn",
-                        "length": "3:37"
+                        "title": "Sickfit",
+                        "length": "1:21"
                     },
                     {
-                        "title": "girl",
-                        "length": "3:06"
+                        "title": "Rainbows",
+                        "length": "2:51"
                     },
                     {
-                        "title": "dream rain sports",
-                        "length": "2:08"
+                        "title": "Curls",
+                        "length": "1:35"
                     },
                     {
-                        "title": "nice",
-                        "length": "2:22"
+                        "title": "Do Not Fire!",
+                        "length": "0:52"
                     },
                     {
-                        "title": "nerve",
-                        "length": "2:55"
+                        "title": "Money Folder",
+                        "length": "3:02"
                     },
                     {
-                        "title": "ego",
-                        "length": "1:04"
+                        "title": "Shadows of Tomorrow",
+                        "length": "2:36"
                     },
                     {
-                        "title": "sidekick",
-                        "length": "1:18"
+                        "title": "Operation Lifesaver aka Mint Test ",
+                        "length": "1:30"
                     },
                     {
-                        "title": "eldest child",
-                        "length": "2:38"
+                        "title": "Figaro",
+                        "length": "2:25"
                     },
                     {
-                        "title": "safe",
-                        "length": "2:52"
+                        "title": "Hardcore Hustle",
+                        "length": "1:21"
+                    },
+                    {
+                        "title": "Strange Ways",
+                        "length": "1:51"
+                    },
+                    {
+                        "title": "Fancy Clown",
+                        "length": "1:55"
+                    },
+                    {
+                        "title": "Eye",
+                        "length": "1:57"
+                    },
+                    {
+                        "title": "Supervillain Theme",
+                        "length": "0:50"
+                    },
+                    {
+                        "title": "All Caps",
+                        "length": "2:10"
+                    },
+                    {
+                        "title": "Great Day",
+                        "length": "2:16"
+                    },
+                    {
+                        "title": "Rhinestone Cowboy",
+                        "length": "3:59"
                     }
                 ]
             }
