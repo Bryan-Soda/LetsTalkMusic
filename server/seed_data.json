@@ -2086,5 +2086,129 @@
                 ]
             }
         ]
+    },
+        {
+        "artist_name": "2hollis",
+        "genre": "EDM/Expiremental Hiphop",
+        "albums": [
+            {
+                "title": "2",
+                "total_length": "33 min 53 secs",
+                "synopsis": "2 is the second album by 2hollis. It is entirely written and produced by the Chicago-based artist, showcasing a shift towards a more polished, electronic-punk, and EDM-influenced sound.",
+                "tracks": [
+                    {
+                        "title": "all 2s",
+                        "length": "2:47"
+                    },
+                    {
+                        "title": "poster boy",
+                        "length": "2:01"
+                    },
+                    {
+                        "title": "GOD",
+                        "length": "3:06"
+                    },
+                    {
+                        "title": "trust",
+                        "length": "2:51"
+                    },
+                    {
+                        "title": "FORFEIT",
+                        "length": "2:50"
+                    },
+                    {
+                        "title": "nothing2 lose",
+                        "length": "2:22"
+                    },
+                    {
+                        "title": "blackbirds",
+                        "length": "2:43"
+                    },
+                    {
+                        "title": "fame runner",
+                        "length": "3:37"
+                    },
+                    {
+                        "title": "2 u",
+                        "length": "2:29"
+                    },
+                    {
+                        "title": "PLASTER",
+                        "length": "4:20"
+                    },
+                    {
+                        "title": "it will never be the same",
+                        "length": "4:44"
+                    }
+                ]
+            },
+            {
+                "title": "star",
+                "total_length": "38 min 5 secs",
+                "synopsis": "2 is the second album by 2hollis. It is entirely written and produced by the Chicago-based artist, showcasing a shift towards a more polished, electronic-punk, and EDM-influenced sound.",
+                "tracks": [
+                    {
+                        "title": "beginning",
+                        "length": "1:28"
+                    },
+                    {
+                        "title": "flash",
+                        "length": "2:44"
+                    },
+                    {
+                        "title": "cope",
+                        "length": "2:45"
+                    },
+                    {
+                        "title": "you",
+                        "length": "2:23"
+                    },
+                    {
+                        "title": "tell me",
+                        "length": "3:56"
+                    },
+                    {
+                        "title": "destroy me",
+                        "length": "2:43"
+                    },
+                    {
+                        "title": "burn",
+                        "length": "3:37"
+                    },
+                    {
+                        "title": "girl",
+                        "length": "3:06"
+                    },
+                    {
+                        "title": "dream rain sports",
+                        "length": "2:08"
+                    },
+                    {
+                        "title": "nice",
+                        "length": "2:22"
+                    },
+                    {
+                        "title": "nerve",
+                        "length": "2:55"
+                    },
+                    {
+                        "title": "ego",
+                        "length": "1:04"
+                    },
+                    {
+                        "title": "sidekick",
+                        "length": "1:18"
+                    },
+                    {
+                        "title": "eldest child",
+                        "length": "2:38"
+                    },
+                    {
+                        "title": "safe",
+                        "length": "2:52"
+                    }
+                ]
+            }
+        ]
     }
 ]
